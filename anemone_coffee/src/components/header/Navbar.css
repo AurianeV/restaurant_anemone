@@ -1,0 +1,63 @@
+nav {
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    min-height: 75px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    height:800px;
+}
+
+.navbar {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    position:fixed;
+    width:100%;
+    min-height:75px;
+}
+
+.navbar_link {
+    display:flex;
+    align-items: center;
+}
+
+.navbar_item {
+    list-style-type:none;
+    padding:1rem;
+}
+
+.logo_fb {
+    width:45px;
+}
+
+.logo_insta {
+    width:33px;
+}
+
+.navbar_logo {
+    width:150px;
+    height:150px;
+    margin-left:10px;
+}
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar_container {
+    padding-top:200px;
+}
+
+.navbar_container_title {
+    color:white
+}
+
+.navbar_container_text{
+    color:white
+}
