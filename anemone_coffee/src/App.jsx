@@ -5,6 +5,7 @@ import Concept from './views/Concept';
 import Reservation from './views/Reservation';
 import Menu from './views/Menu';
 import Contact from './views/Contact';
+import NavBar from './components/header/NavBar'
 
 function App() {
     const navbarProps = {
@@ -33,6 +34,23 @@ function App() {
                 { path: '/contact', label: 'Contact' },
             ],
             title: 'Notre concept',
+            logoInsta: '/logo_instagram.png',
+            logoFacebook: '/logo_facebook.png',
+            buttonLabel: 'Découvrir'
+
+        },
+        menu: {
+            backgroundImage: '/header_image_concept.png',
+            logo: '/ANEMONE_COFFEE.png',
+            navLinks: [
+                { path: '/', label: 'Accueil' },
+                { path: '/menu', label: 'Menu' },
+                { path: '/reservation', label: 'Réserver' },
+                { path: '/contact', label: 'Contact' },
+            ],
+            title: 'Notre menu',
+            logoInsta: '/logo_instagram.png',
+            logoFacebook: '/logo_facebook.png',
             buttonLabel: 'Découvrir'
 
         },
@@ -41,6 +59,8 @@ function App() {
 
     return (
             <Routes>
+                
+                
                 <Route
                     path="/"
                     element={<Home navbarProps={navbarProps.home} />}

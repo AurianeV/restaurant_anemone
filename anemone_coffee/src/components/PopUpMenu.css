@@ -1,0 +1,16 @@
+body {
+    border:solid 1px black;
+    opacity:1;
+    background-color: white;
+}
+
+.popUp_breakfast {
+    display:flex;
+    justify-content: space-around;
+    margin-top:200px;
+    margin-bottom:200px;
+}
+
+.popUp_breakfast_img {
+    width:100px;
+}

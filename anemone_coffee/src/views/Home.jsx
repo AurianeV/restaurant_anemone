@@ -1,6 +1,6 @@
 import NavBar from '../components/header/NavBar'
 
-function Home({ navbarProps }) {
+export default function Home({ navbarProps }) {
     return (
         <div>
             <NavBar {...navbarProps} />
@@ -8,4 +8,3 @@ function Home({ navbarProps }) {
     );
 }
 
-export default Home;
