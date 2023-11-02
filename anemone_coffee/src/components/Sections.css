@@ -1,0 +1,25 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-text {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .section-image {
+    flex: 1;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  
+  .text-left {
+    flex-direction: row;
+  }
+  
+  .image-left {
+    flex-direction: row-reverse;
+  }
+  

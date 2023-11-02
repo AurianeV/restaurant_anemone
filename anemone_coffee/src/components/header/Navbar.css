@@ -13,7 +13,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     flex-wrap:wrap;
-    position:fixed;
     width:100%;
     min-height:75px;
 }
