@@ -1,5 +1,6 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../header/Navbar.css'
+import SwitchLanguage from '../SwitchLanguage'
 
 function Navbar(props) {
   return (
@@ -15,6 +16,7 @@ function Navbar(props) {
                 ))}
             <NavLink to="/"><img className="navbar_logoInsta" src={props.logoInsta} alt="Logo" /></NavLink>
             <NavLink to="/"><img className="navbar_logoFacebook" src={props.logoFacebook} alt="Logo" /></NavLink>
+            <SwitchLanguage/>
             </ul>
         </div>
         <div className="navbar_container">

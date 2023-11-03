@@ -1,0 +1,14 @@
+{
+    "navbar": {
+        "home":"Home",
+        "concept":"Concept",
+        "menu":"menu",
+        "reserver":"reverser",
+        "contact":"contact"
+    },
+    "welcome": "Welcome to our website!",
+    "buttonLabel": "Click me",
+    "section1Text": "Texte de la section 1.",
+    "section2Text": "Texte de la section 2."
+  }
+  

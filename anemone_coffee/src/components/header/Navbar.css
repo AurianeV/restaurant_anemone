@@ -8,6 +8,10 @@ nav {
     height:800px;
 }
 
+.navbar_container_title {
+    font-family: 'intro-rust-g-base-2-line', sans-serif;
+}
+
 .navbar {
     display:flex;
     justify-content: space-around;
