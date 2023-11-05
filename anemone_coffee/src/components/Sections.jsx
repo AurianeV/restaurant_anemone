@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import '../components/Sections.css'
 
-function Section({ title, text, image, isTextOnLeft, linkPage }) {
+function Section({ title, text, image, isTextOnLeft, linkPage, textButton }) {
   return (
     <div className="section">
       {isTextOnLeft && (
         <div className="section-text">
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link to={linkPage}>Voir les détails</Link>
+            <Link to={linkPage}>{textButton}</Link>
         </div>
       )}
       <div className="section-image">
@@ -19,7 +19,7 @@ function Section({ title, text, image, isTextOnLeft, linkPage }) {
         <div className="section-text">
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link to={linkPage}>Voir les détails</Link>
+            <Link to={linkPage}>{textButton}</Link>
         </div>
       )}
     </div>

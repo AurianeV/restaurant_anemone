@@ -1,14 +1,33 @@
 {
-    "navbar": {
-        "home":"Home",
-        "concept":"Concept",
-        "menu":"menu",
-        "reserver":"reverser",
-        "contact":"contact"
-    },
-    "welcome": "Welcome to our website!",
-    "buttonLabel": "Click me",
-    "section1Text": "Texte de la section 1.",
-    "section2Text": "Texte de la section 2."
+    "homeLabel": "Home",
+    "conceptLabel": "Concept",
+    "reservationLabel": "Reservation",
+    "menuLabel": "Menu",
+    "contactLabel": "Contact",
+    "homeTitle": "Welcome to Anémone Coffee",
+    "homeText": "COFFEE - BRUNCH - FOOD",
+    "conceptTitle": "Our Concept",
+    "conceptText": "Explore our unique concept.",
+    "reservationTitle": "Make a Reservation",
+    "reservationText": "Book your table today.",
+    "menuTitle": "Our Menu",
+    "menuText": "Discover our delicious dishes.",
+    "contactTitle": "Contact Us",
+    "contactText": "Get in touch with us.",
+    
+    "home": {
+        "sectionDiscover": {
+            "title":"What to expect at Anemone Café?",
+            "text":"Pick up your breakfast before work. Be able to come drink coffee or eat at any time of the day. Enjoy good specialty coffee and discover new drinks. Enjoy the time to taste with our homenade pastries. Attend regular events. Meet at the aperitif time and enjoy our tapas to share. Have a drink with the friends. Anemone is finally a pleasant and friendly coffee shop in the suburbs that is commited to recreating the link between us. That's why we moved to the city centre, we're counting on you to visit.",
+            "values":"Our values"
+    }
+},
+
+    "footer" :{
+        "titleAdress":"Adress", 
+        "adress":"street of carreaux",
+        "contact":"Contact", 
+        "propos": "About"
+    }
   }
   

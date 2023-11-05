@@ -1,0 +1,11 @@
+.footer_container {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color:white;
+}
+
+.footer_logo {
+    width:300px
+}

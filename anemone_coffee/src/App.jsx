@@ -5,19 +5,14 @@ import Concept from './views/Concept';
 import Reservation from './views/Reservation';
 import Menu from './views/Menu';
 import Contact from './views/Contact';
-import NavBar from './components/header/NavBar'
+import Footer from './components/footer/Footer'
+import CountDown from './components/CountDown'
 
 function App() {
     const navbarProps = {
         home: {
             backgroundImage: '/header_home.png',
             logo: '/ANEMONE_COFFEE.png',
-            navLinks: [
-                { path: '/concept', label: 'Le concept' },
-                { path: '/menu', label: 'Menu' },
-                { path: '/reservation', label: 'Réserver' },
-                { path: '/contact', label: 'Contact' },
-            ],
             title:'Anémone Coffee',
             text:'COFFEE - BRUNCH - FOOD',
             logoInsta: '/logo_instagram.png',
@@ -27,12 +22,6 @@ function App() {
         concept: {
             backgroundImage: '/header_image_concept.png',
             logo: '/ANEMONE_COFFEE.png',
-            navLinks: [
-                { path: '/', label: 'Accueil' },
-                { path: '/menu', label: 'Menu' },
-                { path: '/reservation', label: 'Réserver' },
-                { path: '/contact', label: 'Contact' },
-            ],
             title: 'Notre concept',
             logoInsta: '/logo_instagram.png',
             logoFacebook: '/logo_facebook.png',
@@ -42,24 +31,18 @@ function App() {
         menu: {
             backgroundImage: '/header_image_concept.png',
             logo: '/ANEMONE_COFFEE.png',
-            navLinks: [
-                { path: '/', label: 'Accueil' },
-                { path: '/menu', label: 'Menu' },
-                { path: '/reservation', label: 'Réserver' },
-                { path: '/contact', label: 'Contact' },
-            ],
             title: 'Notre menu',
             logoInsta: '/logo_instagram.png',
             logoFacebook: '/logo_facebook.png',
             buttonLabel: 'Découvrir'
 
         },
-        // Define similar objects for other pages
+
     };
 
     return (
+        <>
             <Routes>
-                
                 
                 <Route
                     path="/"
@@ -81,7 +64,14 @@ function App() {
                     path="/menu"
                     element={<Menu navbarProps={navbarProps.menu} />}
                 />
+                        <Route path="/countdown" element={<CountDown />} />
+
             </Routes>
+            <Footer
+            logoFacebook={navbarProps.home.logoFacebook}
+            logoInsta={navbarProps.home.logoInsta}
+            />
+            </>
     );
 }
 

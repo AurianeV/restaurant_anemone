@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n/i18n'
 
 
+
 export default function Home({ navbarProps }) {
     const { t } = useTranslation();
 
@@ -11,9 +12,11 @@ export default function Home({ navbarProps }) {
         <div>
             <NavBar {...navbarProps} />
             <Sections
-                text={t('welcome')}
+                title={t('home.sectionDiscover.title')}
+                text={t('home.sectionDiscover.text')}
                 image="/coffee_shop.png"
                 isTextOnLeft={true}
+                textButton={t('home.sectionDiscover.values')}
                 linkPage="/page1" // Chemin de destination pour cette section
             />
             <Sections

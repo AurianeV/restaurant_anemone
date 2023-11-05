@@ -1,5 +1,37 @@
 {
-    "welcome": "Bienvenue sur notre site Web !",
-    "buttonLabel": "Cliquez ici"
+    "homeLabel": "Accueil",
+    "conceptLabel": "Concept",
+    "reservationLabel": "Réservation",
+    "menuLabel": "Menu",
+    "contactLabel": "Contact",
+        "homeTitle": "Bienvenue chez Anémone Coffee",
+        "homeText": "CAFÉ - BRUNCH - CUISINE",
+        "conceptTitle": "Notre Concept",
+        "conceptText": "Découvrez notre concept unique.",
+        "reservationTitle": "Réservez une table",
+        "reservationText": "Réservez votre table dès aujourd'hui.",
+        "menuTitle": "Notre Menu",
+        "menuText": "Découvrez nos plats délicieux.",
+        "contactTitle": "Contactez-nous",
+        "contactText": "Prenez contact avec nous.",
+
+
+        "home": {
+            "sectionDiscover": {
+                "title":"À quoi s'attendre chez Anémone Café ?",
+                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis. Anemone est enfin un café agréable et convivial en banlieue qui s’engage à recréer le lien entre nous. C’est pourquoi nous avons déménagé au centre-ville, nous comptons sur vous.",
+                "values":"Nos valeurs"
+        }
+    },
+
+        "footer" :{
+            "titleAdress":"Adresse", 
+            "adress":"rue des carreaux",
+            "contact":"Contact",
+            "propos": "À propos"
+
+
+        }
+      
   }
   
