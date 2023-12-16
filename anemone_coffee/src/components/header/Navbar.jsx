@@ -1,40 +1,82 @@
 import { NavLink } from "react-router-dom";
+import { useState } from 'react'
+
 import '../header/Navbar.css'
 import SwitchLanguage from '../SwitchLanguage'
 import { useTranslation } from 'react-i18next';
 
 function Navbar(props) {
    const { t } = useTranslation();
+   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
 
    const navLinks = [
       { path: '/', label: t('homeLabel') },
-      { path: '/concept', label: t('conceptLabel') },
+      { path: '/connaitre', label: t('knowUsLabel'),
+      children : [
+         {path:'/concept', label:t('conceptLabel') },
+         {path:'/valeurs', label:t('valuesLabel') }
+      ]
+    },
       { path: '/reservation', label: t('reservationLabel') },
-      { path: '/menu', label: t('menuLabel') },
+      { path: '/menus',
+         label: t('menuLabel'),
+         children: [
+            { path: '/menu/concept', label: t('menuAppetizersLabel') },
+            { path: '/menu/valeurs', label: t('menuMainDishesLabel') },
+            { path: '/menu/desserts', label: t('menuDessertsLabel') },
+      ], },
+      { path: '/events', label: t('eventsLabel') },
       { path: '/contact', label: t('contactLabel') },
    ];
 
    return (
-      <nav style={{ backgroundImage: `url(${props.backgroundImage})` }}>
-        <div className="dark-overlay"></div> 
+      <nav style={{ backgroundImage: `url(${props.backgroundImage})` }} onMouseEnter={toggleDropdown}
+      onMouseLeave={closeDropdown} >
          <div className="navbar">
             <NavLink to="/">
-               <img className="navbar_logo" src={props.logo} alt="Logo" />
+               <img className="navbar_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo" />
             </NavLink>
             <ul className="navbar_link">
                {navLinks.map((link, index) => (
                   <li className="navbar_item" key={index}>
-                     <NavLink to={link.path}>{link.label}</NavLink>
+                     {link.children ? (
+                     <div className="dropdown" onBlur={closeDropdown}>
+                        <NavLink onClick={toggleDropdown}>{t(link.label)}</NavLink>
+                        {isDropdownOpen && (
+                           <div className="dropdown-content">
+                              {link.children.map((childLink, childIndex) => (
+                                 <NavLink
+                                 key={childIndex}
+                                 to={childLink.path}
+                                 onClick={closeDropdown}
+                                 >
+                                 {t(childLink.label)}
+                                 </NavLink>
+                              ))}
+                           </div>
+                        )}
+                     </div>
+                  ) : (
+                     <NavLink to={link.path}>{t(link.label)}</NavLink>
+                  )}
                   </li>
                ))}
                <li>
                   <NavLink to="/">
-                     <img className="navbar_logoInsta" src={props.logoInsta} alt="Logo" />
+                     <img className="navbar_logoInsta" src="/logos/logo_instagram.png" alt="Logo" />
                   </NavLink>
                </li>
                <li>
                   <NavLink to="/">
-                     <img className="navbar_logoFacebook" src={props.logoFacebook} alt="Logo" />
+                     <img className="navbar_logoFacebook" src="/logos/logo_facebook.png" alt="Logo" />
                   </NavLink>
                </li>
                <li>

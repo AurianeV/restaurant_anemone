@@ -1,0 +1,34 @@
+.image-section {
+    display: flex;
+    align-items: flex-start; /* Alignez le contenu en haut */
+    width: 100%;
+  }
+  
+  .images-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .image-row {
+      margin:10px
+  }
+  .images-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* Espacement entre les deux ensembles d'images */
+  }
+  
+  .image-container {
+    width: 100%; /* Ajustez la largeur des images carrées selon vos besoins */
+    height: auto; /* Ajustez la hauteur des images carrées selon vos besoins */
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left:10px /* Espacement entre les images */
+  }
+  
+  .image-container img {
+    width: 100% 
+  }
+
+  .text-section {
+      padding:100px
+  }

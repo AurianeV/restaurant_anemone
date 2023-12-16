@@ -13,7 +13,7 @@ function Section({ title, text, image, isTextOnLeft, linkPage, textButton }) {
         </div>
       )}
       <div className="section-image">
-        <img src={image} alt="Section Image" />
+        <img className="section-image-photo" src={image} alt="Section Image" />
       </div>
       {!isTextOnLeft && (
         <div className="section-text">

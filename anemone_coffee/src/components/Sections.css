@@ -12,7 +12,11 @@
   .section-image {
     flex: 1;
     margin-top:20px;
-    margin-bottom:20px;
+  }
+
+  .section-image-photo {
+    max-width:60%;
+    height:auto;
   }
   
   .text-left {

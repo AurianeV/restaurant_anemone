@@ -7,33 +7,26 @@ import Menu from './views/Menu';
 import Contact from './views/Contact';
 import Footer from './components/footer/Footer'
 import CountDown from './components/CountDown'
+import Events from './views/Events'
+import Valeurs from './views/Valeurs'
 
 function App() {
     const navbarProps = {
         home: {
-            backgroundImage: '/header_home.png',
-            logo: '/ANEMONE_COFFEE.png',
+            backgroundImage: '/background_header/home.png',
             title:'Anémone Coffee',
             text:'COFFEE - BRUNCH - FOOD',
-            logoInsta: '/logo_instagram.png',
-            logoFacebook: '/logo_facebook.png',
             buttonLabel: 'Découvrir'
         },
         concept: {
             backgroundImage: '/header_image_concept.png',
-            logo: '/ANEMONE_COFFEE.png',
             title: 'Notre concept',
-            logoInsta: '/logo_instagram.png',
-            logoFacebook: '/logo_facebook.png',
             buttonLabel: 'Découvrir'
 
         },
         menu: {
             backgroundImage: '/header_image_concept.png',
-            logo: '/ANEMONE_COFFEE.png',
             title: 'Notre menu',
-            logoInsta: '/logo_instagram.png',
-            logoFacebook: '/logo_facebook.png',
             buttonLabel: 'Découvrir'
 
         },
@@ -64,9 +57,13 @@ function App() {
                     path="/menu"
                     element={<Menu navbarProps={navbarProps.menu} />}
                 />
-                        <Route path="/countdown" element={<CountDown />} />
+                <Route path="/events" 
+                element={<Events navbarProps={navbarProps.events} />} />
 
-            </Routes>
+                <Route path="/valeurs" 
+                element={<Valeurs navbarProps={navbarProps.valeurs} />} />
+
+                </Routes>
             <Footer
             logoFacebook={navbarProps.home.logoFacebook}
             logoInsta={navbarProps.home.logoInsta}

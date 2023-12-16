@@ -1,27 +1,39 @@
 {
     "homeLabel": "Home",
+    "knowUsLabel" : "Know us",
+    "valuesLabel" : "Our values",
     "conceptLabel": "Concept",
     "reservationLabel": "Reservation",
-    "menuLabel": "Menu",
+    "menuLabel": "Menus",
+    "eventsLabel": "Events",
     "contactLabel": "Contact",
     "homeTitle": "Welcome to Anémone Coffee",
     "homeText": "COFFEE - BRUNCH - FOOD",
     "conceptTitle": "Our Concept",
     "conceptText": "Explore our unique concept.",
     "reservationTitle": "Make a Reservation",
+    "menuAppetizersLabel": "Appetizers",
+  "menuMainDishesLabel": "Main Dishes",
+  "menuDessertsLabel": "Desserts",
     "reservationText": "Book your table today.",
     "menuTitle": "Our Menu",
     "menuText": "Discover our delicious dishes.",
     "contactTitle": "Contact Us",
     "contactText": "Get in touch with us.",
+    "transitionTitle1" : "The coffee shop",
     
     "home": {
         "sectionDiscover": {
             "title":"What to expect at Anemone Café?",
-            "text":"Pick up your breakfast before work. Be able to come drink coffee or eat at any time of the day. Enjoy good specialty coffee and discover new drinks. Enjoy the time to taste with our homenade pastries. Attend regular events. Meet at the aperitif time and enjoy our tapas to share. Have a drink with the friends. Anemone is finally a pleasant and friendly coffee shop in the suburbs that is commited to recreating the link between us. That's why we moved to the city centre, we're counting on you to visit.",
+            "text": "Pick up your breakfast before work. Be able to come drink coffee or eat at any time of the day. Enjoy good specialty coffee and discover new drinks.\n\nEnjoy the time to taste with our homemade pastries. Attend regular events. Meet at the aperitif time and enjoy our tapas to share. Have a drink with friends. Anemone is finally a pleasant and friendly coffee shop in the suburbs that is committed to recreating the link between us. That's why we moved to the city center, we're counting on you to visit.",
             "values":"Our values"
-    }
-},
+        },
+        "sectionCarre": {
+            "title":"Coffee Shop & Pastries",
+            "text":"Our coffee shop is minimalist but unique, a place where everyone can find their place. We offer carefully selected speciality coffees roasted in the Val d'Oise. You'll also find all sorts of hot drinks, cold drinks and seasonal juices.\n\n Every morning we prepare fresh pastries for you to enjoy throughout the day. And if you don't have time to sit down, don't forget that everything is available to take away.",
+            "menu":"Our drinks"
+        }
+    },
 
     "footer" :{
         "titleAdress":"Adress", 

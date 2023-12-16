@@ -1,9 +1,13 @@
 {
     "homeLabel": "Accueil",
+    "knowUsLabel" : "Nous connaître",
     "conceptLabel": "Concept",
+    "valuesLabel" : "Nos valeurs",
     "reservationLabel": "Réservation",
-    "menuLabel": "Menu",
+    "eventsLabel": "Évènements",
+    "menuLabel": "Menus",
     "contactLabel": "Contact",
+    "transitionTitle1" : "Le coffee shop",
         "homeTitle": "Bienvenue chez Anémone Coffee",
         "homeText": "CAFÉ - BRUNCH - CUISINE",
         "conceptTitle": "Notre Concept",
@@ -11,6 +15,9 @@
         "reservationTitle": "Réservez une table",
         "reservationText": "Réservez votre table dès aujourd'hui.",
         "menuTitle": "Notre Menu",
+        "menuAppetizersLabel": "Entrée",
+        "menuMainDishesLabel": "Plat",
+        "menuDessertsLabel": "Desserts",
         "menuText": "Découvrez nos plats délicieux.",
         "contactTitle": "Contactez-nous",
         "contactText": "Prenez contact avec nous.",
@@ -19,9 +26,14 @@
         "home": {
             "sectionDiscover": {
                 "title":"À quoi s'attendre chez Anémone Café ?",
-                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis. Anemone est enfin un café agréable et convivial en banlieue qui s’engage à recréer le lien entre nous. C’est pourquoi nous avons déménagé au centre-ville, nous comptons sur vous.",
+                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. \n\n Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis. Anemone est enfin un café agréable et convivial en banlieue qui s’engage à recréer le lien entre nous. C’est pourquoi nous avons déménagé au centre-ville, nous comptons sur vous.",
                 "values":"Nos valeurs"
-        }
+        },
+            "sectionCarre": {
+                "title":"Coffee Shop & pâtisseries",
+                "text":"Notre coffee shop se veut minimaliste mais singulier, un lieu où chacun trouve sa place. Nous vous proposons du café de spécialité sélectionné avec soin et torréfié dans le val d’Oise. Vous retrouverez également toutes sortes de boissons chaudes, boissons fraiches, et des jus de saison. \n\nChaque matin nous préparons des pâtisseries fraiches que vous pourrez déguster tout au long de la journée. Et si vous n’avez pas le temps de vous poser, n’oubliez pas que tout est disponible à emporter.",
+                "menu":"Nos boissons"
+            }
     },
 
         "footer" :{

@@ -1,13 +1,12 @@
 import '../components/PopUpMenu.css'
 
 export default function PopUpMenu(props) {
-    const { title, items, onClose } = props;
+    const { title, items, menupdf } = props;
     
   
     return (
         <>
         <div className="popUp_header">
-            <button className="popUp_Close" onClick={onClose}>X</button>
             <h1 className="popUp_title">{title}</h1>
             
         </div>
@@ -18,7 +17,9 @@ export default function PopUpMenu(props) {
                     <div key={index}>
                     <img className="popUp_breakfast_img" src={item.image} alt={item.title} />
                     <h2 className="popUp_items">{item.title}</h2>
-                    <button>{item.buttonLabel}</button>
+                    <button onClick={() => window.open(item.menuPdfLink, '_blank')}>
+                      {item.buttonLabel}
+                    </button>
                     </div>
                 ))}
                 </div>
