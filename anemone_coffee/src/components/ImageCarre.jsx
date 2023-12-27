@@ -17,9 +17,11 @@ const ImageCarre = ({isTextOnRight, image1, image2, image3, image4, alt1, alt2, 
     <div className="image-section">
         {!isTextOnRight && (
             <div className="text-section">
-                <h2>{t('home.sectionCarre.title')}</h2>
-                <p>{t('home.sectionCarre.text')}</p>
-                <button>{t('home.sectionCarre.menu')}</button>
+            <h2>{title}</h2>
+            <p>{text}</p>
+            {textButton &&
+              <button>{textButton}</button>
+            }        
             </div>
         )}
         <div className="image-row">
@@ -34,8 +36,10 @@ const ImageCarre = ({isTextOnRight, image1, image2, image3, image4, alt1, alt2, 
             <div className="text-section">
                 <h2>{title}</h2>
                 <p>{text}</p>
-                <button>{textButton}</button>
-            </div>
+                {textButton &&
+                  <button>{textButton}</button>
+                }
+           </div>
         )}
   </div>
   );

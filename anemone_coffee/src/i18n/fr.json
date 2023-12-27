@@ -24,17 +24,47 @@
 
 
         "home": {
+            "transition" : {
+                "title_coffee":"Le coffee shop",
+                "titleBrunch":"Le brunch",
+                "titleTapas":"Apéro et Tapas"
+            },
             "sectionDiscover": {
                 "title":"À quoi s'attendre chez Anémone Café ?",
                 "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. \n\n Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis. Anemone est enfin un café agréable et convivial en banlieue qui s’engage à recréer le lien entre nous. C’est pourquoi nous avons déménagé au centre-ville, nous comptons sur vous.",
-                "values":"Nos valeurs"
-        },
-            "sectionCarre": {
+                "buttonValues":"Nos valeurs"
+            },
+            "sectionCoffeeShop_Patisseries": {
                 "title":"Coffee Shop & pâtisseries",
                 "text":"Notre coffee shop se veut minimaliste mais singulier, un lieu où chacun trouve sa place. Nous vous proposons du café de spécialité sélectionné avec soin et torréfié dans le val d’Oise. Vous retrouverez également toutes sortes de boissons chaudes, boissons fraiches, et des jus de saison. \n\nChaque matin nous préparons des pâtisseries fraiches que vous pourrez déguster tout au long de la journée. Et si vous n’avez pas le temps de vous poser, n’oubliez pas que tout est disponible à emporter.",
-                "menu":"Nos boissons"
+                "buttonBoisson":"Nos boissons"
+            },
+            "sectionBrunch": {
+                "title":"Brunch en continu",
+                "text":"Y’a pas d’heure pour bruncher !\n\n On vous retrouve pour bruncher du mercredi au dimanche de 11h à 17h sans interruption.\n\n Au menu des plats salés et sucrés gourmands, des pâtisseries, des boissons chaudes et fraiches.\n\nBref, il y en a pour tous les goûts.",
+                "buttonBoisson":"Notre brunch"
+            },
+            "sectionTapas" : {
+                "title":"Des plats à partager sous forme de tapas",
+                "text":"Le partage est au cœur de notre travail chez Anémone Café, c’est également ce que l’on veut transmettre à travers notre cuisine. C’est pour cette raison que l’on vous propose tous les soirs nos plats sous forme de tapas à partager. Accompagnées d’un verre de bon vin, tous les ingrédients sont réunis pour une bonne soirée. De belles associations qui subliment des produits de qualité, tel est le mot d’ordre. ",
+                "buttonTapas":"Nos tapas"
+            },
+            "sectionReseaux": {
+                "title":"Nos réseaux sociaux",
+                "text":"Venez apprendre à nous connaitre sur les réseaux sociaux, on est super actifs et vous serez au courant des dernières nouveautés avant tout le monde. Si vous n’êtes toujours pas convaincus on organise souvent des jeu concours avec des p’tits cadeaux à la clé. Ça se passe ici ->"
             }
-    },
+        },
+
+        "values":{
+            "sectionPartenariats": {
+                "title":"Nos partenariats",
+                "text":"Nos partenariats avec des producteurs locaux : Il serait dommage d’avoir des produits de qualité à portée de main et de ne pas en profiter ! C’est pour cette raison qu’Anémone Café à décidé de s’associer avec des producteurs locaux afin de vous garantir le meilleur dans l’assiette et de favoriser les circuits courts dès que possible. Il nous semblait important dans un souci de transparence et de valorisation de leur travail, de vous les présenter ci-dessous :-Le café : -Le fromage : -Les œufs : -La charcuterie"
+            },
+            "sectionDechets": {
+                "title":"La valorisation des déchets",
+                "text":"Chaque petite action compte et il nous semblait fou en tant que restaurateur de ne pas tirer profit de nos déchets alimentaires. Nous nous sommes donc associés à « … » qui profite de tous les déchets alimentaires du café pour les transformer en composte. "
+            }
+        },
 
         "footer" :{
             "titleAdress":"Adresse", 

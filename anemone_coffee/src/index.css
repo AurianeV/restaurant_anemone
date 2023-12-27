@@ -50,3 +50,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.styled-text {
+  /* Ajoutez ici les propriétés de style que vous souhaitez appliquer */
+  font-weight: bold;
+  color: #ff0000; /* Exemple de couleur rouge */
+}
+body, p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+}
