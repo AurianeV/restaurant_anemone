@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import '../components/Sections.css'
+import { forwardRef } from 'react';
 
-function Section({ title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta }) {
+const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta}, ref) => {
+
   return (
-    <div className="section">
+    <div ref={ref} className="section">
       {isTextOnLeft && (
         <div className="section-text">
             <h2>{title}</h2>
@@ -38,6 +40,6 @@ function Section({ title, text, image, isTextOnLeft, linkPage, textButton, logoF
       )}
     </div>
   );
-}
+})
 
 export default Section;

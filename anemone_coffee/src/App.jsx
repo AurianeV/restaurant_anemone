@@ -22,12 +22,6 @@ function App() {
             backgroundImage:'/background_header/values.png',
             title:'Nos valeurs'
         },
-        concept: {
-            backgroundImage: '/header_image_concept.png',
-            title: 'Notre concept',
-            buttonLabel: 'Découvrir'
-
-        },
         events: {
             backgroundImage: '/background_header/events.png',
             title: 'Les évènements'

@@ -18,20 +18,19 @@ function Navbar(props) {
   };
 
    const navLinks = [
-      { path: '/', label: t('homeLabel') },
       { path: '/connaitre', label: t('knowUsLabel'),
       children : [
-         {path:'/concept', label:t('conceptLabel') },
+         {path:'/', label:t('conceptLabel') },
          {path:'/valeurs', label:t('valuesLabel') }
       ]
     },
       { path: '/reservation', label: t('reservationLabel') },
-      { path: '/menus',
+      { path: '/menu',
          label: t('menuLabel'),
          children: [
-            { path: '/menu/concept', label: t('menuAppetizersLabel') },
-            { path: '/menu/valeurs', label: t('menuMainDishesLabel') },
-            { path: '/menu/desserts', label: t('menuDessertsLabel') },
+            { path: '/menu#section-entrees', label: t('menuAppetizersLabel') },
+            { path: '/menu#section-plats', label: t('menuMainDishesLabel') },
+            { path: '/menu#section-desserts', label: t('menuDessertsLabel') },
       ], },
       { path: '/events', label: t('eventsLabel') },
       { path: '/contact', label: t('contactLabel') },

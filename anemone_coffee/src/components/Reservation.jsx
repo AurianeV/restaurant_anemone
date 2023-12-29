@@ -1,11 +1,12 @@
 import React from 'react';
+import { forwardRef } from 'react';
 
-function Reservation() {
+const Reservation = forwardRef (({props}, ref) => {
   return (
-    <div className="section">
+    <div ref={ref} className="section">
       <p>RESERVATION ICI</p>
     </div>
   );
-}
+})
 
 export default Reservation;

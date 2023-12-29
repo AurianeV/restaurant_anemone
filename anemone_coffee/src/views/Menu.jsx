@@ -25,7 +25,7 @@ export default function Menu({navbarProps}){
         <>
         <NavBar {...navbarProps} />
         <div>
-      <h1>Mon Application</h1>
+      <h1>Mon Menu</h1>
       <button onClick={openModal}>Ouvrir la modal</button>
       <ModalComponent
         isOpen={modalIsOpen}
@@ -33,14 +33,23 @@ export default function Menu({navbarProps}){
         className="custom-modal"
       >
             <PopUpMenu
-                title="Nos Menus"
-                items={[
-                    { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'Découvrir la carte', menuPdfLink:'/Menus-Boissons.pdf'},
-                    { title: 'Tapas', image: '/lunch.png', buttonLabel: 'Découvrir la carte', menuPdfLink:'/Menus-Boissons.pdf'},
-                    { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', menuPdfLink:'/Menus-Boissons.pdf'},
-                    ]}
-            />
+   title="Nos Menus"
+   items={[
+      { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/entrees' },
+      { title: 'Tapas', image: '/lunch.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/plats' },
+      { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/desserts' },
+   ]}
+/>
       </ModalComponent>
+      <div id="section-entrees">
+<p>entrées</p>      </div>
+
+      <div id="section-plats">
+<p>plats</p>      </div>
+
+      <div id="section-desserts">
+<p>desserts</p>      </div>
+
     </div>
         
         

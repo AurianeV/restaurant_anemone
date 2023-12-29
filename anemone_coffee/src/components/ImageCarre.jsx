@@ -1,6 +1,8 @@
 import React from 'react';
 import './ImageCarre.css'; 
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom'
+import  { forwardRef } from 'react';
 
 
 const Image = ({ src, alt }) => (
@@ -9,18 +11,21 @@ const Image = ({ src, alt }) => (
   </div>
 );
 
-const ImageCarre = ({isTextOnRight, image1, image2, image3, image4, alt1, alt2, alt3, alt4, title, text, textButton}) => {
+  const ImageCarre = forwardRef(({ isTextOnRight, image1, image2, image3, image4, title, text, textButton, alt1, alt2, alt3, alt4, linkPage }, ref) => {
+
     const { t } = useTranslation();
  
   return (
       
-    <div className="image-section">
+    <div ref={ref} className="image-section">
         {!isTextOnRight && (
             <div className="text-section">
             <h2>{title}</h2>
             <p>{text}</p>
             {textButton &&
-              <button>{textButton}</button>
+              <a href={linkPage} target="_blank" rel="noopener noreferrer">
+                <button>{textButton}</button>
+              </a>
             }        
             </div>
         )}
@@ -37,12 +42,14 @@ const ImageCarre = ({isTextOnRight, image1, image2, image3, image4, alt1, alt2, 
                 <h2>{title}</h2>
                 <p>{text}</p>
                 {textButton &&
-                  <button>{textButton}</button>
+                  <a href={linkPage} target="_blank" rel="noopener noreferrer">
+                    <button>{textButton}</button>
+                  </a>
                 }
            </div>
         )}
   </div>
   );
-};
+})
 
 export default ImageCarre;
