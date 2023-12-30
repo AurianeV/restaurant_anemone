@@ -66,6 +66,11 @@
             }
         },
 
+        "event": {
+            "title":"! Grosse soirée d'ouverture !",
+            "text":"Rendez-vous le 25 janvier pour notre soirée d’ouverture. Au programme : des tapas, du vin, de la musique et des copains ! Bonne ambiance garantie, on a hâte de vous retrouver. "
+        },
+
         "footer" :{
             "titleAdress":"Adresse", 
             "adress":"rue des carreaux",

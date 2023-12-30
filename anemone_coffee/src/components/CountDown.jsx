@@ -1,11 +1,12 @@
 // Countdown.jsx
 import React, { useState, useEffect } from 'react';
+import './CountDown.css'; 
+import { useTranslation } from 'react-i18next';
 
 function Countdown() {
   const [countdown, setCountdown] = useState(null);
 
-  // Date d'ouverture du restaurant (à ajuster)
-  const openingDate = new Date('2023-12-31T12:00:00');
+  const openingDate = new Date('2024-12-31T12:00:00');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +23,7 @@ function Countdown() {
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         setCountdown(
-          `Ouverture du restaurant dans ${days}j ${hours}h ${minutes}m ${seconds}s`
+          `${days}j ${hours}h ${minutes}m ${seconds}s`
         );
       }
     }, 1000);
@@ -30,10 +31,21 @@ function Countdown() {
     return () => clearInterval(interval);
   }, []);
 
+  const { t } = useTranslation();
+
+
   return (
-    <div>
-      <h2>Compte à rebours de l'ouverture du restaurant</h2>
-      <p>{countdown}</p>
+    <div className="countdown-container">
+      <h2>{t('event.title')}</h2>
+      <p>{t('event.text')}</p>
+      <div className="countdown-timer">
+        {countdown &&
+          countdown.split('').map((char, index) => (
+            <div key={index} className={`countdown-digit digit-${index}`}>
+              {char}
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
