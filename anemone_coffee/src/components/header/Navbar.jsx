@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from 'react'
 
-import '../header/Navbar.css'
+import './Navbar.css'
 import SwitchLanguage from '../SwitchLanguage'
 import { useTranslation } from 'react-i18next';
 

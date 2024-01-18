@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import '../components/Sections.css'
+import './Sections.css'
 import { forwardRef } from 'react';
 
 const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta}, ref) => {

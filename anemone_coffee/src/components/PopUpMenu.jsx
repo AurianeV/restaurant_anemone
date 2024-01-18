@@ -1,4 +1,4 @@
-import '../components/PopUpMenu.css'
+import './PopUpMenu.css'
 
 export default function PopUpMenu(props) {
     const { title, items, menupdf } = props;
