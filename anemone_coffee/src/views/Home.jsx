@@ -5,8 +5,10 @@ import TransitionImg from '../components/TransitionImage/TransitionImg'
 import PreLoader from '../components/PreLoader';
 import ImageCarre from '../components/ImageCarre'
 import Reservation from '../components/Reservation'
-import 'intersection-observer'; // Importez l'API Intersection Observer
+import 'intersection-observer'; 
 import React, { useEffect, useRef, useState } from 'react';
+import MainAdminPage from './MainAdminPage'
+
 
 
 export default function Home({ navbarProps }) {
@@ -24,7 +26,6 @@ export default function Home({ navbarProps }) {
   const handleIntersection = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // L'élément est visible à l'écran
         switch (entry.target) {
           
           case discoverRef.current:
@@ -60,7 +61,6 @@ export default function Home({ navbarProps }) {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    // Ajoutez les éléments que vous souhaitez observer
     if (headerRef.current) {
       observer.observe(headerRef.current);
     }
@@ -83,11 +83,10 @@ export default function Home({ navbarProps }) {
       observer.observe(reseauxRef.current);
     }
 
-    // Nettoyez l'observateur lors du démontage du composant
     return () => {
       observer.disconnect();
     };
-  }, []); // Assurez-vous que cela s'exécute une seule fois
+  }, []); 
     return (
         <div>
             <div className="points-container">
@@ -102,6 +101,7 @@ export default function Home({ navbarProps }) {
       <NavBar {...navbarProps} 
         ref={headerRef}
       />
+      <MainAdminPage/>
       <Sections
         title={t('home.sectionDiscover.title')}
         text={t('home.sectionDiscover.text')}
@@ -126,7 +126,7 @@ export default function Home({ navbarProps }) {
         textButton={t('home.sectionCoffeeShop_Patisseries.buttonBoisson')}
         alt="image1"
         linkPage="/Menus-Boissons.pdf"
-        ref={coffeeShopRef} // Assurez-vous de transmettre la référence ici
+        ref={coffeeShopRef} 
         />
       <TransitionImg
         imageTransition="/image_home/transition2.png"

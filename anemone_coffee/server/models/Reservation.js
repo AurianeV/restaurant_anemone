@@ -5,8 +5,9 @@ const mongoose = require('mongoose');
 const reservationSchema = new mongoose.Schema({
   name: String,
   date: Date,
-  tableNumber: Number,
+  number: Number,
   reservationTime: String,
+  placesDisponibles: Number
 });
 
 const Reservation = mongoose.model('Reservation', reservationSchema);

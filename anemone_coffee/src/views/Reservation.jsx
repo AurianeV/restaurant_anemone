@@ -5,7 +5,7 @@ const Reservation = () => {
   const [reservationData, setReservationData] = useState({
     name: '',
     date: '',
-    tableNumber: '',
+    number: '',
     heure: '',
   });
 
@@ -16,16 +16,16 @@ const Reservation = () => {
   const handleReservation = async () => {
     try {
       const response = await axios.post('http://localhost:3001/reservations', reservationData);
-
-      if (response.status === 200) {
-        console.log('Réservation réussie !')
+  
+      if (response.data.success) {
+        console.log('Réservation réussie ! Places disponibles :', response.data.placesDisponibles);
       } else {
-        console.error('Échec de la réservation.')
+        console.error('Échec de la réservation :', response.data.message);
       }
     } catch (error) {
-      console.error('Erreur inattendue :', error)
+      console.error('Erreur inattendue :', error);
     }
-  }
+  };
 
   return (
     <div>
@@ -48,8 +48,8 @@ const Reservation = () => {
         <label>Nombre de personnes :</label>
         <input
           type="number"
-          name="tableNumber"
-          value={reservationData.tableNumber}
+          name="number"
+          value={reservationData.number}
           onChange={handleInputChange}
         />
 

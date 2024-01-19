@@ -1,22 +1,22 @@
-// client/src/views/AdminDashboard.jsx
+// AdminDashboard.jsx
+
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
   const [reservations, setReservations] = useState([]);
 
   useEffect(() => {
-    // Effectuez une requête HTTP GET pour récupérer les réservations
     const fetchReservations = async () => {
       try {
-        const response = await fetch('http://localhost:3000/reservations');
-        if (response.ok) {
-          const data = await response.json();
-          setReservations(data);
-        } else {
-          console.error('Échec de la récupération des réservations.');
-        }
+        const response = await axios.get('http://localhost:3001/dashboard/all', {
+          headers: { 'x-auth-token': localStorage.getItem('jwtToken') },
+        });
+
+        setReservations(response.data);
       } catch (error) {
-        console.error('Erreur inattendue :', error);
+        console.error('Erreur lors de la récupération des réservations :', error);
       }
     };
 
@@ -25,27 +25,14 @@ const AdminDashboard = () => {
 
   return (
     <div>
-      <h2>Tableau de bord de l'administrateur</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Date</th>
-            <th>Numéro de table</th>
-            <th>Heure de réservation</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservations.map((reservation) => (
-            <tr key={reservation._id}>
-              <td>{reservation.name}</td>
-              <td>{reservation.date}</td>
-              <td>{reservation.tableNumber}</td>
-              <td>{reservation.reservationTime}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h2>Tableau de bord des réservations</h2>
+      <ul>
+        {reservations.map((reservation) => (
+          <li key={reservation._id}>
+            <Link to={`/dashboard/${reservation._id}`}>{reservation.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

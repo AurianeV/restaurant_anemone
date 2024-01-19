@@ -6,7 +6,7 @@ const Reservation = require('../models/Reservation.js');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  const { name, date, tableNumber, heure } = req.body;
+  const { name, date, number, heure } = req.body;
   try {
     /* const validHeures = ['11:00', '12:30', '14:00'];
     if (!validHeures.includes(heure)) {
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     const newReservation = new Reservation({
       name,
       date,
-      tableNumber,
+      number,
       reservationTime: heure,
     });
 

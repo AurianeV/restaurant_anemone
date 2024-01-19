@@ -19,6 +19,13 @@ db.once('open', () => console.log('Connecté à MongoDB'));
 const reservationsRouter = require('./routes/reservations.js');
 app.use('/reservations', reservationsRouter);
 
+const dashboardRouter = require('./routes/dashboard.js');  
+app.use('/dashboard', dashboardRouter);
+
+
+const adminRouter = require('./routes/admin.js');
+app.use('/admin', adminRouter);
+
 app.listen(port, () => {
   console.log(`Serveur en cours d'exécution sur le port ${port}`);
 });

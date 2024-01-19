@@ -9,6 +9,9 @@ import Footer from './components/footer/Footer'
 import CountDown from './components/CountDown'
 import Events from './views/Events'
 import Valeurs from './views/Valeurs'
+import AdminDashboard from './views/AdminDashboard'
+import AdminLogin from './views/AdminLogin'
+import RegisterForm from './views/RegisterForm'
 
 function App() {
     const navbarProps = {
@@ -65,6 +68,13 @@ function App() {
 
                 <Route path="/valeurs" 
                 element={<Valeurs navbarProps={navbarProps.valeurs} />} />
+
+                <Route path="/dashboard" element={<AdminDashboard />} />
+
+
+                <Route path="/admin/login" element={<AdminLogin />} />
+
+                <Route path="/admin/register" element={<RegisterForm />} />
 
                 </Routes>
             <Footer
