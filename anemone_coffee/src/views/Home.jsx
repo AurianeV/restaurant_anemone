@@ -164,10 +164,11 @@ export default function Home({ navbarProps }) {
       <Sections
         title={t('home.sectionReseaux.title')}
         text={t('home.sectionReseaux.text')}
-        image="/image_home/presentationrestau.png"
+        image="/logos/RS.png"
         isTextOnLeft={true}
         logoInsta={true}
         logoFacebook={true}
+        logoTiktok={true}
         ref={reseauxRef}
       />
     </div>

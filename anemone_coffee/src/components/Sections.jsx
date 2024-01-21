@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Sections.css'
 import { forwardRef } from 'react';
 
-const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta}, ref) => {
+const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok}, ref) => {
 
   return (
     <div ref={ref} className="section">
@@ -16,12 +16,17 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             }
             {logoFacebook &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoFacebook" src="/logos/logo_facebook.png" alt="Logo" />
+              <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo" />
               </Link>
             }
             {logoInsta &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoInsta" src="/logos/logo_instagram.png" alt="Logo" />
+              <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo" />
+              </Link>
+            }
+            {logoTiktok &&
+              <Link to={linkPage}>                     
+              <img className="navbar_logoInsta" src="/logos/RS_tiktok.png" alt="Logo" />
               </Link>
             }
         </div>

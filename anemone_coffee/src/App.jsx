@@ -36,6 +36,11 @@ function App() {
             buttonLabel: 'Découvrir'
 
         },
+        reservation: {
+            backgroundImage: '/background_header/reservation.png',
+            title: 'Réservation'
+
+        },
 
     };
 
