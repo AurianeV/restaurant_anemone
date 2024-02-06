@@ -10,6 +10,8 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json())
 
+const authenticateAdmin = require('./middleware/auth.js');
+
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erreur de connexion à MongoDB :'));
@@ -18,10 +20,6 @@ db.once('open', () => console.log('Connecté à MongoDB'));
 // Routes
 const reservationsRouter = require('./routes/reservations.js');
 app.use('/reservations', reservationsRouter);
-
-const dashboardRouter = require('./routes/dashboard.js');  
-app.use('/dashboard', dashboardRouter);
-
 
 const adminRouter = require('./routes/admin.js');
 app.use('/admin', adminRouter);

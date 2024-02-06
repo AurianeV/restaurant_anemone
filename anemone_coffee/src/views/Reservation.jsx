@@ -5,6 +5,7 @@ import NavBar from '../components/header/Navbar'
 const Reservation = ({navbarProps}) => {
   const [reservationData, setReservationData] = useState({
     name: '',
+    email:'',
     date: '',
     number: '',
     heure: '',
@@ -35,7 +36,11 @@ const Reservation = ({navbarProps}) => {
       <h2 className="reservationForm_title">Réserver une table</h2>
       <form> 
         <label className="reservationForm_label">Nom :</label>
-        <input type="text" name="name" value={reservationData.name} onChange={handleInputChange} />
+        <input type="text" name="name" placeholder="Doe" value={reservationData.name} onChange={handleInputChange} />
+
+        <label className="reservationForm_label">Adressse mail :</label>
+        <input type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={(e) => setEmail(e.target.value)} required />
+
 
         <label className="reservationForm_label">Date :</label>
         <input type="date" name="date" value={reservationData.date} onChange={handleInputChange} />

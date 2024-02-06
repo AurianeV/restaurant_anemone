@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useState } from 'react'
-
 import './Navbar.css'
 import SwitchLanguage from '../SwitchLanguage'
 import { useTranslation } from 'react-i18next';
@@ -25,13 +24,7 @@ function Navbar(props) {
       ]
     },
       { path: '/reservation', label: t('reservationLabel') },
-      { path: '/menu',
-         label: t('menuLabel'),
-         children: [
-            { path: '/menu#section-entrees', label: t('menuAppetizersLabel') },
-            { path: '/menu#section-plats', label: t('menuMainDishesLabel') },
-            { path: '/menu#section-desserts', label: t('menuDessertsLabel') },
-      ], },
+      { path: '/menu', label: t('menuLabel'),},
       { path: '/events', label: t('eventsLabel') },
       { path: '/contact', label: t('contactLabel') },
    ];
@@ -80,6 +73,11 @@ function Navbar(props) {
                </li>
                <li>
                   <SwitchLanguage />
+               </li>
+               <li>
+                  <NavLink to="/admin">
+                     <img className="navbar_logoAdmin" src="/logos/admin.png" alt="logo connexion administrateur"/>
+                  </NavLink>
                </li>
             </ul>
          </div>

@@ -4,6 +4,10 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Admin = require('../models/Admin.js');
 const router = express.Router();
+const Reservation = require('../models/Reservation.js');
+const authenticateAdmin = require('../middleware/auth.js');
+
+
 
 // Enregistrement d'un nouvel admin
 router.post('/register', async (req, res) => {
@@ -76,5 +80,44 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ success: false, message: 'Erreur lors de la connexion de l\'administrateur.' });
   }
 });
+
+
+// Route pour obtenir toutes les réservations (accessible uniquement par l'admin)
+router.get('/dashboard', async (req, res) => {
+  try {
+    const allReservations = await Reservation.find();
+    res.json(allReservations);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des réservations :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de la récupération des réservations.' });
+  }
+});
+
+/*
+
+router.post('/dashboard/accept/:reservationId', async (req, res) => {
+  const { id } = req.params;
+  try {
+    // Mettre à jour l'état de la réservation pour l'accepter
+    const reservation = await Reservation.findByIdAndUpdate(id, { accepted: true }, { new: true });
+    res.json({ success: true, reservation });
+  } catch (error) {
+    console.error('Erreur lors de l\'acceptation de la réservation :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de l\'acceptation de la réservation.' });
+  }
+});
+
+router.post('/reject/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    // Mettre à jour l'état de la réservation pour la refuser
+    const reservation = await Reservation.findByIdAndUpdate(id, { accepted: false }, { new: true });
+    res.json({ success: true, reservation });
+  } catch (error) {
+    console.error('Erreur lors du refus de la réservation :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors du refus de la réservation.' });
+  }
+});
+*/
 
 module.exports = router;

@@ -10,8 +10,9 @@ import CountDown from './components/CountDown'
 import Events from './views/Events'
 import Valeurs from './views/Valeurs'
 import AdminDashboard from './views/AdminDashboard'
-import AdminLogin from './views/AdminLogin'
-import RegisterForm from './views/RegisterForm'
+import LoginForm from './components/admin/LoginForm'
+import RegisterForm from './components/admin/RegisterForm'
+import MainAdminPage from './views/MainAdminPage'
 
 function App() {
     const navbarProps = {
@@ -74,12 +75,11 @@ function App() {
                 <Route path="/valeurs" 
                 element={<Valeurs navbarProps={navbarProps.valeurs} />} />
 
-                <Route path="/dashboard" element={<AdminDashboard />} />
+                <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+                <Route path="/admin" element={<MainAdminPage />} /> 
 
 
-                <Route path="/admin/login" element={<AdminLogin />} />
-
-                <Route path="/admin/register" element={<RegisterForm />} />
 
                 </Routes>
             <Footer

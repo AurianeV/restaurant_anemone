@@ -1,20 +1,22 @@
+// RegisterForm.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../../App.css'
 
 const RegisterForm = () => {
-    const [credentials, setCredentials] = useState({
+    const [userData, setUserData] = useState({
         username: '',
         password: '',
     });
     const [error, setError] = useState('');
 
     const handleInputChange = (e) => {
-        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+        setUserData({ ...userData, [e.target.name]: e.target.value });
     };
 
     const handleRegister = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/admin/register', credentials);
+            const response = await axios.post('http://localhost:3001/admin/register', userData);
 
             if (response.status === 201) {
                 console.log('Enregistrement réussi !');
@@ -31,17 +33,17 @@ const RegisterForm = () => {
     };
 
     return (
-        <div>
-            <h2>Admin Registration</h2>
+        <div className="registerForm">
+            <h2 className="registerForm_title">Création compte administrateur</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <label>Username:</label>
-            <input type="text" name="username" value={credentials.username} onChange={handleInputChange} />
+            <label className="registerForm_label"> Identifiant:</label>
+            <input type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
-            <label>Password:</label>
-            <input type="password" name="password" value={credentials.password} onChange={handleInputChange} />
+            <label className="registerForm_label">Mot de passe:</label>
+            <input className="registerForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
 
-            <button type="button" onClick={handleRegister}>
-                Register
+            <button className="registerForm_button" type="button" onClick={handleRegister}>
+                Enregistrer
             </button>
         </div>
     );
