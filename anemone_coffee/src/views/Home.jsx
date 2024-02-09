@@ -101,7 +101,6 @@ export default function Home({ navbarProps }) {
       <NavBar {...navbarProps} 
         ref={headerRef}
       />
-      <MainAdminPage/>
       <Sections
         title={t('home.sectionDiscover.title')}
         text={t('home.sectionDiscover.text')}

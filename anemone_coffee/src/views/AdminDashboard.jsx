@@ -1,7 +1,7 @@
 // AdminDashboard.jsx
 
 import ReservationsList from '../components/admin/ReservationsList'
-import AdminList from '../components/admin/AdminList'
+import AdminProfile from '../components/admin/AdminProfile'
 
 const AdminDashboard = () => {
   
@@ -10,6 +10,7 @@ const AdminDashboard = () => {
     <div>
       <h2>Réservations</h2>
       <ReservationsList/>
+      <AdminProfile/>
     </div>
   );
 };

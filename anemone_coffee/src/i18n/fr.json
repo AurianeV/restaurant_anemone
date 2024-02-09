@@ -71,6 +71,16 @@
             "text":"Rendez-vous le 25 janvier pour notre soirée d’ouverture. Au programme : des tapas, du vin, de la musique et des copains ! Bonne ambiance garantie, on a hâte de vous retrouver. "
         },
 
+        "menu": {
+            "titleBrunch":"Notre brunch",
+            "textBrunch": "Pour le petit déjeuner on vous propose toute sorte de boissons chaudes de qualité, vous retrouvez également chaque un jus frais pressé de saison. Seront également disponible nos cakes et autres gâteaux ou encore notre granola servit avec du fromage. On vous propose du brunch toute la semaine, votre menu est à composer vous-même avec une assiette salée et une assiette sucrée. Vous retrouverez en autre : des œufs Bénédicte, avocado toast, pancakes, granola… Vous pouvez également venir déjeuner chez Anémone avec nos plats salés : avocado toast, pancakes de sarrasin, œufs Bénédicte…",
+            "titleBoissons":"Nos boissons",
+            "textBoissons":"Vous pouvez déguster nos cafés, boissons chaudes et fraîches tout au long de la journée. Chez Anémone on vous propose du café de spécialité et des de vrais boissons réalisées par un barista : cappuccino, flat white, latte, matcha latte, chai latte, sésame latte… Pour le gouter venez déguster nos pâtisseries maison : cookies, brownie peanut butter, banana bread…",
+            "titleDinner":"Nos tapas",
+            "textDinner":"Au diner chez Anémone c’est tapas à partager, des plats conçus pour se déguster à plusieurs avec des produits de qualité et des saveurs innovantes. Vous retrouverez également des planches, du vin et des bières locales. ",
+            "textButton":"Découvrir nos cartes"
+        },
+
         "footer" :{
             "titleAdress":"Adresse", 
             "adress":"rue des carreaux",

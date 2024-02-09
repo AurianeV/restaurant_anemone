@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Sections.css'
 import { forwardRef } from 'react';
 
-const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok}, ref) => {
+const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal}, ref) => {
 
   return (
     <div ref={ref} className="section">
@@ -11,6 +11,10 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
         <div className="section-text">
             <h2>{title}</h2>
             <p>{text}</p>
+            
+            {showButton && textButtonModal && (
+            <button onClick={buttonAction}>{textButtonModal}</button>
+          )}
             {textButton &&
               <Link to={linkPage}><button>{textButton}</button></Link>
             }
@@ -38,9 +42,12 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
         <div className="section-text">
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link to={linkPage}>
-              <button>{textButton}</button>
-            </Link>
+            {showButton && textButtonModal && (
+            <button onClick={buttonAction}>{textButtonModal}</button>
+          )}
+            {textButton &&
+              <Link to={linkPage}><button>{textButton}</button></Link>
+            }
         </div>
       )}
     </div>

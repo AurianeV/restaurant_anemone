@@ -7,7 +7,7 @@ const router = express.Router();
 const Reservation = require('../models/Reservation.js');
 const authenticateAdmin = require('../middleware/auth.js');
 
-
+const transporter = require('../services/email.js');
 
 // Enregistrement d'un nouvel admin
 router.post('/register', async (req, res) => {
@@ -94,13 +94,28 @@ router.get('/dashboard', async (req, res) => {
 });
 
 /*
-
+// Route pour accepter une reservation en tant qu'administrateur
 router.post('/dashboard/accept/:reservationId', async (req, res) => {
-  const { id } = req.params;
   try {
-    // Mettre à jour l'état de la réservation pour l'accepter
-    const reservation = await Reservation.findByIdAndUpdate(id, { accepted: true }, { new: true });
-    res.json({ success: true, reservation });
+    const reservationId = req.params.reservationId;
+    const reservation = await Reservation.findById(reservationId);
+
+    if (!reservation) {
+      return res.status(404).json({ success: false, message: 'Réservation non trouvée.' });
+    }
+
+    const clientEmail = reservation.email;
+    
+    // Envoi de l'e-mail au client pour informer de l'acceptation de la réservation
+    await transporter.sendMail({
+      from: 'anemonerestau@gmail.com',
+      to: clientEmail,
+      subject: 'Confirmation de réservation',
+      text: 'Votre réservation a été acceptée. Merci de votre confiance !',
+    });
+    console.log(clientEmail)
+
+    res.status(200).json({ success: true, message: 'Réservation acceptée avec succès.' });
   } catch (error) {
     console.error('Erreur lors de l\'acceptation de la réservation :', error);
     res.status(500).json({ success: false, message: 'Erreur lors de l\'acceptation de la réservation.' });
@@ -119,5 +134,4 @@ router.post('/reject/:id', async (req, res) => {
   }
 });
 */
-
 module.exports = router;

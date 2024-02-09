@@ -35,6 +35,16 @@
         }
     },
 
+    "menu": {
+        "titleBrunch": "Our Brunch",
+        "textBrunch": "For breakfast, we offer a variety of high-quality hot drinks, as well as freshly squeezed seasonal juices. Also available are our cakes and other pastries, or our granola served with cheese. We offer brunch all week long, where you can compose your own menu with a savory dish and a sweet dish. Among other options, you'll find Eggs Benedict, avocado toast, pancakes, granola... You can also have lunch at Anémone with our savory dishes: avocado toast, buckwheat pancakes, Eggs Benedict...",
+        "titleBoissons": "Our Drinks",
+        "textBoissons": "You can enjoy our coffees, hot and cold drinks throughout the day. At Anémone, we offer specialty coffee and real drinks made by a barista: cappuccino, flat white, latte, matcha latte, chai latte, sesame latte... For a snack, come and enjoy our homemade pastries: cookies, peanut butter brownie, banana bread...",
+        "titleDinner": "Our Tapas",
+        "textDinner": "For dinner at Anémone, it's tapas to share, dishes designed to be enjoyed with others, featuring quality products and innovative flavors. You'll also find platters, local wine, and beers.",
+        "textButton": "Discover Our Menus"
+    },
+    
     "footer" :{
         "titleAdress":"Adress", 
         "adress":"street of carreaux",

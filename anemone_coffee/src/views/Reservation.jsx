@@ -39,7 +39,7 @@ const Reservation = ({navbarProps}) => {
         <input type="text" name="name" placeholder="Doe" value={reservationData.name} onChange={handleInputChange} />
 
         <label className="reservationForm_label">Adressse mail :</label>
-        <input type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={handleInputChange} required />
 
 
         <label className="reservationForm_label">Date :</label>

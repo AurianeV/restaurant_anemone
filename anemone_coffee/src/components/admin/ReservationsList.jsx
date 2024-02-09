@@ -19,7 +19,7 @@ const ReservationList = () => {
     fetchReservations();
   }, []);
 
-  /*const handleAccept = async (reservation) => {
+  const handleAccept = async (reservation) => {
     try {
       const response = await axios.post(`http://localhost:3001/admin/dashboard/accept/${reservation._id}`);
       fetchReservations();
@@ -35,7 +35,7 @@ const ReservationList = () => {
     } catch (error) {
       console.error('Erreur lors du refus de la réservation :', error);
     }
-  };*/
+  };
   
 
   return (
@@ -51,8 +51,8 @@ const ReservationList = () => {
             <p>Date : {new Date(reservation.date).toLocaleDateString()}</p>
             <p>Heure : {reservation.reservationTime}</p>
             <p>Nombre de personnes : {reservation.number}</p>
-            {/*<button onClick={() => handleAccept(reservation)}>Accepter</button>
-            <button onClick={() => handleReject(reservation)}>Refuser</button> */}
+            <button onClick={() => handleAccept(reservation)}>Accepter</button>
+            <button onClick={() => handleReject(reservation)}>Refuser</button> 
           </li>
         ))}
       </ul>
