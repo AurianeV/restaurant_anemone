@@ -1,15 +1,9 @@
 import React from 'react';
-import './ImageCarre.css'; 
+import './ImageCarre.scss'; 
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 import  { forwardRef } from 'react';
 
-
-const Image = ({ src, alt }) => (
-  <div className="image-container">
-    <img src={src} alt={alt} />
-  </div>
-);
 
   const ImageCarre = forwardRef(({ isTextOnRight, image1, image2, image3, image4, title, text, textButton, alt1, alt2, alt3, alt4, linkPage }, ref) => {
 
@@ -30,12 +24,12 @@ const Image = ({ src, alt }) => (
             </div>
         )}
         <div className="image-row">
-            <img className="image-container" src={image1} alt={alt1} />
-            <img className="image-container" src={image2} alt={alt2} />
+            <img  src={image1} alt={alt1} />
+            <img  src={image2} alt={alt2} />
         </div>
         <div className="image-row">
-            <img className="image-container" src={image3} alt={alt3} />
-            <img className="image-container" src={image4} alt={alt4} />
+            <img  src={image3} alt={alt3} />
+            <img  src={image4} alt={alt4} />
         </div>
         {isTextOnRight && (
             <div className="text-section">

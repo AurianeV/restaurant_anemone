@@ -1,0 +1,22 @@
+.transition {
+  position: relative;
+
+  .transition_title {
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    color: white; 
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.transition_image {
+  width: 100%; 
+  height: auto;
+}

@@ -62,10 +62,6 @@ function App() {
                     element={<Reservation navbarProps={navbarProps.reservation} />}
                 />
                 <Route
-                    path="/contact"
-                    element={<Contact navbarProps={navbarProps.contact} />}
-                />
-                <Route
                     path="/menu"
                     element={<Menu navbarProps={navbarProps.menu} />}
                 />

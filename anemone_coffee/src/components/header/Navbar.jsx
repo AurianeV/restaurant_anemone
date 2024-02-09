@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useState } from 'react'
-import './Navbar.css'
+import './Navbar.scss'
 import SwitchLanguage from '../SwitchLanguage'
 import { useTranslation } from 'react-i18next';
 
 function Navbar(props) {
    const { t } = useTranslation();
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+   
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -26,7 +26,7 @@ function Navbar(props) {
       { path: '/reservation', label: t('reservationLabel') },
       { path: '/menu', label: t('menuLabel'),},
       { path: '/events', label: t('eventsLabel') },
-      { path: '/contact', label: t('contactLabel') },
+      /*{ path: '/contact', label: t('contactLabel') }*/,
    ];
 
    return (

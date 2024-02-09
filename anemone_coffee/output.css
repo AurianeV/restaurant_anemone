@@ -1,27 +1,23 @@
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.transition {
+  position: relative;
 }
-.section .section-text {
-  flex: 1;
-  padding: 20px;
-}
-.section .section-image {
-  flex: 1;
-  margin-top: 20px;
-}
-.section .section-image .section-image-photo {
-  max-width: 100%;
+
+.transition_image {
+  width: 100%;
   height: auto;
 }
 
-.text-left {
-  flex-direction: row;
+.transition_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
-.image-left {
-  flex-direction: row-reverse;
+h3 {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,5 +1,5 @@
 import React from 'react';
-import './TransitionImg.css'
+import './TransitionImg.scss'
 
 function TransitionImg({ imageTransition, titleTransition }) {
   return (
