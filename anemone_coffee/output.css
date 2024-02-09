@@ -1,0 +1,27 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .section-text {
+  flex: 1;
+  padding: 20px;
+}
+.section .section-image {
+  flex: 1;
+  margin-top: 20px;
+}
+.section .section-image .section-image-photo {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-left {
+  flex-direction: row;
+}
+
+.image-left {
+  flex-direction: row-reverse;
+}
+
+/*# sourceMappingURL=output.css.map */

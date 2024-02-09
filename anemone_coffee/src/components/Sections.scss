@@ -1,0 +1,51 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .section-text {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+
+    h2 {
+      font-size: 21px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 14px;
+      font-size: 18px; 
+    }
+
+    @media screen and (min-width: 1025px) {
+      padding: 14px;
+      font-size: 18px; 
+    }
+
+    h2 {
+      font-size: 27px;
+    }
+  }
+
+  .section-image {
+    flex: 1;
+    margin-top: 20px;
+
+    .section-image-photo {
+      max-width: 100%;
+      height: auto;
+
+      @media screen and (min-width: 768px) {
+        max-width: 60%;
+      }
+    }
+  }
+}
+
+.text-left {
+  flex-direction: row;
+}
+
+.image-left {
+  flex-direction: row-reverse;
+}

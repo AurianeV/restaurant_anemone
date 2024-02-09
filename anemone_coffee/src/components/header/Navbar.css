@@ -1,12 +1,12 @@
 nav {
-    justify-content: space-around;
+    position: relative; /* Assurez-vous que la position est relative pour que les éléments enfants puissent être positionnés par rapport à ce conteneur */
     width: 100%;
     min-height: 75px;
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
-    height:800px;
-    
+    height: 800px;
+    overflow: hidden; /* Empêche le contenu enfant de déborder */
 }
 
 .navbar_container_title {
@@ -35,6 +35,8 @@ nav {
     list-style-type:none;
     padding:1rem;
     text-transform: uppercase;
+    font-weight: 600;
+
 }
 .navbar_logo {
     width:150px;
@@ -53,11 +55,13 @@ nav {
 }
 
 .navbar_container_title {
-    color:white
+    color:white;
+    font-family: 'Protest Revolution', sans-serif;
+
 }
 
 .navbar_container_text{
-    color:white
+    color:white;
 }
 
 .navbar_logoInsta {
@@ -92,13 +96,74 @@ nav {
   }
   
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #e0e0e0;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  .dropdown:hover button {
-    background-color: #3e8e41;
-  }
+
+.buttonLangue {
+    padding:2px;
+    background-color: rgba(226, 226, 226, 0.575);
+    margin-left: 2px;;
+}
+
+/* Ajoutez ces styles à votre fichier CSS */
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .navbar_link {
+        display: block;
+    }
+    
+    .navbar_item {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .navbar_logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .navbar_container {
+        padding-top: 50px;
+    }
+    
+    .navbar_container_title {
+        font-size: 1.5rem;
+    }
+    
+    .navbar_container_text {
+        font-size: 0.9rem;
+    }
+
+    .navbar_link.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 999;
+        padding: 1rem;
+    }
+    
+    .navbar_item {
+        padding: 1rem 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+}

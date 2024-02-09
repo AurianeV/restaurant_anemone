@@ -32,7 +32,7 @@ function App() {
         },
 
         menu: {
-            backgroundImage: '/header_image_concept.png',
+            backgroundImage: '/background_header/menus.png',
             title: 'Notre menu',
             buttonLabel: 'Découvrir'
 
