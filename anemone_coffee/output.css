@@ -1,23 +1,14 @@
-.transition {
-  position: relative;
-}
-
-.transition_image {
-  width: 100%;
-  height: auto;
-}
-
-.transition_title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
   color: white;
+  padding: 10px;
 }
 
-h3 {
-  font-family: "Protest Revolution", sans-serif;
-  font-size: 24px;
+.footer_logo {
+  width: 200px;
 }
 
 /*# sourceMappingURL=output.css.map */

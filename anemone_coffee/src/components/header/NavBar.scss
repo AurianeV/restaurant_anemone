@@ -1,3 +1,5 @@
+
+
 nav {
     position: relative;
     width: 100%;
@@ -7,157 +9,96 @@ nav {
     background-position: center center; 
     height: 800px;
     overflow: hidden;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    min-height: 75px;
-}
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 75px;
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
+        a {
+            color: white;
+            text-decoration: none;
+        }
 
-.navbar_link {
-    display: flex;
-    align-items: center;
-}
+        .navbar_link {
+            display: flex;
+            align-items: center;
 
-.navbar_item {
-    list-style-type: none;
-    padding: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
+            .navbar_item {
+                list-style-type: none;
+                padding: 1rem;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
 
-.navbar_logo {
-    width: 150px;
-    height: 150px;
-    margin-left: 10px;
-}
+            .navbar_logoInsta {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .navbar_logoFacebook {
+                width: 40px;
+                height: 40px;
+            }
 
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .dropdown-content a:hover {
+                background-color: #e0e0e0;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        }
 
-.navbar_container {
-    padding-top: 200px;
-}
+        .navbar_logo {
+            width: 150px;
+            height: 150px;
+            margin-left: 10px;
+        }
 
-.navbar_container_title {
-    color: white;
-    font-family: 'Protest Revolution', sans-serif;
-}
+        
+    }
+    .navbar_container {
+        padding-top: 200px;
 
-.navbar_container_text {
-    color: white;
-}
+        h1 {
+            color: white;
+            font-family: 'Protest Revolution', sans-serif;
+        }
 
-.navbar_logoInsta {
-    width: 30px;
-    height: 30px;
-}
+        p {
+            color: white;
+        }
+    }
 
-.navbar_logoFacebook {
-    width: 40px;
-    height: 40px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #e0e0e0;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
+    
 .buttonLangue {
     padding: 2px;
     background-color: rgba(226, 226, 226, 0.575);
     margin-left: 2px;
 }
-
-/* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
-    .navbar_link {
-        display: block;
-    }
-    
-    .navbar_item {
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-    
-    .navbar_logo {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .navbar_container {
-        padding-top: 50px;
-    }
-    
-    .navbar_container_title {
-        font-size: 1.5rem;
-    }
-    
-    .navbar_container_text {
-        font-size: 0.9rem;
-    }
-
-    .navbar_link.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 999;
-        padding: 1rem;
-    }
-    
-    .navbar_item {
-        padding: 1rem 0;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
 }
