@@ -7,14 +7,20 @@ import { useTranslation } from 'react-i18next';
 function Navbar(props) {
    const { t } = useTranslation();
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
    
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
+   const toggleDropdown = () => {
+      setIsDropdownOpen((prev) => !prev);
+   };
 
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
-  };
+   const closeDropdown = () => {
+      setIsDropdownOpen(false);
+   };
+
+   const toggleMobileMenu = () => {
+      setIsMobileMenuOpen((prev) => !prev);
+      setIsDropdownOpen(false); 
+   };
 
    const navLinks = [
       { path: '/connaitre', label: t('knowUsLabel'),
@@ -36,8 +42,9 @@ function Navbar(props) {
             <NavLink to="/">
                <img className="navbar_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo" />
             </NavLink>
-            <ul className="navbar_link">
-               {navLinks.map((link, index) => (
+            <button className="burger-icon" onClick={toggleMobileMenu}>Menu</button>
+            <ul className={`navbar_link ${isMobileMenuOpen ? 'active' : ''}`}>
+              {navLinks.map((link, index) => (
                   <li className="navbar_item" key={index}>
                      {link.children ? (
                      <div className="dropdown" onBlur={closeDropdown}>
