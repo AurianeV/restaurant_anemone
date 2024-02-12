@@ -83,7 +83,7 @@ router.post('/login', async (req, res) => {
 
 
 // Route pour obtenir toutes les réservations (accessible uniquement par l'admin)
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', authenticateAdmin, async (req, res) => {
   try {
     const allReservations = await Reservation.find();
     res.json(allReservations);

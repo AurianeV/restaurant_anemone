@@ -13,8 +13,13 @@ import AdminDashboard from './views/AdminDashboard'
 import LoginForm from './components/admin/LoginForm'
 import RegisterForm from './components/admin/RegisterForm'
 import MainAdminPage from './views/MainAdminPage'
+import {useState} from 'react'
+import { Navigate } from 'react-router-dom';
 
 function App() {
+
+    const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+
     const navbarProps = {
         home: {
             backgroundImage: '/background_header/home.png',
@@ -71,7 +76,8 @@ function App() {
                 <Route path="/valeurs" 
                 element={<Valeurs navbarProps={navbarProps.valeurs} />} />
 
-                <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                <Route path="/admin/dashboard" element={isAdminAuthenticated ? <AdminDashboard /> : <Navigate to="/admin" />} />
+
 
                 <Route path="/admin" element={<MainAdminPage />} /> 
 

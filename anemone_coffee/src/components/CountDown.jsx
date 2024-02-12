@@ -1,6 +1,6 @@
 // Countdown.jsx
 import React, { useState, useEffect } from 'react';
-import './CountDown.css'; 
+import './CountDown.scss'; 
 import { useTranslation } from 'react-i18next';
 
 function Countdown() {

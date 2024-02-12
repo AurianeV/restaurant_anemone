@@ -24,12 +24,12 @@ import  { forwardRef } from 'react';
             </div>
         )}
         <div className="image-row">
-            <img  src={image1} alt={alt1} />
-            <img  src={image2} alt={alt2} />
+            <img  className="image-row1" src={image1} alt={alt1} />
+            <img  className="image-row2" src={image2} alt={alt2} />
         </div>
         <div className="image-row">
-            <img  src={image3} alt={alt3} />
-            <img  src={image4} alt={alt4} />
+            <img  className="image-row3" src={image3} alt={alt3} />
+            <img  className="image-row4" src={image4} alt={alt4} />
         </div>
         {isTextOnRight && (
             <div className="text-section">
