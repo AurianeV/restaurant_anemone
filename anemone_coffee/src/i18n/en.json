@@ -12,27 +12,57 @@
     "conceptTitle": "Our Concept",
     "conceptText": "Explore our unique concept.",
     "reservationTitle": "Make a Reservation",
-    "menuAppetizersLabel": "Appetizers",
-  "menuMainDishesLabel": "Main Dishes",
-  "menuDessertsLabel": "Desserts",
     "reservationText": "Book your table today.",
     "menuTitle": "Our Menu",
     "menuText": "Discover our delicious dishes.",
-    "contactTitle": "Contact Us",
-    "contactText": "Get in touch with us.",
     "transitionTitle1" : "The coffee shop",
     
     "home": {
+        "transition" : {
+            "title_coffee":"The coffee shop",
+            "titleBrunch":"The brunch",
+            "titleTapas":"Aperitifs and Tapas"
+        },
         "sectionDiscover": {
             "title":"What to expect at Anemone Café?",
             "text": "Pick up your breakfast before work. Be able to come drink coffee or eat at any time of the day. Enjoy good specialty coffee and discover new drinks.\n\nEnjoy the time to taste with our homemade pastries. Attend regular events. Meet at the aperitif time and enjoy our tapas to share. Have a drink with friends. Anemone is finally a pleasant and friendly coffee shop in the suburbs that is committed to recreating the link between us. That's why we moved to the city center, we're counting on you to visit.",
-            "values":"Our values"
+            "buttonValues":"Our values"
         },
-        "sectionCarre": {
-            "title":"Coffee Shop & Pastries",
-            "text":"Our coffee shop is minimalist but unique, a place where everyone can find their place. We offer carefully selected speciality coffees roasted in the Val d'Oise. You'll also find all sorts of hot drinks, cold drinks and seasonal juices.\n\n Every morning we prepare fresh pastries for you to enjoy throughout the day. And if you don't have time to sit down, don't forget that everything is available to take away.",
-            "menu":"Our drinks"
+        "sectionCoffeeShop_Patisseries": {
+            "title":"Coffee Shop & pastries",
+            "text":"Our coffee shop is minimalist yet unique, a place where everyone can find their place. We offer carefully selected specialty coffees roasted in the Val d'Oise. You'll also find all kinds of hot drinks, cold beverages and seasonal juices. Every morning we prepare fresh pastries for you to enjoy throughout the day. And if you don't have time to sit down, don't forget that everything is available to take away",
+            "buttonBoisson":"Our drinks"
+        },
+        "sectionBrunch": {
+            "title":"Brunch non-stop",
+            "text":"There's no time for brunch! We'll be brunching from Wednesday to Sunday from 11am to 5pm non-stop. On the menu, savory and sweet gourmet dishes, pastries, hot and cold drinks... In short, there's something for everyone.",
+            "buttonBoisson":"Our brunch"
+        },
+        "sectionTapas" : {
+            "title":"Dishes to share in the form of tapas",
+            "text":"Sharing is at the heart of our work at Anémone Café, and it's also what we want to convey through our cuisine. That's why every evening we offer our dishes as tapas to share. Accompanied by a glass of good wine, all the ingredients are brought together for a great evening. Beautiful combinations that sublimate quality products, that's our watchword.",
+            "buttonTapas":"Our tapas"
+        },
+        "sectionReseaux": {
+            "title":"Our social networks",
+            "text":"Come and get to know us on social networks, we're super active and you'll be up to date with the latest news before anyone else. If you're still not convinced, we often organize contests with prizes. It happens here ->"
         }
+    },
+
+    "values":{
+        "sectionPartenariats": {
+            "title":"our partnerships",
+            "text":"Our partnerships with local producers: It would be a shame to have quality products at hand and not take advantage of them! That's why Anémone Café has decided to partner with local producers to guarantee you the best on your plate, and to promote short supply chains wherever possible. In the interests of transparency and appreciation of their work, we feel it's important to present them to you below:-The coffee: -The cheese: -The eggs: -The charcuterie"
+        },
+        "sectionDechets": {
+            "title":"Waste recovery",
+            "text":"Every little action counts, and it seemed crazy to us as restaurateurs not to make the most of our food waste. So we teamed up with..., which takes advantage of all the café's food waste to turn it into compost "
+        }
+    },
+
+    "event": {
+        "title":"! Big opening night!",
+        "text":"See you on January 25 for our opening party. On the program: tapas, wine, music and friends! We look forward to seeing you there. "
     },
 
     "menu": {
@@ -43,6 +73,16 @@
         "titleDinner": "Our Tapas",
         "textDinner": "For dinner at Anémone, it's tapas to share, dishes designed to be enjoyed with others, featuring quality products and innovative flavors. You'll also find platters, local wine, and beers.",
         "textButton": "Discover Our Menus"
+    },
+
+    "reservation": {
+        "title":"Reserve a table", 
+        "name":"Name :",
+        "date":"Date :",
+        "heure":"Time :",
+        "choixHeure":"Choose a time",
+        "numberPeople": "Number of people :",
+        "reservation": "Book"
     },
     
     "footer" :{

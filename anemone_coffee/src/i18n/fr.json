@@ -7,21 +7,13 @@
     "eventsLabel": "Évènements",
     "menuLabel": "Menus",
     "contactLabel": "Contact",
-    "transitionTitle1" : "Le coffee shop",
-        "homeTitle": "Bienvenue chez Anémone Coffee",
-        "homeText": "CAFÉ - BRUNCH - CUISINE",
-        "conceptTitle": "Notre Concept",
-        "conceptText": "Découvrez notre concept unique.",
-        "reservationTitle": "Réservez une table",
-        "reservationText": "Réservez votre table dès aujourd'hui.",
-        "menuTitle": "Notre Menu",
-        "menuAppetizersLabel": "Entrée",
-        "menuMainDishesLabel": "Plat",
-        "menuDessertsLabel": "Desserts",
-        "menuText": "Découvrez nos plats délicieux.",
-        "contactTitle": "Contactez-nous",
-        "contactText": "Prenez contact avec nous.",
-
+    "homeTitle": "Bienvenue chez Anémone Coffee",
+    "homeText": "CAFÉ - BRUNCH - CUISINE",
+    "conceptTitle": "Notre Concept",
+    "conceptText": "Découvrez notre concept unique.",
+    "reservationTitle": "Réservez une table",
+    "reservationText": "Réservez votre table dès aujourd'hui.",
+    "menuTitle": "Notre Menu",
 
         "home": {
             "transition" : {
@@ -79,6 +71,16 @@
             "titleDinner":"Nos tapas",
             "textDinner":"Au diner chez Anémone c’est tapas à partager, des plats conçus pour se déguster à plusieurs avec des produits de qualité et des saveurs innovantes. Vous retrouverez également des planches, du vin et des bières locales. ",
             "textButton":"Découvrir nos cartes"
+        },
+
+        "reservation": {
+            "title":"Réserver une table", 
+            "name":"Nom :",
+            "date":"Date :",
+            "heure":"Heure :",
+            "choixHeure":"Choisissez une heure",
+            "numberPeople": "Nombre de personnes :",
+            "reservation": "Réserver"
         },
 
         "footer" :{

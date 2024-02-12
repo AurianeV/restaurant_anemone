@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import NavBar from '../components/header/Navbar'
+import { useTranslation } from 'react-i18next';
 
 const Reservation = ({navbarProps}) => {
+  const { t } = useTranslation();
+
   const [reservationData, setReservationData] = useState({
     name: '',
     email:'',
@@ -33,27 +36,27 @@ const Reservation = ({navbarProps}) => {
     <>
     <NavBar {...navbarProps} />
     <div className="reservationForm">
-      <h2 className="reservationForm_title">Réserver une table</h2>
+      <h2 className="reservationForm_title">{t('reservation.title')}</h2>
       <form> 
-        <label className="reservationForm_label">Nom :</label>
+        <label className="reservationForm_label">{t('reservation.name')}</label>
         <input type="text" name="name" placeholder="Doe" value={reservationData.name} onChange={handleInputChange} />
 
-        <label className="reservationForm_label">Adressse mail :</label>
-        <input type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={handleInputChange} required />
+        {/*<label className="reservationForm_label">Adressse mail :</label>
+        <input type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={handleInputChange} required />*/}
 
 
-        <label className="reservationForm_label">Date :</label>
+        <label className="reservationForm_label">{t('reservation.date')}</label>
         <input type="date" name="date" value={reservationData.date} onChange={handleInputChange} />
 
-        <label className="reservationForm_label">Heure :</label>
+        <label className="reservationForm_label">{t('reservation.heure')}</label>
         <select name="heure" onChange={handleInputChange} value={reservationData.heure}>
-          <option value="">Choisissez une heure</option>
-          <option value="11:00">11:00 - 12:30 (30 places)</option>
-          <option value="12:30">12:30 - 14:00 (30 places)</option>
-          <option value="14:00">14:00 - 15:30 (30 places)</option>
+          <option value="">{t('reservation.choixHeure')}</option>
+          <option value="11:00">11:00 - 12:30</option>
+          <option value="12:30">12:30 - 14:00</option>
+          <option value="14:00">14:00 - 15:30</option>
         </select>
 
-        <label className="reservationForm_label">Nombre de personnes :</label>
+        <label className="reservationForm_label">{t('reservation.numberPeople')}</label>
         <input
           type="number"
           name="number"
@@ -62,7 +65,7 @@ const Reservation = ({navbarProps}) => {
         />
 
         <button className="reservationForm_button" type="button" onClick={handleReservation}>
-          Réserver
+        {t('reservation.reservation')}
         </button>
       </form>
     </div>
