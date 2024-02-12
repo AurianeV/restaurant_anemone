@@ -10,7 +10,7 @@ const AdminDashboard = ({isAuthenticated}) => {
   const navigate = useNavigate();
 
   if (!isAuthenticated) {
-    // Si l'utilisateur n'est pas authentifié, redirigez-le vers la page de connexion ou une autre page
+    // Si l'utilisateur n'est pas authentifié, redirection vers la page de connexion ou d'inscription
     navigate('/admin');
     return null;
   }

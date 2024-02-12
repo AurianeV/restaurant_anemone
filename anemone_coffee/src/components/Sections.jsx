@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Sections.scss'
 import { forwardRef } from 'react';
 
-const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal}, ref) => {
+const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal, alt}, ref) => {
 
   return (
     <div ref={ref} className="section">
@@ -20,12 +20,12 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             }
             {logoFacebook &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo" />
+              <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo facebook" />
               </Link>
             }
             {logoInsta &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo" />
+              <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo instagram" />
               </Link>
             }
             {logoTiktok &&
@@ -36,7 +36,7 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
         </div>
       )}
       <div className="section-image">
-        <img className="section-image-photo" src={image} alt="Section Image" />
+        <img className="section-image-photo" src={image} alt={alt}/>
       </div>
       {!isTextOnLeft && (
         <div className="section-text">

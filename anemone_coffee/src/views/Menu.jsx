@@ -31,6 +31,7 @@ export default function Menu({navbarProps}){
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}
         showButton={true}
+        alt="photo d'une assiette de brunch"
       />
       <Sections
         title={t('menu.titleBoissons')}
@@ -40,6 +41,7 @@ export default function Menu({navbarProps}){
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}
         showButton={true}
+        alt="photo d'un café et chai latte"
       />
       <Sections
         title={t('menu.titleDinner')}
@@ -49,6 +51,7 @@ export default function Menu({navbarProps}){
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}
         showButton={true}
+        alt="photo de tapas"
       />
 
 

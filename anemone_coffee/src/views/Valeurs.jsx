@@ -18,13 +18,17 @@ function Valeurs({ navbarProps }) {
                 image4='/image_values/carre_partenariats/16.png'
                 title={t('values.sectionPartenariats.title')}
                 text={t('values.sectionPartenariats.text')}
-                alt="image1"
+                alt1="photo fromage"
+                alt2="photo café"
+                alt3="photo grains de café"
+                alt4="photo carottes"
             />
              <Sections
                 title={t('values.sectionDechets.title')}
                 text={t('values.sectionDechets.text')}
                 image="/image_home/presentationrestau.png"
                 isTextOnLeft={true}
+                alt="photo dechets"
             />
             
         </div>

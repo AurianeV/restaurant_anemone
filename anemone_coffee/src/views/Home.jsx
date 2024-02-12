@@ -2,7 +2,6 @@ import NavBar from '../components/header/NavBar'
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
 import TransitionImg from '../components/TransitionImage/TransitionImg'
-import PreLoader from '../components/PreLoader';
 import ImageCarre from '../components/ImageCarre'
 import Reservation from '../components/Reservation'
 import 'intersection-observer'; 
@@ -109,6 +108,7 @@ export default function Home({ navbarProps }) {
         textButton={t('home.sectionDiscover.buttonValues')}
         linkPage="/valeurs"
         ref={discoverRef}
+        alt="photo d'un restaurateur"
       />
       <TransitionImg
         imageTransition="/transition1.png"
@@ -123,7 +123,10 @@ export default function Home({ navbarProps }) {
         title={t('home.sectionCoffeeShop_Patisseries.title')}
         text={t('home.sectionCoffeeShop_Patisseries.text')}
         textButton={t('home.sectionCoffeeShop_Patisseries.buttonBoisson')}
-        alt="image1"
+        alt1="photo brownie"
+        alt2="photo café"
+        alt3="photo café"
+        alt4="photo smoothie"
         linkPage="/Menus-Boissons.pdf"
         ref={coffeeShopRef} 
         />
@@ -137,6 +140,10 @@ export default function Home({ navbarProps }) {
         image2="/image_home/carre_brunch/6.png"
         image3="/image_home/carre_brunch/7.png"
         image4="/image_home/carre_brunch/8.png"
+        alt1="photo brunch"
+        alt2="photo avocado toast"
+        alt3="photo pancakes"
+        alt4="photo café"
         title={t('home.sectionBrunch.title')}
         text={t('home.sectionBrunch.text')}
         textButton={t('home.sectionBrunch.buttonBoisson')}
@@ -153,6 +160,10 @@ export default function Home({ navbarProps }) {
         image2="/image_home/carre_tapas/10.png"
         image3="/image_home/carre_tapas/11.png"
         image4="/image_home/carre_tapas/12.png"
+        alt1="photo personne à table"
+        alt2="photo assiette nourriture"
+        alt3="photo assiette nourriture"
+        alt4="photo vin"
         title={t('home.sectionTapas.title')}
         text={t('home.sectionTapas.text')}
         textButton={t('home.sectionTapas.buttonTapas')}

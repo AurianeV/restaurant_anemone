@@ -40,7 +40,7 @@ function Navbar(props) {
       onMouseLeave={closeDropdown} >
          <div className="navbar">
             <NavLink to="/">
-               <img className="navbar_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo" />
+               <img className="navbar_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo Anemone Coffee" />
             </NavLink>
             <button className="burger-icon" onClick={toggleMobileMenu}>Menu</button>
             <ul className={`navbar_link ${isMobileMenuOpen ? 'active' : ''}`}>
@@ -70,12 +70,12 @@ function Navbar(props) {
                ))}
                <li>
                   <NavLink to="/">
-                     <img className="navbar_logoInsta" src="/logos/logo_instagram.png" alt="Logo" />
+                     <img className="navbar_logoInsta" src="/logos/logo_instagram.png" alt="Logo instagram" />
                   </NavLink>
                </li>
                <li>
                   <NavLink to="/">
-                     <img className="navbar_logoFacebook" src="/logos/logo_facebook.png" alt="Logo" />
+                     <img className="navbar_logoFacebook" src="/logos/logo_facebook.png" alt="Logo facebook" />
                   </NavLink>
                </li>
                <li>
