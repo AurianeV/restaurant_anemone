@@ -47,6 +47,10 @@ function App() {
             title: 'Réservation'
 
         },
+        admin: {
+            backgroundImage: '/background_header/photo_connexion.png',
+            title: 'Connexion / Enregistrement'
+        }
 
     };
 
@@ -79,7 +83,7 @@ function App() {
                 <Route path="/admin/dashboard" element={isAdminAuthenticated ? <AdminDashboard /> : <Navigate to="/admin" />} />
 
 
-                <Route path="/admin" element={<MainAdminPage />} /> 
+                <Route path="/admin" element={<MainAdminPage navbarProps={navbarProps.admin}/>} /> 
 
 
 
