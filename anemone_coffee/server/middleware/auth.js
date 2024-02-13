@@ -12,8 +12,9 @@ const authenticateAdmin = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(decoded)
 
-    if (decoded.role !== 'admin') {
+    if (decoded?.role !== 'admin') {
       return res.status(403).json({ success: false, message: "Vous n'avez pas les autorisations nécessaires." });
     }
 

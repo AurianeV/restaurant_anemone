@@ -72,7 +72,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Génération d'un jeton JWT avec votre clé secrète
-    const token = jwt.sign({ username: admin.username }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ username: admin.username, role:'admin' }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.status(200).json({ success: true, token });
   } catch (error) {
@@ -92,6 +92,20 @@ router.get('/dashboard', authenticateAdmin, async (req, res) => {
     res.status(500).json({ success: false, message: 'Erreur lors de la récupération des réservations.' });
   }
 });
+
+// Route pour obtenir les données de profil de l'administrateur (accessible uniquement par l'admin)
+router.get('/profile',  authenticateAdmin, async (req, res) => {
+  try {
+    // Vous pouvez renvoyer les données de profil de l'administrateur à partir de req.user ou les rechercher dans la base de données
+    const adminProfileData = await Admin.find();
+   
+    res.json(adminProfileData);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données de profil de l\'administrateur :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de la récupération des données de profil de l\'administrateur.' });
+  }
+});
+
 
 /*
 // Route pour accepter une reservation en tant qu'administrateur

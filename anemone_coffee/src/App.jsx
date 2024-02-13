@@ -80,7 +80,7 @@ function App() {
                 <Route path="/valeurs" 
                 element={<Valeurs navbarProps={navbarProps.valeurs} />} />
 
-                <Route path="/admin/dashboard" element={isAdminAuthenticated ? <AdminDashboard /> : <Navigate to="/admin" />} />
+                <Route path="/admin/dashboard" element={<AdminDashboard navbarProps={navbarProps.valeurs} />} />
 
 
                 <Route path="/admin" element={<MainAdminPage navbarProps={navbarProps.admin}/>} /> 

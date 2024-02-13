@@ -20,12 +20,16 @@ const LoginForm = ({ onLogin }) => {
 
       if (response.status === 200) {
         // Si la connexion réussit, on stocke le token dans le localStorage
+        console.log('Connexion réussi !');
+
         localStorage.setItem('jwtToken', response.data.token);
 
         // Effacer les messages d'erreur en cas de succès
         setError('');
         setIsLoggedIn(true);
         onLogin(response.data.token);
+
+
       } else {
         // Gérer les autres réponses ici si nécessaire
         console.error('Échec de la connexion.');
