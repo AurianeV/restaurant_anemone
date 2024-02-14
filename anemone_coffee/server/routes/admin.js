@@ -121,6 +121,25 @@ router.put('/profile',  authenticateAdmin, async (req, res) => {
   }
 });
 
+// Route pour modifier son mot de passe
+/*router.put('/profile', authenticateAdmin, async (req, res) => {
+  try {
+    const { password } = req.body;
+    const adminId = await Admin.find();
+    // Sécurisation mot de passe
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Mettre à jour le mot de passe dans la base de données
+    await Admin.findByIdAndUpdate(adminId, { password: hashedPassword });
+
+    res.json({ success: true, message: 'Mot de passe mis à jour avec succès.' });
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour du mot de passe de l\'administrateur :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de la mise à jour du mot de passe de l\'administrateur.' });
+  }
+});*/
+
 /*
 // Route pour accepter une reservation en tant qu'administrateur
 router.post('/dashboard/accept/:reservationId', async (req, res) => {

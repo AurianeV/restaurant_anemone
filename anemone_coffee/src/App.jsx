@@ -50,6 +50,10 @@ function App() {
         admin: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Connexion / Enregistrement'
+        },
+        dashboard: {
+            backgroundImage: '/background_header/photo_connexion.png',
+            title: 'Tableau de bord - Administration'
         }
 
     };
@@ -80,7 +84,7 @@ function App() {
                 <Route path="/valeurs" 
                 element={<Valeurs navbarProps={navbarProps.valeurs} />} />
 
-                <Route path="/admin/dashboard" element={<AdminDashboard navbarProps={navbarProps.valeurs} />} />
+                <Route path="/admin/dashboard" element={<AdminDashboard navbarProps={navbarProps.dashboard} />} />
 
 
                 <Route path="/admin" element={<MainAdminPage navbarProps={navbarProps.admin}/>} /> 

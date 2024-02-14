@@ -36,8 +36,6 @@ function Countdown() {
 
   return (
     <div className="countdown-container">
-      <h2>{t('event.title')}</h2>
-      <p>{t('event.text')}</p>
       <div className="countdown-timer">
         {countdown &&
           countdown.split('').map((char, index) => (

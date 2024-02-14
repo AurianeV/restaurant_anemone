@@ -3,11 +3,9 @@ import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
 import TransitionImg from '../components/TransitionImage/TransitionImg'
 import ImageCarre from '../components/ImageCarre'
-import Reservation from '../components/Reservation'
 import 'intersection-observer'; 
 import React, { useEffect, useRef, useState } from 'react';
 import MainAdminPage from './MainAdminPage'
-
 
 
 export default function Home({ navbarProps }) {
@@ -170,7 +168,6 @@ export default function Home({ navbarProps }) {
         alt="image1"
         ref= {tapasRef}
       />
-      <Reservation ref={reservationRef}/>
       <Sections
         title={t('home.sectionReseaux.title')}
         text={t('home.sectionReseaux.text')}

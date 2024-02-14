@@ -41,20 +41,22 @@ const ReservationList = () => {
   
 
   return (
-    <div>
-      <h2>Liste des réservations</h2>
-      {error && <p>{error}</p>}
-      {reservations.length === 0 && <p>Aucune réservation trouvée.</p>}
-      <ul>
+    <div className="reservation-list">
+      <h2 className="reservation-list-title">Liste des réservations</h2>
+      {error && <p className="error-message">{error}</p>}
+      {reservations.length === 0 && <p className="no-reservations">Aucune réservation trouvée.</p>}
+      <ul className="reservation-items">
         {reservations.map((reservation) => (
-          <li key={reservation._id}>
-            <p>Nom : {reservation.name}</p>
-            <p>Email : {reservation.email}</p>
-            <p>Date : {new Date(reservation.date).toLocaleDateString()}</p>
-            <p>Heure : {reservation.reservationTime}</p>
-            <p>Nombre de personnes : {reservation.number}</p>
-            <button onClick={() => handleAccept(reservation)}>Accepter</button>
-            <button onClick={() => handleReject(reservation)}>Refuser</button> 
+          <li key={reservation._id} className="reservation-item">
+            <p className="reservation-detail"><span className="detail-label">Nom:</span> {reservation.name}</p>
+            <p className="reservation-detail"><span className="detail-label">Email:</span> {reservation.email}</p>
+            <p className="reservation-detail"><span className="detail-label">Date:</span> {new Date(reservation.date).toLocaleDateString()}</p>
+            <p className="reservation-detail"><span className="detail-label">Heure:</span> {reservation.reservationTime}</p>
+            <p className="reservation-detail"><span className="detail-label">Nombre de personnes:</span> {reservation.number}</p>
+            <div className="reservation-actions">
+              <button className="accept-button" onClick={() => handleAccept(reservation)}>Accepter</button>
+              <button className="reject-button" onClick={() => handleReject(reservation)}>Refuser</button>
+            </div>
           </li>
         ))}
       </ul>

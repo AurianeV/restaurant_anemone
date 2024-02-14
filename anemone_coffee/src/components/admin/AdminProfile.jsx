@@ -5,6 +5,8 @@ import axios from 'axios';
 const AdminProfile = () => {
   const [adminProfile, setAdminProfile] = useState([]);
   const [newUsername, setNewUsername] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+
 
   const [error, setError] = useState(null);
 
@@ -39,7 +41,24 @@ const AdminProfile = () => {
         setError('Une erreur s\'est produite lors de la mise à jour du nom d\'utilisateur.');
       }
     };
-    
+
+    const updatePassword = async () => {
+      try {
+        await axios.put('http://localhost:3001/admin/profile', {
+          password: newPassword
+        }, {
+          headers: {
+            "x-auth-token": localStorage.getItem('jwtToken')
+          }
+        });
+        setNewPassword('');
+        // Mettre à jour le profil après la mise à jour du mot de passe
+        fetchAdminProfile();
+      } catch (error) {
+        console.error('Erreur lors de la mise à jour du mot de passe :', error);
+        setError('Une erreur s\'est produite lors de la mise à jour du mot de passe.');
+      }
+    };
 
     useEffect(() => {
       fetchAdminProfile();
@@ -51,24 +70,28 @@ const AdminProfile = () => {
   }
 
   return (
-    <div>
-      <h2>Profil de l'administrateur</h2>
-      <ul>
+    <div className="admin-profile">
         {adminProfile.map((data) => (
           <li key={data._id}>
-            <p>Bonjour {data.username}</p>
+            <h2 className="admin-profile-title">Bonjour {data.username}</h2>
             
           </li>
         ))}
-      </ul>
+      <form onSubmit={(e) => {e.preventDefault(); updateUsername()}}>
+        <label htmlFor="newUsername">Modifier mon identifiant :</label>
+        <input type="text" id="newUsername" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
+        <button type="submit">Mettre à jour</button>
+      </form>
+      {/*
       <form onSubmit={(e) => {
-  e.preventDefault();
-  updateUsername();
-}}>
-  <label htmlFor="newUsername">Modifier mon identifiant :</label>
-  <input type="text" id="newUsername" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
-  <button type="submit">Mettre à jour</button>
-</form>
+        e.preventDefault();
+        updatePassword();
+      }}>
+        <label htmlFor="newPassword">Modifier mon mot de passe :</label>
+        <input type="password" id="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+        <button type="submit">Mettre à jour</button>
+      </form>
+    */}
 
     </div>
   );
