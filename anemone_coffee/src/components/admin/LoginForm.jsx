@@ -48,7 +48,7 @@ const LoginForm = ({ onLogin }) => {
    
         <>
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <label>Username:</label>
+          <label>Identifiant:</label>
           <input type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
           <label>Password:</label>

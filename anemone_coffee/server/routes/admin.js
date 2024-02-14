@@ -96,7 +96,7 @@ router.get('/dashboard', authenticateAdmin, async (req, res) => {
 // Route pour obtenir les données de profil de l'administrateur (accessible uniquement par l'admin)
 router.get('/profile',  authenticateAdmin, async (req, res) => {
   try {
-    // Vous pouvez renvoyer les données de profil de l'administrateur à partir de req.user ou les rechercher dans la base de données
+    
     const adminProfileData = await Admin.find();
    
     res.json(adminProfileData);
@@ -106,6 +106,20 @@ router.get('/profile',  authenticateAdmin, async (req, res) => {
   }
 });
 
+// Route pour modifier les info de l'utilisateur
+router.put('/profile',  authenticateAdmin, async (req, res) => {
+  try {
+    const { username } = req.body;
+    const adminId = await Admin.find(); 
+    // Mettre à jour le nom d'utilisateur dans la base de données
+    await Admin.findByIdAndUpdate(adminId, { username });
+
+    res.json({ success: true, message: 'Nom d\'utilisateur mis à jour avec succès.' });
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour du nom d\'utilisateur de l\'administrateur :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de la mise à jour du nom d\'utilisateur de l\'administrateur.' });
+  }
+});
 
 /*
 // Route pour accepter une reservation en tant qu'administrateur
