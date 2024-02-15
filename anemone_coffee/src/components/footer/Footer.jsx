@@ -9,7 +9,7 @@ function Footer (props) {
         <div className="footer_container">
             
                 <div className="footer_img">
-                    <img className="footer_logo" src="/logos/LogoAnemone_blanc.png"/>  
+                    <img className="footer_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo Anémone Coffee"/>  
                 </div>
 
                 <div className="footer_container_content">

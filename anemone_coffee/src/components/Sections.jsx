@@ -30,7 +30,7 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             }
             {logoTiktok &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoInsta" src="/logos/RS_tiktok.png" alt="Logo" />
+              <img className="navbar_logoInsta" src="/logos/RS_tiktok.png" alt="Logo Tiktok" />
               </Link>
             }
         </div>

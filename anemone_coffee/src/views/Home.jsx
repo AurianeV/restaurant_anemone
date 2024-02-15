@@ -125,7 +125,7 @@ export default function Home({ navbarProps }) {
         alt2="photo café"
         alt3="photo café"
         alt4="photo smoothie"
-        linkPage="/Menus-Boissons.pdf"
+        linkPage="/menu"
         ref={coffeeShopRef} 
         />
       <TransitionImg
@@ -147,6 +147,7 @@ export default function Home({ navbarProps }) {
         textButton={t('home.sectionBrunch.buttonBoisson')}
         alt="image1"
         ref={brunchRef}
+        linkPage="/menu"
       />
       <TransitionImg
         imageTransition="/image_home/transition_tapas.png"
@@ -167,6 +168,8 @@ export default function Home({ navbarProps }) {
         textButton={t('home.sectionTapas.buttonTapas')}
         alt="image1"
         ref= {tapasRef}
+        linkPage="/menu"
+
       />
       <Sections
         title={t('home.sectionReseaux.title')}
@@ -177,6 +180,7 @@ export default function Home({ navbarProps }) {
         logoFacebook={true}
         logoTiktok={true}
         ref={reseauxRef}
+        alt="Gobelet"
       />
     </div>
         

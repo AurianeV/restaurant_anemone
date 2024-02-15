@@ -17,10 +17,11 @@ import  { forwardRef } from 'react';
             <h2>{title}</h2>
             <p>{text}</p>
             {textButton &&
-              <a href={linkPage} target="_blank" rel="noopener noreferrer">
+              <Link to={linkPage}>
                 <button>{textButton}</button>
-              </a>
-            }        
+              </Link>
+            }
+                 
             </div>
         )}
         <div className="image-row">
@@ -36,9 +37,9 @@ import  { forwardRef } from 'react';
                 <h2>{title}</h2>
                 <p>{text}</p>
                 {textButton &&
-                  <a href={linkPage} target="_blank" rel="noopener noreferrer">
-                    <button>{textButton}</button>
-                  </a>
+                 <Link to={linkPage}>
+                 <button>{textButton}</button>
+               </Link>
                 }
            </div>
         )}
