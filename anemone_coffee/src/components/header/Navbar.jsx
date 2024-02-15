@@ -91,9 +91,7 @@ function Navbar(props) {
          <div className="navbar_container">
             <h1 className="navbar_container_title"> {props.title}</h1>
             <p className="navbar_container_text">{props.text}</p>
-            {props.buttonLabel &&
-               <button>{props.buttonLabel}</button>
-            }
+            
          </div>
       </nav>
    );
