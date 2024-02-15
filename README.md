@@ -35,21 +35,23 @@ npm nodemon index.js
 
 L'application devrait maintenant être accessible à l'adresse http://localhost:3000 dans votre navigateur.
 
-Dépendances à installer :
-Frontend
+- Dépendances à installer :
 
-axios - Client HTTP pour effectuer des requêtes AJAX : npm install axios
-bcrypt - Cryptage des mots de passe : npm install bcrypt
-dotenv - Chargement des variables d'environnement à partir d'un fichier .env : npm install dotenv --save
-npm install i18next react-i18next
-npm install intersection-observer
-npm install react-router-dom@latest
-npm install react-modal  
+Pour le Frontend
 
-Backend
-cors - Middleware permettant les requêtes HTTP entre différents domaines : npm install cors
-express - Framework pour les applications web Node.js : npm install express
-jsonwebtoken - Génération de JWT pour l'authentification : npm install jsonwebtoken
-mongoose - ODM pour MongoDB : npm install mongoose
+- axios - Client HTTP pour effectuer des requêtes AJAX : npm install axios
+- bcrypt - Cryptage des mots de passe : npm install bcrypt
+- dotenv - Chargement des variables d'environnement à partir d'un fichier .env : npm install dotenv --save
+- npm install i18next react-i18next
+- npm install intersection-observer
+- npm install react-router-dom@latest
+- npm install react-modal  
+
+Pour le Backend
+  
+- cors - Middleware permettant les requêtes HTTP entre différents domaines : npm install cors
+- express - Framework pour les applications web Node.js : npm install express
+- jsonwebtoken - Génération de JWT pour l'authentification : npm install jsonwebtoken
+- mongoose - ODM pour MongoDB : npm install mongoose
 
 
