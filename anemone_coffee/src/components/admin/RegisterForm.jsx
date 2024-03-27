@@ -19,6 +19,7 @@ const RegisterForm = () => {
             const response = await axios.post('http://localhost:3001/admin/register', userData);
 
             if (response.status === 201) {
+                alert('Votre compte a bien été créé ! Vous pouvez maintenant vous connecter.')
                 console.log('Enregistrement réussi !');
             } else {
                 console.error('Échec de l\'enregistrement.');
@@ -36,11 +37,11 @@ const RegisterForm = () => {
         <div className="registerForm">
             <h2 className="registerForm_title">Création compte administrateur</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <label className="registerForm_label"> Identifiant:</label>
-            <input type="text" name="username" value={userData.username} onChange={handleInputChange} />
+            <label for="username" className="registerForm_label"> Identifiant:</label>
+            <input id="username" type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
-            <label className="registerForm_label">Mot de passe:</label>
-            <input className="registerForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
+            <label for="password" className="registerForm_label">Mot de passe:</label>
+            <input id="password" className="registerForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
 
             <button className="registerForm_button" type="button" onClick={handleRegister}>
                 Enregistrer

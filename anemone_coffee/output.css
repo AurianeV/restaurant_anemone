@@ -1,38 +1,3 @@
-@charset "UTF-8";
-/* Countdown.css */
-.countdown-container {
-  text-align: center;
-  font-family: "Arial", sans-serif;
-  margin: 50px;
-}
 
-.countdown-timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.countdown-digit {
-  font-size: 4em;
-  margin: 0 5px;
-  padding: 10px;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Styles spécifiques pour chaque chiffre */
-.countdown-digit.digit-0 {
-  background-color: #ff5a5f; /* Rouge */
-}
-
-.countdown-digit.digit-1 {
-  background-color: #00a699; /* Vert */
-}
-
-.countdown-digit.digit-2 {
-  background-color: #fc642d; /* Orange */
-}
 
 /*# sourceMappingURL=output.css.map */

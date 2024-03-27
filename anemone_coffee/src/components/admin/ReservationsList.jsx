@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './ReservationsList.scss'
 
 const ReservationList = () => {
   const [reservations, setReservations] = useState([]);
@@ -44,22 +45,37 @@ const ReservationList = () => {
     <div className="reservation-list">
       <h2 className="reservation-list-title">Liste des réservations</h2>
       {error && <p className="error-message">{error}</p>}
-      {reservations.length === 0 && <p className="no-reservations">Aucune réservation trouvée.</p>}
-      <ul className="reservation-items">
-        {reservations.map((reservation) => (
-          <li key={reservation._id} className="reservation-item">
-            <p className="reservation-detail"><span className="detail-label">Nom:</span> {reservation.name}</p>
-            <p className="reservation-detail"><span className="detail-label">Email:</span> {reservation.email}</p>
-            <p className="reservation-detail"><span className="detail-label">Date:</span> {new Date(reservation.date).toLocaleDateString()}</p>
-            <p className="reservation-detail"><span className="detail-label">Heure:</span> {reservation.reservationTime}</p>
-            <p className="reservation-detail"><span className="detail-label">Nombre de personnes:</span> {reservation.number}</p>
-            <div className="reservation-actions">
-              <button className="accept-button" onClick={() => handleAccept(reservation)}>Accepter</button>
-              <button className="reject-button" onClick={() => handleReject(reservation)}>Refuser</button>
-            </div>
-          </li>
-        ))}
-      </ul>
+      {reservations.length === 0 ? (
+        <p className="no-reservations">Aucune réservation trouvée.</p>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Heure</th>
+              <th>Nombre de personnes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reservations.map((reservation) => (
+              <tr key={reservation._id}>
+                <td>{reservation.name}</td>
+                <td>{reservation.email}</td>
+                <td>{new Date(reservation.date).toLocaleDateString()}</td>
+                <td>{reservation.reservationTime}</td>
+                <td>{reservation.number}</td>
+                <td>
+                  <button onClick={() => handleAccept(reservation)}>Accepter</button>
+                  <button onClick={() => handleReject(reservation)}>Refuser</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

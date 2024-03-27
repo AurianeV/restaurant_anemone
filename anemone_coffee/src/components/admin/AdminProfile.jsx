@@ -78,7 +78,7 @@ const AdminProfile = () => {
           </li>
         ))}
       <form onSubmit={(e) => {e.preventDefault(); updateUsername()}}>
-        <label htmlFor="newUsername">Modifier mon identifiant :</label>
+        <label for="newUsername">Modifier mon identifiant :</label>
         <input type="text" id="newUsername" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} />
         <button type="submit">Mettre à jour</button>
       </form>

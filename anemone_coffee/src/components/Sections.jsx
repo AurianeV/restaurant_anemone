@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal, alt}, ref) => {
 
   return (
-    <div ref={ref} className="section">
+    <section ref={ref} className="section">
       {isTextOnLeft && (
         <div className="section-text">
             <h2>{title}</h2>
@@ -50,7 +50,7 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             }
         </div>
       )}
-    </div>
+    </section>
   );
 })
 

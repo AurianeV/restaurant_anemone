@@ -46,20 +46,20 @@ const LoginForm = ({ onLogin }) => {
 
   return (
    
-        <>
+        <div>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <div className="loginForm">
-            <label className="loginForm_label">Identifiant:</label>
-            <input type="text" name="username" value={userData.username} onChange={handleInputChange} />
+            <label for="username" className="loginForm_label">Identifiant:</label>
+            <input id="username" type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
-            <label className="loginForm_label">Password:</label>
-            <input className="loginForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
+            <label for="password" className="loginForm_label">Password:</label>
+            <input id="password" className="loginForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
 
             <button className="loginForm_button" type="button" onClick={handleLogin}>
               Connexion
             </button>
           </div>
-        </>
+        </div>
       
   );
 };

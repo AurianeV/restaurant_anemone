@@ -6,7 +6,7 @@ function Footer (props) {
     const { t } = useTranslation();
 
     return (
-        <div className="footer_container">
+        <footer className="footer_container">
             
                 <div className="footer_img">
                     <img className="footer_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo Anémone Coffee"/>  
@@ -27,7 +27,7 @@ function Footer (props) {
                         <p>lien 2</p>
                     </div>
             </div>
-        </div>
+        </footer>
     )
 }
 export default Footer
