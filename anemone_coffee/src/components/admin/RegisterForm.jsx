@@ -34,19 +34,19 @@ const RegisterForm = () => {
     };
 
     return (
-        <div className="registerForm">
+        <section className="registerForm">
             <h2 className="registerForm_title">Création compte administrateur</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <label for="username" className="registerForm_label"> Identifiant:</label>
+            <label htmlFor="username" className="registerForm_label"> Identifiant:</label>
             <input id="username" type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
-            <label for="password" className="registerForm_label">Mot de passe:</label>
+            <label htmlFor="password" className="registerForm_label">Mot de passe:</label>
             <input id="password" className="registerForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
 
             <button className="registerForm_button" type="button" onClick={handleRegister}>
                 Enregistrer
             </button>
-        </div>
+        </section>
     );
 };
 

@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Admin = require('../models/Admin.js');
 const Reservation = require('../models/Reservation.js');
-const transporter = require('../services/email.js');
 const authenticateAdmin = require('../middleware/auth.js');
 
 const adminController = {};
@@ -123,8 +122,15 @@ adminController.acceptReservation = async (req, res) => {
     // Code pour accepter une réservation
 };
 
-adminController.rejectReservation = async (req, res) => {
-    // Code pour refuser une réservation
+adminController.deleteReservation = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Reservation.findByIdAndDelete(id);
+    res.json({ success: true, message: 'Réservation supprimée avec succès.' });
+  } catch (error) {
+    console.error('Erreur lors de la suppression de la réservation :', error);
+    res.status(500).json({ success: false, message: 'Erreur lors de la suppression de la réservation.' });
+  }
 };
 
 module.exports = adminController;

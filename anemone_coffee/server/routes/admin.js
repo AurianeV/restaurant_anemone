@@ -9,8 +9,6 @@ const authenticateAdmin = require('../middleware/auth.js');
 const adminController = require('../controller/adminController.js')
 
 
-const transporter = require('../services/email.js');
-
 // Route pour l'enregistrement d'un nouvel administrateur
 router.post('/register', adminController.registerAdmin);
 
@@ -25,6 +23,10 @@ router.get('/profile',  authenticateAdmin, adminController.getAdminProfile);
 
 // Route pour modifier les info de l'utilisateur
 router.put('/profile',  authenticateAdmin, adminController.updateAdminProfile);
+
+// Route pour supprimer une réservation
+router.delete('/dashboard/reservations/:id', adminController.deleteReservation);
+
 
 // Route pour modifier son mot de passe
 /*router.put('/profile', authenticateAdmin, async (req, res) => {

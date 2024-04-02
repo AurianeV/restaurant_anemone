@@ -10,6 +10,7 @@ use('Anemone_Coffee');
 // Make sure you run it against the correct database and collection.
 db.admins.drop();
 db.reservations.drop();
+db.utilisateur.drop()
 
 // Run a find command to view all documents in the admins collection.
 db.admins.find();
@@ -18,3 +19,5 @@ db.admins.find();
 db.reservations.find();
 
 // You can perform other operations as needed.
+
+db.utilisateur.find();

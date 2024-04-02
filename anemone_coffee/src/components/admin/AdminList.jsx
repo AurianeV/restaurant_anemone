@@ -10,9 +10,11 @@ const AdminList = () => {
       try {
         const response = await axios.get('/admin/admins');
         setAdmins(response.data);
+        setLoading(false);
       } catch (error) {
         console.error('Erreur lors de la récupération des administrateurs :', error);
         setError('Une erreur s\'est produite lors de la récupération des administrateurs.');
+        setLoading(false);
       }
     };
     fetchAdmins();
@@ -22,6 +24,7 @@ const AdminList = () => {
     <div>
       <h2>Liste des administrateurs</h2>
       {error && <p>{error}</p>}
+      {loading && <p>Chargement en cours...</p>}
       {admins.length === 0 && <p>Aucun administrateur trouvé.</p>}
       <ul>
         {admins.map((admin) => (

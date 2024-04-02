@@ -46,20 +46,21 @@ const LoginForm = ({ onLogin }) => {
 
   return (
    
-        <div>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-          <div className="loginForm">
-            <label for="username" className="loginForm_label">Identifiant:</label>
+        <section>
+          <form className="loginForm" onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
+            <label htmlFor="username" className="loginForm_label">Identifiant:</label>
             <input id="username" type="text" name="username" value={userData.username} onChange={handleInputChange} />
 
-            <label for="password" className="loginForm_label">Password:</label>
+            <label htmlFor="password" className="loginForm_label">Password:</label>
             <input id="password" className="loginForm_input" type="password" name="password" value={userData.password} onChange={handleInputChange} />
 
-            <button className="loginForm_button" type="button" onClick={handleLogin}>
+            <button className="loginForm_button" type="submit">
               Connexion
             </button>
-          </div>
-        </div>
+          </form>
+        </section>
       
   );
 };

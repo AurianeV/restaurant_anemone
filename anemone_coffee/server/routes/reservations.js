@@ -1,24 +1,21 @@
 // routes/reservations.js
-
 const express = require('express');
 const Reservation = require('../models/Reservation.js');
 
+
 const router = express.Router();
 
+// Route pour créer une nouvelle réservation (accessible uniquement par les utilisateurs authentifiés)
 router.post('/', async (req, res) => {
   const { name, email, date, number, heure } = req.body;
   try {
-    /* const validHeures = ['11:00', '12:30', '14:00'];
-    if (!validHeures.includes(heure)) {
-      return res.status(401).json({ success: false, message: 'Heure invalide.' });
-    } */
-
     const newReservation = new Reservation({
       name,
       email,
       date,
       number,
       reservationTime: heure,
+      userId: req.userId, 
     });
 
     await newReservation.save();
