@@ -8,15 +8,16 @@ const adminController = {};
 
 // enregistrement
 adminController.registerAdmin = async (req, res) => {
-    const { username, password } = req.body;
 
     try {
-        // l'administrateur existe déjà ?
-        const existingAdmin = await Admin.findOne({ username });
+      // Vérifier s'il existe déjà un compte administrateur
+      const existingAdminCount = await Admin.countDocuments();
+      if (existingAdminCount > 0) {
+          return res.status(400).json({ success: false, message: 'Un compte administrateur existe déjà.' });
+      }
 
-        if (existingAdmin) {
-            return res.status(400).json({ success: false, message: 'Cet administrateur existe déjà.' });
-        }
+      const { username, password } = req.body;
+
 
         if (password.length < 8) {
             return res.status(400).json({ success: false, message: 'Le mot de passe doit contenir au moins 8 caractères.' });
