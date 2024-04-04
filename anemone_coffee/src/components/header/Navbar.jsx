@@ -22,12 +22,6 @@ function Navbar(props) {
       setIsDropdownOpen(false); 
    };
 
-   const handleLogout = () => {
-      // Supprimez le token JWT du stockage local ou effectuez toute autre action de déconnexion
-      localStorage.removeItem('token');
-      // Redirigez l'utilisateur vers la page de connexion ou une autre page appropriée
-      window.location.href = '/reservation'; // Remplacez '/login' par l'URL de votre page de connexion
-    };
 
    const navLinks = [
       { path: '/connaitre', label: t('knowUsLabel'),
@@ -94,9 +88,6 @@ function Navbar(props) {
                      <NavLink to="/user">
                         <img className="navbar_logoUser" src="/logos/admin.png" alt="logo connexion utilisateur"/>
                      </NavLink>
-                  </li>
-                  <li>
-                     <button onClick={handleLogout}>{t('logout')}</button>
                   </li>
                </ul>
             </div>

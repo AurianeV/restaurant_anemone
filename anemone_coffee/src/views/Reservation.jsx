@@ -17,11 +17,23 @@ const Reservation = ({ navbarProps }) => {
     heure: '',
   });
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+
+  useEffect(() => {
+    const token = localStorage.getItem('jwtToken');
+
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   const handleInputChange = (e) => {
     setReservationData({ ...reservationData, [e.target.name]: e.target.value });
   };
 
   const handleReservation = async () => {
+    const token = localStorage.getItem('jwtToken');
+
     // Vérification des champs requis
     if (
       !reservationData.name ||
@@ -34,7 +46,10 @@ const Reservation = ({ navbarProps }) => {
       return; // Arrête la fonction si un champ est vide
     }
     try {
-      const response = await axios.post('http://localhost:3001/reservations', reservationData);
+      const response = await axios.post('http://localhost:3001/reservations', reservationData, {
+      headers: {
+        'x-auth-token': token // Ajouter le token JWT dans les en-têtes de la requête
+      }});
 
       if (response.data.success) {
         alert('Réservation réussie !')
@@ -51,16 +66,38 @@ const Reservation = ({ navbarProps }) => {
   return (
     <>
       <NavBar {...navbarProps} />
+      {isLoggedIn ? (
         <div className="reservationForm">
           <h2 className="reservationForm_title">{t('reservation.title')}</h2>
           <form>
-            <label for="name" className="reservationForm_label">{t('reservation.name')}</label>
-            <input id="name" type="text" name="name" placeholder="Doe" value={reservationData.name} onChange={handleInputChange} />
+            <label htmlFor="name" className="reservationForm_label">
+              {t('reservation.name')}
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Doe"
+              value={reservationData.name}
+              onChange={handleInputChange}
+            />
 
-            <label for="email" className="reservationForm_label">Adressse mail :</label>
-            <input id="email" type="text" name="email" placeholder="johndoe@gmail.com" value={reservationData.email} onChange={handleInputChange} required />
+            <label htmlFor="email" className="reservationForm_label">
+              Adresse mail :
+            </label>
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder="johndoe@gmail.com"
+              value={reservationData.email}
+              onChange={handleInputChange}
+              required
+            />
 
-            <label for="date" className="reservationForm_label">{t('reservation.date')}</label>
+            <label htmlFor="date" className="reservationForm_label">
+              {t('reservation.date')}
+            </label>
             <input id="date" type="date" name="date" value={reservationData.date} onChange={handleInputChange} />
 
             <label className="reservationForm_label">{t('reservation.heure')}</label>
@@ -71,20 +108,22 @@ const Reservation = ({ navbarProps }) => {
               <option value="14:00">14:00 - 15:30</option>
             </select>
 
-            <label for="number" className="reservationForm_label">{t('reservation.numberPeople')}</label>
-            <input
-              id="number"
-              type="number"
-              name="number"
-              value={reservationData.number}
-              onChange={handleInputChange}
-            />
+            <label htmlFor="number" className="reservationForm_label">
+              {t('reservation.numberPeople')}
+            </label>
+            <input id="number" type="number" name="number" value={reservationData.number} onChange={handleInputChange} />
 
             <button className="reservationForm_button" type="button" onClick={handleReservation}>
               {t('reservation.reservation')}
             </button>
           </form>
         </div>
+      ) : (
+        <div>
+          <p>Merci de vous connecter pour effectuer une réservation.</p>
+          <LoginForm /> 
+        </div>
+      )}
     </>
   );
 };
