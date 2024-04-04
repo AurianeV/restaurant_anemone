@@ -39,6 +39,7 @@ function Navbar(props) {
       { path: '/reservation', label: t('reservationLabel') },
       { path: '/menu', label: t('menuLabel'),},
       { path: '/events', label: t('eventsLabel') },
+
       /*{ path: '/contact', label: t('contactLabel') }*/,
    ];
 
@@ -90,8 +91,8 @@ function Navbar(props) {
                      <SwitchLanguage />
                   </li>
                   <li>
-                     <NavLink to="/admin">
-                        <img className="navbar_logoAdmin" src="/logos/admin.png" alt="logo connexion administrateur"/>
+                     <NavLink to="/user">
+                        <img className="navbar_logoUser" src="/logos/admin.png" alt="logo connexion utilisateur"/>
                      </NavLink>
                   </li>
                   <li>

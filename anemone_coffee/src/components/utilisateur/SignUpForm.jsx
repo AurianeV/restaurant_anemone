@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const SignUpForm = () => {
+const SignUpForm = ({ onSignUpSuccess }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -18,6 +18,7 @@ const SignUpForm = () => {
       console.log(response.data);
       if (response.status === 201) {
         alert('Inscription réussie !');
+        onSignUpSuccess();
       } else {
         alert('Erreur lors de l\'inscription.');
       }

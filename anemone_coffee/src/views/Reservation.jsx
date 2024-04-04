@@ -17,30 +17,6 @@ const Reservation = ({ navbarProps }) => {
     heure: '',
   });
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showReservationForm, setShowReservationForm] = useState(false);
-
-
-  useEffect(() => {
-    // Vérifier si l'utilisateur est connecté en vérifiant la présence du token JWT dans le stockage local
-    const checkLoggedInStatus = () => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    };
-
-    checkLoggedInStatus();
-  }, []); 
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-    setShowReservationForm(true); 
-
-  };
-
   const handleInputChange = (e) => {
     setReservationData({ ...reservationData, [e.target.name]: e.target.value });
   };
@@ -75,16 +51,6 @@ const Reservation = ({ navbarProps }) => {
   return (
     <>
       <NavBar {...navbarProps} />
-
-      <h1>Pour effectuer une réservation merci de créer un compte ! :)</h1>
-
-      {!isLoggedIn && (
-        <>
-          <LoginForm onLoginSuccess={handleLoginSuccess} />
-          <SignUpForm />
-        </>
-      )}
-      {isLoggedIn && showReservationForm && (
         <div className="reservationForm">
           <h2 className="reservationForm_title">{t('reservation.title')}</h2>
           <form>
@@ -119,7 +85,6 @@ const Reservation = ({ navbarProps }) => {
             </button>
           </form>
         </div>
-      )}
     </>
   );
 };

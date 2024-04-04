@@ -9,5 +9,10 @@ const utilisateurController = require('../controller/utilisateurController.js')
 
 router.post('/register', utilisateurController.signUpUtilisateur);
 router.post('/login', utilisateurController.loginUtilisateur);
+// Route pour récupérer les informations du compte utilisateur
+router.get('/account',  authenticateUser, utilisateurController.getUserAccountInfo);
+
+// Route pour modifier le mot de passe de l'utilisateur
+router.put('/account', utilisateurController.updateUserPassword);
 
 module.exports = router;

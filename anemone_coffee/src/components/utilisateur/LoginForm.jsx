@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const LogInForm = ({ onLoginSuccess }) => {
+const LogInForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -20,9 +20,11 @@ const LogInForm = ({ onLoginSuccess }) => {
       });
       console.log(response.data);
       if (response.data.success) {
+        // Stocker le token JWT dans le localStorage
+      localStorage.setItem('jwtToken', response.data.token);
+      window.location.href = '/user-account'; // Redirection vers la page du compte utilisateur
+
         alert('Connexion réussie !');
-        // Appeler la fonction onLoginSuccess pour notifier le composant parent de la réussite de la connexion
-        onLoginSuccess();
       } else {
         alert('Identifiants incorrects.');
       }

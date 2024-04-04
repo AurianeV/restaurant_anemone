@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
       date,
       number,
       reservationTime: heure,
-      userId: req.userId, 
+      userId: req.userId
+      
     });
 
     await newReservation.save();

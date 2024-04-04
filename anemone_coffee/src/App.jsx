@@ -15,6 +15,8 @@ import RegisterForm from './components/admin/RegisterForm'
 import MainAdminPage from './views/MainAdminPage'
 import {useState} from 'react'
 import { Navigate } from 'react-router-dom';
+import UserPage from './views/UserPage'
+import UserAccountPage from './views/UserAccountPage'
 
 function App() {
 
@@ -54,6 +56,10 @@ function App() {
         dashboard: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Tableau de bord - Administration'
+        },
+        useraccount: {
+            backgroundImage: '/background_header/photo_connexion.png',
+            title: 'Inscription/Connexion - Utilisateur'
         }
 
     };
@@ -89,7 +95,9 @@ function App() {
 
                 <Route path="/admin" element={<MainAdminPage navbarProps={navbarProps.admin}/>} /> 
 
+                <Route path="/user" element={<UserPage navbarProps={navbarProps.useraccount}/>} />
 
+                <Route path="/user-account" element={<UserAccountPage navbarProps={navbarProps.useraccount}/>} />
 
                 </Routes>
             <Footer
