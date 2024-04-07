@@ -5,7 +5,7 @@ export default function PopUpMenu(props) {
     
   
     return (
-        <>
+        <div className="popUp">
         <div className="popUp_header">
             <h1 className="popUp_title">{title}</h1>
             
@@ -24,7 +24,7 @@ export default function PopUpMenu(props) {
                 ))}
                 </div>
         </div>
-      </>
+      </div>
     );
   }
 

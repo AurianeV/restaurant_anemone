@@ -1,5 +1,33 @@
 
 
+.popUp_container {
+    width:100%;
+    text-align: center;
+    margin:auto;
+}
+.popUp_breakfast {
+    display:flex;
+    justify-content: space-around;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+.popUp_breakfast_img {
+    width:40%;
+}
+
+button {
+    margin:2px;
+}
+
+@media screen and (min-width: 768px) {
+
+.popUp_container {
+        width:100%;
+        text-align: center;
+        margin:auto;
+}
+
 .popUp_breakfast {
     display:flex;
     justify-content: space-around;
@@ -9,4 +37,6 @@
 
 .popUp_breakfast_img {
     width:100px;
+}
+
 }

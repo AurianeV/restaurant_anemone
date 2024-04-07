@@ -77,15 +77,15 @@ const UserAccountPage = ({ navbarProps }) => {
       <>
     <NavBar {...navbarProps} />
     <div className="user-account-page">
-    <button onClick={handleLogout}>Logout</button>
+    <button onClick={handleLogout}>Déconnexion</button>
 
-      <h1>User Account</h1>
+      <h1>Compte utilisateur</h1>
       {user && (
         <div>
-          <h2>User Information</h2>
+          <h2>Information de l'utilisateur</h2>
           <p>Email: {user.email}</p>
 
-          <h2>Change Password</h2>
+          <h2>Changement de mot de passe</h2>
           <input
             type="password"
             placeholder="New Password"
@@ -98,8 +98,8 @@ const UserAccountPage = ({ navbarProps }) => {
             value={confirmNewPassword}
             onChange={(e) => setConfirmNewPassword(e.target.value)}
           />
-          <button onClick={handlePasswordChange}>Change Password</button>
-          {passwordUpdateSuccess && <p>Password updated successfully.</p>}
+          <button onClick={handlePasswordChange}>Changement de mot de passe</button>
+          {passwordUpdateSuccess && <p>Mot de passe modifié avec succès.</p>}
         </div>
       )}
     </div>

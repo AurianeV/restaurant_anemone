@@ -71,6 +71,7 @@ function Navbar(props) {
                      )}
                      </li>
                   ))}
+                  {/*
                   <li>
                      <NavLink to="/">
                         <img className="navbar_logoInsta" src="/logos/logo_instagram.png" alt="Logo instagram" />
@@ -81,6 +82,7 @@ function Navbar(props) {
                         <img className="navbar_logoFacebook" src="/logos/logo_facebook.png" alt="Logo facebook" />
                      </NavLink>
                   </li>
+                  */}
                   <li>
                      <SwitchLanguage />
                   </li>

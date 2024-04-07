@@ -51,7 +51,7 @@ function App() {
         },
         admin: {
             backgroundImage: '/background_header/photo_connexion.png',
-            title: 'Connexion / Enregistrement'
+            title: 'Connexion - Administrateur'
         },
         dashboard: {
             backgroundImage: '/background_header/photo_connexion.png',
@@ -59,7 +59,7 @@ function App() {
         },
         useraccount: {
             backgroundImage: '/background_header/photo_connexion.png',
-            title: 'Inscription/Connexion - Utilisateur'
+            title: 'Connexion - Utilisateur'
         }
 
     };

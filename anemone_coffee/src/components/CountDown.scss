@@ -1,6 +1,6 @@
 // Countdown.scss
 
-$countdown-digit-size: 3em; 
+$countdown-digit-size: 1em; 
 
 .countdown-container {
   text-align: center;
@@ -15,8 +15,8 @@ $countdown-digit-size: 3em;
 
   .countdown-digit {
     font-size: $countdown-digit-size;
-    margin: 0 5px;
-    padding: 10px;
+    margin: 0 2px;
+    padding: 7px;
     background-color: black;
     color: white;
     border-radius: 10px;
@@ -37,5 +37,15 @@ $countdown-digit-size: 3em;
 
   @media screen and (min-width: 768px) {
     $countdown-digit-size: 4em; 
+
+    .countdown-digit {
+      font-size: $countdown-digit-size;
+      margin: 0 5px;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+}
 }

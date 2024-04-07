@@ -1,3 +1,7 @@
+// Sections.scss
+
+@import 'mixins';
+
 .section {
   display: flex;
   align-items: center;
@@ -8,44 +12,52 @@
     padding: 10px;
     font-size: 14px;
 
+    .logo_reseaux {
+      @include logo-styles; 
+    }
+
+    .navbar_logoFacebook, .navbar_logoInsta, .navbar_logoTiktok {
+      @include logo-styles; 
+    }
+
     h2 {
       font-size: 21px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 14px;
-      font-size: 18px; 
+      font-size: 18px;
+
+      .navbar_logoFacebook, .navbar_logoInsta, .navbar_logoTiktok {
+        width:60px; 
+        
+      }
     }
 
     @media screen and (min-width: 1025px) {
       padding: 14px;
-      font-size: 18px; 
-    }
-
-    h2 {
-      font-size: 27px;
+      font-size: 18px;
     }
   }
 
   .section-image {
     flex: 1;
     margin-top: 20px;
+    width:100%;
 
     .section-image-photo {
-      max-width: 100%;
-      height: auto;
-
-      @media screen and (min-width: 768px) {
-        max-width: 60%;
-      }
+      width:100% 
     }
   }
 }
 
 .text-left {
+  @extend .section;
   flex-direction: row;
 }
 
 .image-left {
+  @extend .section;
   flex-direction: row-reverse;
 }
+

@@ -15,6 +15,7 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             {showButton && textButtonModal && (
             <button onClick={buttonAction}>{textButtonModal}</button>
           )}
+          <div className="logo_reseaux">
             {textButton &&
               <Link to={linkPage}><button>{textButton}</button></Link>
             }
@@ -30,9 +31,10 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
             }
             {logoTiktok &&
               <Link to={linkPage}>                     
-              <img className="navbar_logoInsta" src="/logos/RS_tiktok.png" alt="Logo Tiktok" />
+              <img className="navbar_logoTiktok" src="/logos/RS_tiktok.png" alt="Logo Tiktok" />
               </Link>
             }
+            </div>
         </div>
       )}
       <div className="section-image">
