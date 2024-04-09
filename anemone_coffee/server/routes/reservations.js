@@ -7,7 +7,6 @@ const router = express.Router();
 
 // Route pour créer une nouvelle réservation (accessible uniquement par les utilisateurs ou admin authentifiés)
 router.post('/', authUserAdmin, async (req, res) => {
-  console.log('User from middleware:', req.user); 
 
   const { name, email, date, number, heure } = req.body;
   try {

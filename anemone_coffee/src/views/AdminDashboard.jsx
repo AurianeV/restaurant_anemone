@@ -15,8 +15,6 @@ const AdminDashboard = ({ navbarProps }) => {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
-      // Redirigez l'utilisateur vers la page de connexion s'il n'est pas connecté
-      // history.push('/login'); // Vous devez importer history de react-router-dom
     }
   }, []);
   if (!isLoggedIn) {

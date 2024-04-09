@@ -24,47 +24,48 @@ const UserAccountPage = ({ navbarProps }) => {
 
     } catch (error) {
       console.error('Error fetching user account info:', error);
-      setIsLoggedIn(false); // Mettre à jour l'état isLoggedIn à false en cas d'erreur
+      setIsLoggedIn(false); 
 
     }
   };
 
   const handlePasswordChange = async () => {
     if (newPassword !== confirmNewPassword) {
-      alert('Passwords do not match.');
-      return;
+        alert('Les mots de passe ne correspondent pas.');
+        return;
     }
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/;
+    if (!passwordRegex.test(newPassword)) {
+        alert('Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial.');
+        return;
+    }
+
     try {
-      await axios.put('http://localhost:3001/utilisateur/account', { newPassword });
-      setPasswordUpdateSuccess(true);
+        await axios.put('http://localhost:3001/utilisateur/update-password', { newPassword });
+        setPasswordUpdateSuccess(true);
     } catch (error) {
-      console.error('Error updating password:', error);
-      alert('Error updating password. Please try again.');
+        console.error('Erreur lors de la mise à jour du mot de passe :', error);
+        alert('Erreur lors de la mise à jour du mot de passe. Veuillez réessayer.');
     }
-  };
+};
 
   const handleLogout = () => {
-    // Ajoutez un message de débogage pour vérifier si la fonction est appelée
     console.log('Déconnexion en cours...');
     
     // Supprimer le jeton JWT du stockage local
     localStorage.removeItem('jwtToken');
-    
-    // Mettre à jour l'état isLoggedIn à false lorsque l'utilisateur se déconnecte
-    setIsLoggedIn(false);
-    
+      setIsLoggedIn(false);
     // Vider les données de l'utilisateur
     setUser('');
     
     // Rediriger l'utilisateur vers la page de connexion
-    //window.location.href = '/user'; // Assurez-vous que l'URL de redirection est correcte
+    window.location.href = '/user'; 
   };
   
   
   
 
   useEffect(() => {
-    // Fetch user account info when component mounts
     fetchUserAccountInfo();
   }, []);
 

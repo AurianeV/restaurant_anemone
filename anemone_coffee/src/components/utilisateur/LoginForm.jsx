@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './form.scss'
 
 const LogInForm = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const LogInForm = () => {
       if (response.data.success) {
         // Stocker le token JWT dans le localStorage
       localStorage.setItem('jwtToken', response.data.token);
-      window.location.href = '/user-account'; // Redirection vers la page du compte utilisateur
+      window.location.href = '/user-account'; 
 
         alert('Connexion réussie !');
       } else {

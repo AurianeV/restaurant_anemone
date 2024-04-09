@@ -1,0 +1,28 @@
+@import '../mixins.scss';
+
+// Inclure les styles des champs de formulaire à l'aide du mixin
+.reservationForm, .registerForm, .loginForm {
+    @include form-styles;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  input[type="number"] {
+      @include input-style
+  }
+
+  // Inclure les styles des boutons de formulaire à l'aide du mixin
+  .reservationForm_button, .registerForm_button, .loginForm_button {
+    @include button-styles;
+  }
+
+  .reservationForm_title, .registerForm_title {
+      @include title-form
+  }
+
+  label {
+      @include label-form
+  }

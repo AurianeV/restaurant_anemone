@@ -15,7 +15,7 @@ const utilisateurSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: 'user' // Définir le rôle par défaut à 'user'
+    default: 'user' 
   }
 });
 

@@ -88,7 +88,7 @@ function Navbar(props) {
                   </li>
                   <li>
                      <NavLink to="/user">
-                        <img className="navbar_logoUser" src="/logos/admin.png" alt="logo connexion utilisateur"/>
+                        <img className="navbar_logoUser" src="/logos/user.png" alt="logo connexion utilisateur"/>
                      </NavLink>
                   </li>
                </ul>

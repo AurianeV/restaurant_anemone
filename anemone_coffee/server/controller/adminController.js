@@ -115,14 +115,6 @@ adminController.updateAdminProfile = async (req, res) => {
         res.status(500).json({ success: false, message: 'Erreur lors de la mise à jour du nom d\'utilisateur de l\'administrateur.' });
       }};
 
-adminController.updateAdminPassword = async (req, res) => {
-    // Code pour mettre à jour le mot de passe de l'administrateur
-};
-
-adminController.acceptReservation = async (req, res) => {
-    // Code pour accepter une réservation
-};
-
 adminController.deleteReservation = async (req, res) => {
   try {
     const { id } = req.params;

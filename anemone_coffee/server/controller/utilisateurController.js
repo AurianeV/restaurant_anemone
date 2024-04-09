@@ -84,7 +84,6 @@ utilisateurController.getUserAccountInfo = async (req, res) => {
     try {
         const email = req.user.email;
 
-      // Récupérer les informations du compte utilisateur à partir de req.userId ou req.user
       const userData = await Utilisateur.findOne({ email })
       res.status(200).json(userData);
     } catch (error) {
@@ -95,17 +94,30 @@ utilisateurController.getUserAccountInfo = async (req, res) => {
   
   utilisateurController.updateUserPassword = async (req, res) => {
     try {
-      const { newPassword } = req.body;
-      // Mettre à jour le mot de passe de l'utilisateur
-      // Vous pouvez utiliser req.userId pour récupérer l'ID de l'utilisateur
-      // Assurez-vous d'ajouter la logique de validation et de hachage du mot de passe
-      // Ensuite, enregistrez le nouveau mot de passe dans votre base de données
-      res.status(200).json({ success: true, message: 'Password updated successfully.' });
+        const { newPassword } = req.body;
+        const userId = await Utilisateur.find(); 
+
+        // Valider le nouveau mot de passe 
+        if (newPassword.length < 8) {
+          return res.status(400).json({ success: false, message: 'Le mot de passe doit contenir au moins 8 caractères.' });
+      }
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/;
+      if (!passwordRegex.test(newPassword)) {
+          return res.status(400).json({ success: false, message: 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial.' });
+      }
+        // Hacher le nouveau mot de passe
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+        // Mettre à jour le mot de passe de l'utilisateur dans la base de données
+        await Utilisateur.findByIdAndUpdate(userId, { password: hashedPassword });
+
+        res.status(200).json({ success: true, message: 'Mot de passe mis à jour avec succès.' });
     } catch (error) {
-      console.error('Error updating user password:', error);
-      res.status(500).json({ success: false, message: 'Error updating user password.' });
+        console.error('Erreur lors de la mise à jour du mot de passe de l\'utilisateur :', error);
+        res.status(500).json({ success: false, message: 'Erreur lors de la mise à jour du mot de passe de l\'utilisateur.' });
     }
-  };
+};
   
 
 module.exports = utilisateurController;

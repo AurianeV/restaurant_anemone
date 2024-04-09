@@ -15,4 +15,6 @@ router.get('/account',  authenticateUser, utilisateurController.getUserAccountIn
 // Route pour modifier le mot de passe de l'utilisateur
 router.put('/account', utilisateurController.updateUserPassword);
 
+router.put('/update-password', utilisateurController.updateUserPassword);
+
 module.exports = router;

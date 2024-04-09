@@ -12,7 +12,6 @@ const authUserAdmin = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        console.log('Decoded token:', decoded); // Log du payload décodé pour vérifier son contenu
         req.user = decoded;
 
         // Vérification du rôle de l'utilisateur et de l'administrateur
