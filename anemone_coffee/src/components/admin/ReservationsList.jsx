@@ -24,14 +24,14 @@ const ReservationList = () => {
     fetchReservations();
   }, []);
 
-  const handleAccept = async (reservation) => {
+  /*const handleAccept = async (reservation) => {
     try {
       const response = await axios.post(`http://localhost:3001/admin/dashboard/accept/${reservation._id}`);
       fetchReservations();
     } catch (error) {
       console.error('Erreur lors de l\'acceptation de la réservation :', error);
     }
-  };
+  };*/
 
   const handleReject = async (reservation) => {
     try {
@@ -40,6 +40,7 @@ const ReservationList = () => {
   
       // Supprimer la réservation de la base de données
       await axios.delete(`http://localhost:3001/admin/dashboard/reservations/${reservation._id}`);
+      alert('La réservation a bien été supprimé')
     } catch (error) {
       console.error('Erreur lors du refus de la réservation :', error);
     }
@@ -64,7 +65,7 @@ const ReservationList = () => {
                 <p><strong>Nombre de personnes:</strong> {reservation.number}</p>
               </div>
               <div className="reservation-actions">
-                <button className="acceptButton" onClick={() => handleAccept(reservation)}>Accepter</button>
+                {/*<button className="acceptButton" onClick={() => handleAccept(reservation)}>Accepter</button>*/}
                 <button className="rejectButton" onClick={() => handleReject(reservation)}>Refuser</button>
               </div>
             </li>

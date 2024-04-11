@@ -15,6 +15,13 @@ const LoginForm = ({ onLogin }) => {
   };
 
   const handleLogin = async () => {
+    if (
+      !userData.username ||
+      !userData.password 
+    ) {
+      alert('Veuillez remplir tous les champs.');
+      return; 
+    }
     try {
       const response = await axios.post('http://localhost:3001/admin/login', userData);
 
@@ -32,16 +39,15 @@ const LoginForm = ({ onLogin }) => {
 
       } else {
         // Gérer les autres réponses ici si nécessaire
-        console.error('Échec de la connexion.');
+        alert('Identifiants ou mot de passe incorrects.');
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.message) {
-        setError(error.response.data.message);
+          setError(error.response.data.message);
       } else {
-        setError('Erreur inattendue.');
+          setError('Erreur inattendue.');
       }
-      console.error('Erreur lors de la connexion :', error);
-    }
+  }
   };
 
   return (

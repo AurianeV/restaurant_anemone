@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './form.scss'
+import { Link } from 'react-router-dom'
+
 
 const LogInForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,6 +17,13 @@ const LogInForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (
+      !formData.email ||
+      !formData.password 
+    ) {
+      alert('Veuillez remplir tous les champs.');
+      return; 
+    }
     try {
       const response = await axios.post('http://localhost:3001/utilisateur/login', {
         email: formData.email,
@@ -27,16 +37,21 @@ const LogInForm = () => {
 
         alert('Connexion réussie !');
       } else {
-        alert('Identifiants incorrects.');
+        alert('Identifiants ou mot de passe incorrects.');
       }
     } catch (error) {
-      console.error('Erreur lors de la soumission du formulaire :', error);
-      alert('Une erreur est survenue lors de la connexion.');
-    }
+      if (error.response && error.response.data && error.response.data.message) {
+          setError(error.response.data.message);
+      } else {
+          setError('Erreur inattendue.');
+      }
+  }
   };
 
   return (
     <form className="loginForm" onSubmit={handleSubmit}>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+
       <h2 className="registerForm_title">J'ai déjà un compte, je me connecte</h2>
 
       <label htmlFor="email" className="registerForm_label"> Adresse mail :</label>
@@ -45,6 +60,8 @@ const LogInForm = () => {
       <label htmlFor="password" className="registerForm_label"> Mot de passe :</label>
       <input id="password" type="password" name="password" placeholder="Mot de passe" value={formData.password} onChange={handleChange} />
       <button type="submit">Se connecter</button>
+      <p><strong style={{color:"red"}}>Si vous n'avez pas de compte, merci d'en créer un en suivant ce lien :</strong></p>
+      <Link to="/user">Créer un compte</Link>
     </form>
   );
 };

@@ -43,7 +43,12 @@ const Reservation = ({ navbarProps }) => {
       !reservationData.heure
     ) {
       alert('Veuillez remplir tous les champs.');
-      return; // Arrête la fonction si un champ est vide
+      return; 
+    }
+
+    if(number.value < 1) {
+      alert('Vous devez être au moins une personne pour réserver une table.');
+      return; 
     }
     try {
       const response = await axios.post('http://localhost:3001/reservations', reservationData, {

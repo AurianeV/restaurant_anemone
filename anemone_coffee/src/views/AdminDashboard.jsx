@@ -9,17 +9,26 @@ const AdminDashboard = ({ navbarProps }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeOnglet, setActiveOnglet] = useState('reservations'); 
 
+  const decodeToken = (token) => {
+    try {
+      return JSON.parse(atob(token.split('.')[1]));
+    } catch (error) {
+      return null;
+    }
+  };
+
   useEffect(() => {
     const token = localStorage.getItem('jwtToken');
     if (token) {
-      setIsLoggedIn(true);
+      const decodedToken = decodeToken(token);
+      if (decodedToken.role === 'admin') {
+        setIsLoggedIn(true);
+      }
     } else {
       setIsLoggedIn(false);
     }
   }, []);
-  if (!isLoggedIn) {
-    return <p>Vous devez être administrateur pour accéder à cette page.</p>;
-  }
+  
 
   // Déconnexion
   const handleLogout = () => {
@@ -30,18 +39,26 @@ const AdminDashboard = ({ navbarProps }) => {
   };
 
   return (
-    <div>
+    <>
       <NavBar {...navbarProps} />
-      <button onClick={handleLogout}>Déconnexion</button>
-      <div>
-        <button onClick={() => setActiveOnglet('reservations')}>Liste des réservations</button>
-        <button onClick={() => setActiveOnglet('profile')}>Profil de l'administrateur</button>
-      </div>
-
-      {activeOnglet === 'reservations' && <ReservationsList />}
-      {activeOnglet === 'profile' && <AdminProfile />}
-
-    </div>
+      {isLoggedIn ? (
+         <div>
+          <button onClick={handleLogout}>Déconnexion</button>
+          <div>
+            <button onClick={() => setActiveOnglet('reservations')}>Liste des réservations</button>
+            <button onClick={() => setActiveOnglet('profile')}>Profil de l'administrateur</button>
+          </div>
+    
+          {activeOnglet === 'reservations' && <ReservationsList />}
+          {activeOnglet === 'profile' && <AdminProfile />}
+   
+         </div>
+      ) : (
+        <div>
+          <p>Vous devez être administrateur pour accéder à cette page.</p>
+        </div>
+      )}
+  </>
   );
 };
 

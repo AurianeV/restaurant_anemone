@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from '../components/header/Navbar'
-import UserPage from './UserPage'
 
 
 const UserAccountPage = ({ navbarProps }) => {
@@ -13,7 +12,7 @@ const UserAccountPage = ({ navbarProps }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
-  const fetchUserAccountInfo = async () => {
+  const UserAccountInfo = async () => {
     try {
       const response = await axios.get('http://localhost:3001/utilisateur/account', {headers:{
         "x-auth-token": localStorage.getItem('jwtToken')
@@ -43,6 +42,10 @@ const UserAccountPage = ({ navbarProps }) => {
     try {
         await axios.put('http://localhost:3001/utilisateur/update-password', { newPassword });
         setPasswordUpdateSuccess(true);
+        setNewPassword('')
+        setConfirmNewPassword('')
+
+
     } catch (error) {
         console.error('Erreur lors de la mise à jour du mot de passe :', error);
         alert('Erreur lors de la mise à jour du mot de passe. Veuillez réessayer.');
@@ -66,44 +69,47 @@ const UserAccountPage = ({ navbarProps }) => {
   
 
   useEffect(() => {
-    fetchUserAccountInfo();
+    UserAccountInfo();
   }, []);
 
 
-  if (!isLoggedIn) {
-    return <p>Merci de vous connecter pour accéder à cette page </p> 
-  }
 
   return (
-      <>
-    <NavBar {...navbarProps} />
-    <div className="user-account-page">
-    <button onClick={handleLogout}>Déconnexion</button>
+    <>
+      <NavBar {...navbarProps} />
+      {isLoggedIn ? (
+      <section className="user-account-page">
+        <button onClick={handleLogout}>Déconnexion</button>
 
-      <h1>Compte utilisateur</h1>
-      {user && (
-        <div>
-          <h2>Information de l'utilisateur</h2>
-          <p>Email: {user.email}</p>
+        <h1>Compte utilisateur</h1>
+        {user && (
+          <div>
+            <h2>Information de l'utilisateur</h2>
+            <p>Email: {user.email}</p>
 
-          <h2>Changement de mot de passe</h2>
-          <input
-            type="password"
-            placeholder="New Password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Confirm New Password"
-            value={confirmNewPassword}
-            onChange={(e) => setConfirmNewPassword(e.target.value)}
-          />
-          <button onClick={handlePasswordChange}>Changement de mot de passe</button>
-          {passwordUpdateSuccess && <p>Mot de passe modifié avec succès.</p>}
-        </div>
+            <label htmlFor="newPassword">Modifier mon mot de passe :</label>
+            <input
+              id="newPassword"
+              type="password"
+              placeholder="New Password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+            <input
+              id="newPassword"
+              type="password"
+              placeholder="Confirm New Password"
+              value={confirmNewPassword}
+              onChange={(e) => setConfirmNewPassword(e.target.value)}
+            />
+            <button onClick={handlePasswordChange}>Changement de mot de passe</button>
+            {passwordUpdateSuccess && <p style={{ color: 'green' }}><strong>Mot de passe modifié avec succès.</strong></p>}
+          </div>
+        )}
+      </section>
+      ) : (
+      <p><strong>Merci de vous connecter pour accéder à cette page </strong></p>
       )}
-    </div>
     </>
   );
 };

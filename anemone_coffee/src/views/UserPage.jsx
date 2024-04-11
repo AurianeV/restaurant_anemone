@@ -1,17 +1,44 @@
 // AuthPage.js
 import React from 'react';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import LogInForm from '../components/utilisateur/LoginForm';
 import SignUpForm from '../components/utilisateur/SignUpForm';
 import NavBar from '../components/header/Navbar'
+import axios from 'axios';
+
 
 const UserPage = ({ navbarProps }) => {
-    const [showLoginForm, setShowLoginForm] = useState(false); // État pour afficher le formulaire de connexion après l'inscription
+    const [showLoginForm, setShowLoginForm] = useState(false); 
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const handleSignUpSuccess = () => {
       setShowLoginForm(true); 
     };
-  
+
+    const UserAccountInfo = async () => {
+        try {
+          const response = await axios.get('http://localhost:3001/utilisateur/account', {headers:{
+            "x-auth-token": localStorage.getItem('jwtToken')
+          }});
+
+          setIsLoggedIn(true); 
+          
+    
+        } catch (error) {
+          console.error('Error fetching user account info:', error);
+          setIsLoggedIn(false); 
+    
+        }
+      };
+
+      useEffect(() => {
+        UserAccountInfo();
+      }, []);
+
+      if (isLoggedIn) {
+        window.location.href = '/user-account'
+
+      }
     return (
         <>
         <NavBar {...navbarProps} />

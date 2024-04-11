@@ -24,6 +24,10 @@ const AdminProfile = () => {
     };
 
     const updateUsername = async () => {
+      if (!newUsername) {
+        alert('Le champ du nouvel identifiant ne peut pas être vide.');
+        return;
+      }
       try {
         await axios.put('http://localhost:3001/admin/profile', {
           username: newUsername

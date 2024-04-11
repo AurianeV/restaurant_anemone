@@ -9,7 +9,7 @@ utilisateurController.signUpUtilisateur = async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // l'administrateur existe déjà ?
+        // l'utilisateur existe déjà ?
         const existingUtilisateur = await Utilisateur.findOne({ email });
 
         if (existingUtilisateur) {

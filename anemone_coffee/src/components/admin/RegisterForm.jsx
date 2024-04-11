@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../../App.css'
 
-const RegisterForm = () => {
+const RegisterForm = ({ onSignUpSuccess }) => {
     const [userData, setUserData] = useState({
         username: '',
         password: '',
@@ -15,12 +15,20 @@ const RegisterForm = () => {
     };
 
     const handleRegister = async () => {
+        if (
+            !userData.username ||
+            !userData.password 
+          ) {
+            alert('Veuillez remplir tous les champs.');
+            return; 
+          }
         try {
             const response = await axios.post('http://localhost:3001/admin/register', userData);
 
             if (response.status === 201) {
                 alert('Votre compte a bien été créé ! Vous pouvez maintenant vous connecter.')
                 console.log('Enregistrement réussi !');
+                onSignUpSuccess();
             } else {
                 console.error('Échec de l\'enregistrement.');
             }

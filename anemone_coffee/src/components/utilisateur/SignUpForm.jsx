@@ -8,6 +8,7 @@ const SignUpForm = ({ onSignUpSuccess }) => {
     email: '',
     password: ''
   });
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,6 +16,13 @@ const SignUpForm = ({ onSignUpSuccess }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (
+      !formData.email ||
+      !formData.password 
+    ) {
+      alert('Veuillez remplir tous les champs.');
+      return; 
+    }
     try {
       const response = await axios.post('http://localhost:3001/utilisateur/register', formData);
       console.log(response.data);
@@ -26,7 +34,11 @@ const SignUpForm = ({ onSignUpSuccess }) => {
       }
     } catch (error) {
       console.error('Erreur lors de la soumission du formulaire :', error);
-      alert('Une erreur est survenue lors de l\'inscription.');
+      if (error.response && error.response.data && error.response.data.message) {
+        setError(error.response.data.message);
+      } else {
+        setError('Une erreur est survenue lors de l\'inscription.');
+      }
     }
   };
 
@@ -39,6 +51,8 @@ const SignUpForm = ({ onSignUpSuccess }) => {
 
       <label htmlFor="password" className="registerForm_label"> Mot de passe :</label>
       <input id="password" type="password" name="password" placeholder="Mot de passe" value={formData.password} onChange={handleChange} />
+      
+      {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <button type="submit">S'inscrire</button>
     </form>

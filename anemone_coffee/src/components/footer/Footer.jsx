@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import './footer.scss'
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
-function Footer (props) {
+function Footer () {
     const { t } = useTranslation();
 
     return (
