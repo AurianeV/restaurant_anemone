@@ -17,7 +17,6 @@ export default function Home({ navbarProps }) {
   const coffeeShopRef = useRef();
   const brunchRef = useRef();
   const tapasRef=useRef();
-  const reservationRef=useRef();
   const reseauxRef= useRef();
 
   const handleIntersection = (entries, observer) => {
@@ -37,11 +36,8 @@ export default function Home({ navbarProps }) {
             case tapasRef.current:
               setActiveSection(3);
               break;
-            case reservationRef.current:
-              setActiveSection(4);
-              break;
             case reseauxRef.current:
-              setActiveSection(5);
+              setActiveSection(4);
               break;          
               default:
             break;
@@ -52,15 +48,13 @@ export default function Home({ navbarProps }) {
   useEffect(() => {
     const options = {
       root: null, 
-      rootMargin: '0px',
+      rootMargin: '1px',
       threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
+    
     if (discoverRef.current) {
       observer.observe(discoverRef.current);
     }
@@ -72,9 +66,6 @@ export default function Home({ navbarProps }) {
     }
     if (tapasRef.current) {
       observer.observe(tapasRef.current);
-    }
-    if (reservationRef.current) {
-      observer.observe(reservationRef.current);
     }
     if (reseauxRef.current) {
       observer.observe(reseauxRef.current);
@@ -92,7 +83,6 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 2 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 4 ? 'active' : ''}`} />
-              <div className={`point ${activeSection === 5 ? 'active' : ''}`} />
             </div>
 
       <NavBar {...navbarProps} 

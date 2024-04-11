@@ -20,7 +20,6 @@ import UserAccountPage from './views/UserAccountPage'
 
 function App() {
 
-    const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
 
     const navbarProps = {
         home: {

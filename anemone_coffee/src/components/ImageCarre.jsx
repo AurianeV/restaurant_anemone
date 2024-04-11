@@ -11,7 +11,7 @@ import  { forwardRef } from 'react';
  
   return (
       
-    <div ref={ref} className="image-section">
+    <section ref={ref} className="image-section">
         {!isTextOnRight && (
             <div className="text-section">
             <h2>{title}</h2>
@@ -24,13 +24,15 @@ import  { forwardRef } from 'react';
                  
             </div>
         )}
-        <div className="image-row">
-            <img  className="image-row1" src={image1} alt={alt1} />
-            <img  className="image-row2" src={image2} alt={alt2} />
-        </div>
-        <div className="image-row">
-            <img  className="image-row3" src={image3} alt={alt3} />
-            <img  className="image-row4" src={image4} alt={alt4} />
+        <div className="section">
+          <div className="image-row">
+              <img  className="image-row1" src={image1} alt={alt1} />
+              <img  className="image-row2" src={image2} alt={alt2} />
+          </div>
+          <div className="image-row">
+              <img  className="image-row3" src={image3} alt={alt3} />
+              <img  className="image-row4" src={image4} alt={alt4} />
+          </div>
         </div>
         {isTextOnRight && (
             <div className="text-section">
@@ -43,7 +45,7 @@ import  { forwardRef } from 'react';
                 }
            </div>
         )}
-  </div>
+  </section>
   );
 })
 

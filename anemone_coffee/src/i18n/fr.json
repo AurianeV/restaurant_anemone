@@ -23,12 +23,12 @@
             },
             "sectionDiscover": {
                 "title":"À quoi s'attendre chez Anémone Café ?",
-                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. \n\n Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis. Anemone est enfin un café agréable et convivial en banlieue qui s’engage à recréer le lien entre nous. C’est pourquoi nous avons déménagé au centre-ville, nous comptons sur vous.",
+                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. \n\n Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis.",
                 "buttonValues":"Nos valeurs"
             },
             "sectionCoffeeShop_Patisseries": {
                 "title":"Coffee Shop & pâtisseries",
-                "text":"Notre coffee shop se veut minimaliste mais singulier, un lieu où chacun trouve sa place. Nous vous proposons du café de spécialité sélectionné avec soin et torréfié dans le val d’Oise. Vous retrouverez également toutes sortes de boissons chaudes, boissons fraiches, et des jus de saison. \n\nChaque matin nous préparons des pâtisseries fraiches que vous pourrez déguster tout au long de la journée. Et si vous n’avez pas le temps de vous poser, n’oubliez pas que tout est disponible à emporter.",
+                "text":"Notre coffee shop se veut minimaliste mais singulier, un lieu où chacun trouve sa place. Nous vous proposons du café de spécialité sélectionné avec soin et torréfié dans le val d’Oise. Vous retrouverez également toutes sortes de boissons chaudes, boissons fraiches, et des jus de saison. ",
                 "buttonBoisson":"Nos boissons"
             },
             "sectionBrunch": {
@@ -38,7 +38,7 @@
             },
             "sectionTapas" : {
                 "title":"Des plats à partager sous forme de tapas",
-                "text":"Le partage est au cœur de notre travail chez Anémone Café, c’est également ce que l’on veut transmettre à travers notre cuisine. C’est pour cette raison que l’on vous propose tous les soirs nos plats sous forme de tapas à partager. Accompagnées d’un verre de bon vin, tous les ingrédients sont réunis pour une bonne soirée. De belles associations qui subliment des produits de qualité, tel est le mot d’ordre. ",
+                "text":"Le partage est au cœur de notre travail chez Anémone Café, c’est également ce que l’on veut transmettre à travers notre cuisine. C’est pour cette raison que l’on vous propose tous les soirs nos plats sous forme de tapas à partager. Accompagnées d’un verre de bon vin, tous les ingrédients sont réunis pour une bonne soirée. ",
                 "buttonTapas":"Nos tapas"
             },
             "sectionReseaux": {
@@ -50,7 +50,7 @@
         "values":{
             "sectionPartenariats": {
                 "title":"Nos partenariats",
-                "text":"Nos partenariats avec des producteurs locaux : Il serait dommage d’avoir des produits de qualité à portée de main et de ne pas en profiter ! C’est pour cette raison qu’Anémone Café à décidé de s’associer avec des producteurs locaux afin de vous garantir le meilleur dans l’assiette et de favoriser les circuits courts dès que possible. Il nous semblait important dans un souci de transparence et de valorisation de leur travail, de vous les présenter ci-dessous :-Le café : -Le fromage : -Les œufs : -La charcuterie"
+                "text":"Nos partenariats avec des producteurs locaux : Il serait dommage d’avoir des produits de qualité à portée de main et de ne pas en profiter ! C’est pour cette raison qu’Anémone Café à décidé de s’associer avec des producteurs locaux afin de vous garantir le meilleur dans l’assiette et de favoriser les circuits courts dès que possible."
             },
             "sectionDechets": {
                 "title":"La valorisation des déchets",
@@ -65,7 +65,7 @@
 
         "menu": {
             "titleBrunch":"Notre brunch",
-            "textBrunch": "Pour le petit déjeuner on vous propose toute sorte de boissons chaudes de qualité, vous retrouvez également chaque un jus frais pressé de saison. Seront également disponible nos cakes et autres gâteaux ou encore notre granola servit avec du fromage. On vous propose du brunch toute la semaine, votre menu est à composer vous-même avec une assiette salée et une assiette sucrée. Vous retrouverez en autre : des œufs Bénédicte, avocado toast, pancakes, granola… Vous pouvez également venir déjeuner chez Anémone avec nos plats salés : avocado toast, pancakes de sarrasin, œufs Bénédicte…",
+            "textBrunch": "Pour le petit déjeuner on vous propose toute sorte de boissons chaudes de qualité, vous retrouvez également chaque un jus frais pressé de saison. Seront également disponible nos cakes et autres gâteaux ou encore notre granola servit avec du fromage. On vous propose du brunch toute la semaine, votre menu est à composer vous-même avec une assiette salée et une assiette sucrée. Vous retrouverez en autre : des œufs Bénédicte, avocado toast, pancakes, granola… ",
             "titleBoissons":"Nos boissons",
             "textBoissons":"Vous pouvez déguster nos cafés, boissons chaudes et fraîches tout au long de la journée. Chez Anémone on vous propose du café de spécialité et des de vrais boissons réalisées par un barista : cappuccino, flat white, latte, matcha latte, chai latte, sésame latte… Pour le gouter venez déguster nos pâtisseries maison : cookies, brownie peanut butter, banana bread…",
             "titleDinner":"Nos tapas",

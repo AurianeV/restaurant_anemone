@@ -40,6 +40,7 @@ const AdminProfile = () => {
         fetchAdminProfile();
         // Réinitialiser le champ du nouveau nom d'utilisateur
         setNewUsername('');
+        alert('Votre identifiant a bien été modifié.')
       } catch (error) {
         console.error('Erreur lors de la mise à jour du nom d\'utilisateur :', error);
         setError('Une erreur s\'est produite lors de la mise à jour du nom d\'utilisateur.');

@@ -2,9 +2,9 @@
 
 @mixin logo-styles {
     display:flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
-    width: 100%; 
+    width: 50%; 
     height: auto;
     margin-right: 10px;
   }

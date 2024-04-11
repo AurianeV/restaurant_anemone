@@ -14,7 +14,7 @@ const LogInForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
@@ -60,8 +60,6 @@ const LogInForm = () => {
       <label htmlFor="password" className="registerForm_label"> Mot de passe :</label>
       <input id="password" type="password" name="password" placeholder="Mot de passe" value={formData.password} onChange={handleChange} />
       <button type="submit">Se connecter</button>
-      <p><strong style={{color:"red"}}>Si vous n'avez pas de compte, merci d'en créer un en suivant ce lien :</strong></p>
-      <Link to="/user">Créer un compte</Link>
     </form>
   );
 };

@@ -3,7 +3,6 @@ import axios from 'axios';
 import NavBar from '../components/header/Navbar';
 import { useTranslation } from 'react-i18next';
 import LoginForm from '../components/utilisateur/LoginForm';
-import SignUpForm from '../components/utilisateur/SignUpForm';
 
 
 const Reservation = ({ navbarProps }) => {
@@ -53,7 +52,7 @@ const Reservation = ({ navbarProps }) => {
     try {
       const response = await axios.post('http://localhost:3001/reservations', reservationData, {
       headers: {
-        'x-auth-token': token // Ajouter le token JWT dans les en-têtes de la requête
+        'x-auth-token': token 
       }});
 
       if (response.data.success) {

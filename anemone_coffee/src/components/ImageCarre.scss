@@ -10,21 +10,24 @@
     margin:auto;
 
     img {
-      width: 100%; 
+      width: 90%; 
       height: auto; 
       overflow: hidden;
-      margin:5px;
-      margin-right:20px;
+      margin:2px;
+      margin-right:10px;
     }
    .image-row3, .image-row4 {
       display: none;
     }
   }
   .text-section {
-    padding: 20px; 
+    padding: 7px; 
   }
 
   @media screen and (min-width: 768px) {
+
+    .section{
+      width:80%;
     .image-row {
       flex-direction: column; 
       margin:auto;
@@ -42,6 +45,7 @@
       .image-row3, .image-row4 {
       display:block;
     }
+  }
     .text-section {
       padding: 100px;
     }
