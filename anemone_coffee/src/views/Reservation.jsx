@@ -8,6 +8,7 @@ import LoginForm from '../components/utilisateur/LoginForm';
 const Reservation = ({ navbarProps }) => {
   const { t } = useTranslation();
 
+  // Initialisation des données de réservation
   const [reservationData, setReservationData] = useState({
     name: '',
     email: '',
@@ -18,6 +19,7 @@ const Reservation = ({ navbarProps }) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
+  //Vérification de la connexion
   useEffect(() => {
     const token = localStorage.getItem('jwtToken');
 
@@ -26,10 +28,12 @@ const Reservation = ({ navbarProps }) => {
     }
   }, []);
 
+  //Gestion des changements de saisie
   const handleInputChange = (e) => {
     setReservationData({ ...reservationData, [e.target.name]: e.target.value });
   };
 
+  //Gestion de la réservation
   const handleReservation = async () => {
     const token = localStorage.getItem('jwtToken');
 
