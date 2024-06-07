@@ -4,6 +4,18 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: 'IntroRustG';
+  src: url('./fonts/FontsFree-Net-IntroRustG-Base2Line.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'IntroRustG', sans-serif;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;

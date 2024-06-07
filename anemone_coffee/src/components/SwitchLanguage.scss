@@ -1,0 +1,41 @@
+.language-switcher {
+    position: relative;
+    display: inline-block;
+  
+    .buttonLangue {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: inline-flex;
+      align-items: center;
+    }
+  
+    .arrow {
+      margin-left: 5px;
+      font-size: 0.8rem;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+  
+      .buttonLangue {
+        margin-top:-10px;
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+  
+        &:hover {
+          background-color: #f0f0f01f;
+        }
+      }
+    }
+  }
+  

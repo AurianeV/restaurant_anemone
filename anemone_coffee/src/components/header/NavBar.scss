@@ -8,6 +8,12 @@ nav {
     height: 800px;
     overflow: hidden;
 }
+@font-face {
+    font-family: 'IntroRustG', 'Arial', 'Helvetica';
+    src: url('../../fonts//FontsFree-Net-IntroRustG-Base2Line.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .navbar {
     
@@ -60,7 +66,7 @@ nav {
 
         h1 {
             color: white;
-            font-family: 'Protest Revolution', sans-serif;
+            font-family: 'IntroRustG', sans-serif;
         }
 
         p {
@@ -155,7 +161,7 @@ nav {
     
     .buttonLangue {
         padding: 2px;
-        background-color: rgba(226, 226, 226, 0.575);
+        background-color: rgba(226, 226, 226, 0.212);
         margin-left: 2px;
     }
     } 

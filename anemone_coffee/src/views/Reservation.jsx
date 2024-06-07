@@ -75,7 +75,7 @@ const Reservation = ({ navbarProps }) => {
     <>
       <NavBar {...navbarProps} />
       {isLoggedIn ? (
-        <div className="reservationForm">
+        <section className="reservationForm">
           <h2 className="reservationForm_title">{t('reservation.title')}</h2>
           <form>
             <label htmlFor="name" className="reservationForm_label">
@@ -125,7 +125,7 @@ const Reservation = ({ navbarProps }) => {
               {t('reservation.reservation')}
             </button>
           </form>
-        </div>
+        </section>
       ) : (
         <div>
           <p>Merci de vous connecter pour effectuer une réservation.</p>

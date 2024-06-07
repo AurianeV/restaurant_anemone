@@ -86,11 +86,12 @@ function Navbar(props) {
                   <li>
                      <SwitchLanguage />
                   </li>
-                  <li>
+                  {/* <li>
                      <NavLink to="/user">
                         <img className="navbar_logoUser" src="/logos/user.png" alt="logo connexion utilisateur"/>
                      </NavLink>
                   </li>
+                  */}
                </ul>
             </div>
             <div className="navbar_container">
