@@ -76,18 +76,25 @@
         "reservation": {
             "title":"Réserver une table", 
             "name":"Nom :",
+            "email":"Adresse mail :",
+            "phone":"Numéro de téléphone :",
             "date":"Date :",
             "heure":"Heure :",
             "choixHeure":"Choisissez une heure",
             "numberPeople": "Nombre de personnes :",
-            "reservation": "Réserver"
+            "reservation": "Réserver",
+            "infoGroupe": "Pour les groupes supérieurs à 6 personnes, veuillez nous contacter par mail : anemonecafe95@gmail.com"
         },
 
         "footer" :{
             "titleAdress":"Adresse", 
-            "adress":"68 Rue du Général Lecler, 95320 Saint-Leu-la-Forêt",
+            "adress":"Saint-Leu-la-Forêt 95320",
             "contact":"Contact",
-            "propos": "À propos"
+            "propos": "À propos",
+            "reservation": "Page réservation",
+            "event":"Découvrir les prochains évènements",
+            "mail":"anemonecafe95@gmail.com"
+
 
 
         }

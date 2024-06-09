@@ -78,18 +78,24 @@
     "reservation": {
         "title":"Reserve a table", 
         "name":"Name :",
+        "email":"E-mail address :",
+        "phone":"Phone number :",
         "date":"Date :",
         "heure":"Time :",
         "choixHeure":"Choose a time",
         "numberPeople": "Number of people :",
-        "reservation": "Book"
+        "reservation": "Book",
+        "infoGroupe": "For groups of more than 6 people, please contact us by e-mail: anemonecafe95@gmail.com"
     },
     
     "footer" :{
         "titleAdress":"Adress", 
-        "adress":"street of carreaux",
+        "adress":"Saint-Leu-la-Forêt 95320",
         "contact":"Contact", 
-        "propos": "About"
+        "propos": "About",
+        "reservation": "Réservation page",
+        "event":"Find out about upcoming events",
+        "mail":"anemonecafe95@gmail.com"
     }
   }
   

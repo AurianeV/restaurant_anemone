@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import './footer.scss'
+import { NavLink } from 'react-router-dom'
 
 function Footer () {
     const { t } = useTranslation();
@@ -18,12 +19,18 @@ function Footer () {
                     </div>
                     <div className="footer_contact">
                         <h3>{t('footer.contact')}</h3>
-                        <p>06 00 00 00 00</p>
+                        <p>{t('footer.mail')}</p>
                     </div>
                     <div className="footer_propos">
                         <h3>{t('footer.propos')}</h3>
-                        <p>lien 1</p>
-                        <p>lien 2</p>
+                        <ul>
+                            <li>
+                                <NavLink to="/reservation">{t('footer.reservation')}</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/events">{t('footer.event')}</NavLink>
+                            </li>
+                        </ul>
                     </div>
             </div>
         </footer>

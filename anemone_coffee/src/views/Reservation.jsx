@@ -7,10 +7,12 @@ import LoginForm from '../components/utilisateur/LoginForm';
 
 const Reservation = ({ navbarProps }) => {
   const { t } = useTranslation();
+  const [error, setError] = useState('');
 
   // Initialisation des données de réservation
   const [reservationData, setReservationData] = useState({
     name: '',
+    phone:'',
     email: '',
     date: '',
     number: '',
@@ -40,6 +42,7 @@ const Reservation = ({ navbarProps }) => {
     // Vérification des champs requis
     if (
       !reservationData.name ||
+      !reservationData.phone ||
       !reservationData.email ||
       !reservationData.date ||
       !reservationData.number ||
@@ -53,6 +56,7 @@ const Reservation = ({ navbarProps }) => {
       alert('Vous devez être au moins une personne pour réserver une table.');
       return; 
     }
+
     try {
       const response = await axios.post('http://localhost:3001/reservations', reservationData, {
       headers: {
@@ -62,12 +66,17 @@ const Reservation = ({ navbarProps }) => {
       if (response.data.success) {
         alert('Réservation réussie !')
         console.log('Réservation réussie !');
+        setError('')
       } else {
         console.error('Échec de la réservation :', response.data.message);
       }
     } catch (error) {
-      console.error('Erreur inattendue :', error);
-    }
+      if (error.response && error.response.data && error.response.data.message) {
+          setError(error.response.data.message);
+      } else {
+          setError('Erreur inattendue.');
+      }
+  }
   };
 
 
@@ -91,7 +100,7 @@ const Reservation = ({ navbarProps }) => {
             />
 
             <label htmlFor="email" className="reservationForm_label">
-              Adresse mail :
+              {t('reservation.email')}
             </label>
             <input
               id="email"
@@ -102,6 +111,12 @@ const Reservation = ({ navbarProps }) => {
               onChange={handleInputChange}
               required
             />
+
+            <label htmlFor="phone" className="reservationForm_label">
+              {t('reservation.phone')}
+            </label>
+            <input id="phone" type="number" name="phone" placeholder="06 00 00 00 00" value={reservationData.phone} onChange={handleInputChange} />
+
 
             <label htmlFor="date" className="reservationForm_label">
               {t('reservation.date')}
@@ -120,6 +135,7 @@ const Reservation = ({ navbarProps }) => {
               {t('reservation.numberPeople')}
             </label>
             <input id="number" type="number" name="number" value={reservationData.number} onChange={handleInputChange} />
+            {error && <p style={{ color: 'red' }}>{error}</p>}
 
             <button className="reservationForm_button" type="button" onClick={handleReservation}>
               {t('reservation.reservation')}

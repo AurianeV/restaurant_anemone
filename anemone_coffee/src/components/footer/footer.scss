@@ -19,6 +19,15 @@ footer {
     .footer_contact,
     .footer_propos {
         margin-bottom: 30px; 
+        text-align: left;
+
+        ul {
+            padding:0px;
+        }
+
+        a{
+            color:white;
+        }
     }
 
     @media only screen and (min-width: 768px) {
