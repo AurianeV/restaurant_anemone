@@ -23,7 +23,12 @@ router.post('/', authUserAdmin, async (req, res) => {
 
     if (number > 6) {
       return res.status(400).json({ success: false, message: 'Pour les groupes supérieurs à 6 personnes, veuillez nous contacter par mail : anemonecafe95@gmail.com' });
+    } else if (number < 1 ) {
+      return res.status(400).json({ success: false, message: 'Le nombre de personne doit être supérieur ou égal à 1 pour effectuer une réservation.' });
+    } else if ( phone.length !== 10 ) {
+      return res.status(400).json({ success: false, message: "Le numéro de téléphone n'est pas valide." });
     }
+
 
     await newReservation.save();
 
