@@ -17,9 +17,10 @@ export default function PopUpMenu(props) {
                       <div key={index}>
                       <img className="popUp_breakfast_img" src={item.image} alt={item.title} />
                       <h2 className="popUp_items">{item.title}</h2>
-                      <button onClick={() => window.open(item.menuPdfLink, '_blank')}>
+                      {/*<button onClick={() => window.open(item.menuPdfLink, '_blank')}>
                         {item.buttonLabel}
                       </button>
+                  */}
                       </div>
                   ))}
                   </div>
