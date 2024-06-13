@@ -9,11 +9,11 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
     <section ref={ref} className="section">
       {isTextOnLeft && (
         <div className="section-text">
-            <h2>{title}</h2>
-            <p>{text}</p>
+            <h2 className="title-left">{title}</h2>
+            <p className="text-left" >{text}</p>
             
             {showButton && textButtonModal && (
-            <button onClick={buttonAction}>{textButtonModal}</button>
+            <button className="button-left" onClick={buttonAction}>{textButtonModal}</button>
           )}
           <div className="logo_reseaux">
             {textButton &&
@@ -42,10 +42,10 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
       </div>
       {!isTextOnLeft && (
         <div className="section-text">
-            <h2>{title}</h2>
-            <p>{text}</p>
+            <h2 className="title-right" >{title}</h2>
+            <p className="text-right" >{text}</p>
             {showButton && textButtonModal && (
-            <button onClick={buttonAction}>{textButtonModal}</button>
+            <button className="button-right" onClick={buttonAction}>{textButtonModal}</button>
           )}
             {textButton &&
               <Link to={linkPage}><button>{textButton}</button></Link>

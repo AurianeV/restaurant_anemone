@@ -9,8 +9,9 @@
 
   .section-text {
     flex: 1;
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
+    text-align: justify;
 
     .logo_reseaux {
       display:flex;
@@ -51,25 +52,46 @@
     }
   }
   @media screen and (min-width: 1025px) {
-  
-    .section-image {
-      margin-top: 20px;
-      width:100%;
-  
-      .section-image-photo {
-        width:50%;
-      }
+
+    .logo_reseaux {
+      padding-left:50px
     }
-  }
-  .text-left {
-    @extend .section;
-    flex-direction: row;
+
+    .section-text {
+      flex: 1;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .section-image {
+      width:100%;
+      padding-top:50px;
+      padding-bottom:50px;
+      padding-right:150px;
+      padding-left:150px;
+    }
+    .text-right, .title-right {
+      padding-right:150px;
+    }
+
+    .button-right {
+      margin-right:150px;
+    }
+
+    .text-left, .title-left{
+      padding-left:150px;
+
+    }
+
+    .button-left {
+      margin-left:150px;
+    }
+
+
   }
   
-  .image-left {
-    @extend .section;
-    flex-direction: row-reverse;
-  }
+  
+  
 }
 
 

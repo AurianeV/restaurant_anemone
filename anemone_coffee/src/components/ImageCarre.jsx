@@ -13,7 +13,7 @@ import  { forwardRef } from 'react';
       
     <section ref={ref} className="image-section">
         {!isTextOnRight && (
-            <div className="text-section">
+            <div className="text-section-left">
             <h2>{title}</h2>
             <p>{text}</p>
             {textButton &&
@@ -35,7 +35,7 @@ import  { forwardRef } from 'react';
           </div>
         </div>
         {isTextOnRight && (
-            <div className="text-section">
+            <div className="text-section-right">
                 <h2>{title}</h2>
                 <p>{text}</p>
                 {textButton &&
