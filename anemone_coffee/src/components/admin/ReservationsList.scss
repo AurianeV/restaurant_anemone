@@ -45,6 +45,15 @@ $border-radius: 5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      text-align: justify;
+
+      &.pending {
+        background-color: rgb(255, 221, 158);
+      }
+    
+      &.accepted {
+        background-color: rgb(189, 255, 189);
+      }
 
       .reservation-details {
         flex-grow: 1;

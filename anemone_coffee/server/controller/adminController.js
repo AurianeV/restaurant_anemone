@@ -3,6 +3,9 @@ const bcrypt = require('bcrypt');
 const Admin = require('../models/Admin.js');
 const Reservation = require('../models/Reservation.js');
 const authenticateAdmin = require('../middleware/auth.js');
+const sendMail = require('../services/mailer.js');
+require('dotenv').config();
+
 
 const adminController = {};
 
@@ -115,15 +118,49 @@ adminController.updateAdminProfile = async (req, res) => {
         res.status(500).json({ success: false, message: 'Erreur lors de la mise à jour du nom d\'utilisateur de l\'administrateur.' });
       }};
 
-adminController.deleteReservation = async (req, res) => {
-  try {
-    const { id } = req.params;
-    await Reservation.findByIdAndDelete(id);
-    res.json({ success: true, message: 'Réservation supprimée avec succès.' });
-  } catch (error) {
-    console.error('Erreur lors de la suppression de la réservation :', error);
-    res.status(500).json({ success: false, message: 'Erreur lors de la suppression de la réservation.' });
-  }
-};
+      adminController.deleteReservation = async (req, res) => {
+        try {
+          const { id } = req.params;
+          const reservation = await Reservation.findByIdAndDelete(id);
+          if (!reservation) {
+            return res.status(404).json({ success: false, message: 'Réservation non trouvée.' });
+          }
+      
+          // Envoyer un email de notification
+          await sendMail(
+            reservation.email,
+            'Anémone Café -  Réservation annulée',
+            `Bonjour ${reservation.name},\n\nNous ne pouvons malheureusement pas prendre votre réservation pour le ${new Date(reservation.date).toLocaleDateString()} à ${reservation.reservationTime}. 
+            \n\nNous vous remercions pour l’interêt que vous portez à notre établissement.`
+          );
+      
+          res.json({ success: true, message: 'Réservation supprimée avec succès et email envoyé.' });
+        } catch (error) {
+          console.error('Erreur lors de la suppression de la réservation :', error);
+          res.status(500).json({ success: false, message: 'Erreur lors de la suppression de la réservation.' });
+        }
+      };
 
+      adminController.acceptReservation = async (req, res) => {
+        try {
+          const { id } = req.params;
+          const reservation = await Reservation.findByIdAndUpdate(id, { status: 'accepted' }, { new: true });
+          if (!reservation) {
+            return res.status(404).json({ success: false, message: 'Réservation non trouvée.' });
+          }
+      
+          // Envoyer un email de notification
+          await sendMail(
+            reservation.email,
+            'Anémone Café - Réservation confirmée',
+            `Bonjour ${reservation.name},\n\nVotre réservation du ${new Date(reservation.date).toLocaleDateString()} à ${reservation.reservationTime} est confirmée.\n\nÀ très vite.`
+          );
+      
+          res.json({ success: true, message: 'Réservation confirmée avec succès et email envoyé.', reservation });
+        } catch (error) {
+          console.error('Erreur lors de la confirmation de la réservation :', error);
+          res.status(500).json({ success: false, message: 'Erreur lors de la confirmation de la réservation.' });
+        }
+      };
+      
 module.exports = adminController;

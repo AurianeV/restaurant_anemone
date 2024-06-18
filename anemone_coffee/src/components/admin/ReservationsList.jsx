@@ -24,28 +24,23 @@ const ReservationList = () => {
     fetchReservations();
   }, []);
 
-  /*const handleAccept = async (reservation) => {
+  const handleAccept = async (reservation) => {
     try {
-      const response = await axios.post(`http://localhost:3001/admin/dashboard/accept/${reservation._id}`);
+      await axios.post(`http://localhost:3001/admin/dashboard/reservations/${reservation._id}`);
       fetchReservations();
     } catch (error) {
       console.error('Erreur lors de l\'acceptation de la réservation :', error);
     }
-  };*/
+  };
 
   const handleReject = async (reservation) => {
     try {
-      // Supprimer la réservation de l'affichage
-      setReservations(reservations.filter(item => item._id !== reservation._id));
-  
-      // Supprimer la réservation de la base de données
       await axios.delete(`http://localhost:3001/admin/dashboard/reservations/${reservation._id}`);
-      alert('La réservation a bien été supprimé')
+      fetchReservations();
     } catch (error) {
       console.error('Erreur lors du refus de la réservation :', error);
     }
   };
-  
 
   return (
     <section className="reservation-list">
@@ -56,7 +51,7 @@ const ReservationList = () => {
       ) : (
         <ul className="reservation-items">
           {reservations.map((reservation) => (
-            <li key={reservation._id} className="reservation-item">
+            <li key={reservation._id} className={`reservation-item ${reservation.status}`}>
               <div className="reservation-details">
                 <p><strong>Nom:</strong> {reservation.name}</p>
                 <p><strong>Email:</strong> {reservation.email}</p>
@@ -65,8 +60,12 @@ const ReservationList = () => {
                 <p><strong>Nombre de personnes:</strong> {reservation.number}</p>
               </div>
               <div className="reservation-actions">
-                {/*<button className="acceptButton" onClick={() => handleAccept(reservation)}>Accepter</button>*/}
-                <button className="rejectButton" onClick={() => handleReject(reservation)}>Refuser</button>
+                {reservation.status === 'pending' && (
+                  <>
+                    <button className="acceptButton" onClick={() => handleAccept(reservation)}>Accepter</button>
+                    <button className="rejectButton" onClick={() => handleReject(reservation)}>Refuser</button>
+                  </>
+                )}
               </div>
             </li>
           ))}

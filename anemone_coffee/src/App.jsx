@@ -25,8 +25,8 @@ function App() {
     const navbarProps = {
         home: {
             backgroundImage: '/background_header/home.png',
-            title:'Anémone Coffee',
-            text:'COFFEE - BRUNCH - FOOD',
+            title:'Anémone Café',
+            text:'COFFEE - FOOD - BRUNCH',
             buttonLabel: 'Découvrir'
         },
         valeurs: {

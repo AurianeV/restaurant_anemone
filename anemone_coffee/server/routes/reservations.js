@@ -2,11 +2,12 @@
 const express = require('express');
 const Reservation = require('../models/Reservation.js');
 const {authUserAdmin} = require('../middleware/authUserAdmin.js')
-
+const sendMail = require('../services/mailer.js');
+require('dotenv').config();
 const router = express.Router();
 
 // Route pour créer une nouvelle réservation (accessible uniquement par les utilisateurs ou admin authentifiés)
-router.post('/', authUserAdmin, async (req, res) => {
+router.post('/', async (req, res) => {
 
   const { name, phone, email, date, number, heure } = req.body;
   try {
@@ -29,9 +30,13 @@ router.post('/', authUserAdmin, async (req, res) => {
       return res.status(400).json({ success: false, message: "Le numéro de téléphone n'est pas valide." });
     }
 
-
+   
     await newReservation.save();
-
+    await sendMail(
+      email,
+      'Anémone Café - Réservation en attente',
+      `Bonjour ${name},\n\nVotre demande de réservation du ${new Date(date).toLocaleDateString()} à ${heure} a bien été prise en compte, nous la traitons dans les plus bref délais.\n\nÀ très vite.`
+    );
     return res.json({ success: true });
 
     

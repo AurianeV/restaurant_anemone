@@ -75,7 +75,7 @@
 
         "reservation": {
             "title":"Réserver une table", 
-            "name":"Nom :",
+            "name":"Prénom:",
             "email":"Adresse mail :",
             "phone":"Numéro de téléphone :",
             "date":"Date :",

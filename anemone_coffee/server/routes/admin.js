@@ -27,6 +27,9 @@ router.put('/profile',  authenticateAdmin, adminController.updateAdminProfile);
 // Route pour supprimer une réservation
 router.delete('/dashboard/reservations/:id', adminController.deleteReservation);
 
+// Route pour valider une réservation
+router.post('/dashboard/reservations/:id', adminController.acceptReservation);
+
 
 // Route pour modifier son mot de passe
 /*router.put('/profile', authenticateAdmin, async (req, res) => {

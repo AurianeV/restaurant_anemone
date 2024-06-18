@@ -9,7 +9,12 @@ const reservationSchema = new mongoose.Schema({
   date: Date,
   number: Number,
   reservationTime: String,
-  placesDisponibles: Number
+  placesDisponibles: Number,
+  status: {
+    type: String,
+    enum: ['pending', 'accepted'],
+    default: 'pending'
+  }
 });
 
 const Reservation = mongoose.model('Reservation', reservationSchema);

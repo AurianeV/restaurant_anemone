@@ -60,8 +60,8 @@ const Reservation = ({ navbarProps }) => {
       }});
 
       if (response.data.success) {
-        alert('Réservation réussie !')
-        console.log('Réservation réussie !');
+        alert('Votre demande de réservation est en attente de confirmation. Merci de vérifier vos mails.')
+        console.log('Demande de réservation réussie !');
         setError('')
       } else {
         console.error('Échec de la réservation :', response.data.message);
@@ -90,7 +90,7 @@ const Reservation = ({ navbarProps }) => {
               id="name"
               type="text"
               name="name"
-              placeholder="Doe"
+              placeholder="Sarah"
               value={reservationData.name}
               onChange={handleInputChange}
             />
