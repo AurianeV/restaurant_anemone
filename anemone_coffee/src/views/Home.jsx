@@ -6,12 +6,21 @@ import ImageCarre from '../components/ImageCarre'
 import 'intersection-observer'; 
 import React, { useEffect, useRef, useState } from 'react';
 import MainAdminPage from './MainAdminPage'
+import Logo from '../components/Logo'
 
 
 export default function Home({ navbarProps }) {
     const { t } = useTranslation();
     const [activeSection, setActiveSection] = useState(0);
+    const [showContent, setShowContent] = useState(false)
 
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowContent(true);
+      }, 3000); 
+      return () => clearTimeout(timer);
+    }, []);
+  
   const headerRef= useRef();
   const discoverRef = useRef();
   const coffeeShopRef = useRef();
@@ -76,7 +85,10 @@ export default function Home({ navbarProps }) {
     };
   }, []); 
     return (
-        <div>
+        <>
+          {!showContent && <Logo/>}
+          {showContent && (
+        <div> 
             <div className="points-container">
               <div className={`point ${activeSection === 0 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 1 ? 'active' : ''}`} />
@@ -173,7 +185,8 @@ export default function Home({ navbarProps }) {
         alt="Gobelet"
       />
     </div>
-        
+          )}
+        </>
     );
 }
 
