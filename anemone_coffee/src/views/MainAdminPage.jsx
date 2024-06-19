@@ -34,14 +34,7 @@ const MainAdminPage = ({navbarProps}) => {
         </Routes>
       ) : (
         <>
-          {showLoginForm ? <LoginForm onLogin={handleLogin} /> : <RegisterForm onSignUpSuccess={handleShowLoginForm}/>}
-          <div>
-            {showLoginForm ? (
-              <p>Vous n'avez pas encore de compte ? <Link to="#" onClick={handleShowRegisterForm}>Inscrivez-vous ici</Link>.</p>
-            ) : (
-              <p>Vous avez déjà un compte ? <Link to="#" onClick={handleShowLoginForm}>Connectez-vous ici</Link>.</p>
-            )}
-          </div>
+           <LoginForm onLogin={handleLogin} /> 
         </>
       )}
     </div>
