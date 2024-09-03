@@ -4,6 +4,7 @@ import NavBar from '../components/header/NavBar'
 import ModalComponent from '../components/PopUp/PopUp';
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
+import TransitionLine from '../components/TransitionLine';
 
 
 export default function Menu({navbarProps}){
@@ -33,6 +34,7 @@ export default function Menu({navbarProps}){
         showButton={true}
         alt="photo d'une assiette de brunch"
       />
+      <TransitionLine/>
       <Sections
         title={t('menu.titleBoissons')}
         text={t('menu.textBoissons')}
@@ -43,6 +45,7 @@ export default function Menu({navbarProps}){
         showButton={true}
         alt="photo d'un café et chai latte"
       />
+      <TransitionLine/>
       <Sections
         title={t('menu.titleDinner')}
         text={t('menu.textDinner')}

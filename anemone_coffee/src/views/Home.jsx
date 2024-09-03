@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 import TransitionImg from '../components/TransitionImage/TransitionImg'
 import ImageCarre from '../components/ImageCarre'
 import 'intersection-observer'; 
-import React, { useEffect, useRef, useState } from 'react';
-import MainAdminPage from './MainAdminPage'
+import { useEffect, useRef, useState } from 'react';
 import Logo from '../components/Logo'
 
 

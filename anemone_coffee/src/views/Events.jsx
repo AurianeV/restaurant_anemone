@@ -15,7 +15,7 @@ export default function Events({ navbarProps }) {
                 <h2>{t('event.title')}</h2>
                 <p>{t('event.text')}</p>
             </div>
-            <CountDown/>
+            {/*<CountDown/>*/}
         </div>
     );
 }

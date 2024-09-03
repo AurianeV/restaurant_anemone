@@ -5,7 +5,9 @@ $countdown-digit-size: 1em;
 .countdown-container {
   text-align: center;
   font-family: 'Arial', sans-serif;
-  margin: 50px;
+  margin: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
 
   .countdown-timer {
     display: flex;

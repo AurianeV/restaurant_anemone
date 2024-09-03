@@ -5,15 +5,11 @@ nav {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
-    height: 800px;
+    height: 700px;
     overflow: hidden;
+
 }
-@font-face {
-    font-family: 'IntroRustG', 'Arial', 'Helvetica';
-    src: url('../../fonts//FontsFree-Net-IntroRustG-Base2Line.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+
 
 .navbar {
     
@@ -66,7 +62,8 @@ nav {
 
         h1 {
             color: white;
-            font-family: 'IntroRustG', sans-serif;
+            font-family: 'League Spartan', sans-serif;
+            text-transform: uppercase;
         }
 
         p {

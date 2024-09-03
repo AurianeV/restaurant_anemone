@@ -79,7 +79,6 @@ const Reservation = ({ navbarProps }) => {
   return (
     <>
       <NavBar {...navbarProps} />
-      {isLoggedIn ? (
         <section className="reservationForm">
           <h2 className="reservationForm_title">{t('reservation.title')}</h2>
           <form>
@@ -159,12 +158,6 @@ const Reservation = ({ navbarProps }) => {
             </button>
           </form>
         </section>
-      ) : (
-        <div>
-          <p>Merci de vous connecter pour effectuer une réservation.</p>
-          <LoginForm /> 
-        </div>
-      )}
     </>
   );
 };
