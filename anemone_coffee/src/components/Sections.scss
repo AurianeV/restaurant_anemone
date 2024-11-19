@@ -1,100 +1,160 @@
-// Sections.scss
-
 @import 'mixins';
+
+/* Style pour le titre mobile */
+.title_mobile {
+  padding-top:20px;
+  padding-right:20px;
+  padding-left:20px;
+
+  @media screen and (min-width: 768px) {
+    display: none; /* Masque le titre mobile sur les écrans à partir de 768px */
+  }
+}
 
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right:20px;
+  padding-left:20px;
 
+  .title-left, .title-right {
+    display: none;
+  }
+
+  /* Section texte */
   .section-text {
     flex: 1;
-    padding: 50px;
-    font-size: 14px;
     text-align: justify;
 
+    .text-right, .text-left {
+      text-align: left;
+    }
+
+    button {
+      color: black;
+    }
+
+    /* Logos des réseaux sociaux */
     .logo_reseaux {
-      display:flex;
-      justify-content:center;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      width: 100%; 
       height: auto;
       margin-right: 10px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     .navbar_logoFacebook, .navbar_logoInsta, .navbar_logoTiktok {
-      @include logo-styles; 
-    }
-
-    h2 {
-      font-size: 21px;
+      @include logo-styles;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 14px;
       font-size: 18px;
 
-      .navbar_logoFacebook, .navbar_logoInsta, .navbar_logoTiktok {
-        width:60px; 
-        
+      .title-left, .title-right {
+        display: block;
       }
-    }
 
-    
+      .navbar_logoFacebook, .navbar_logoInsta, .navbar_logoTiktok {
+        width: 60px;
+      }
+
+
+    }
   }
+
+  /* Section image */
   .section-image {
     flex: 1;
-    margin-top: 20px;
-    width:100%;
+    margin-top: 10px;
+    width: 100%;
 
-    .section-image-photo {
-      width:100% 
+    .section-image-photo-mobile {
+      display: block; /* Affiche l'image mobile par défaut */
+      width: 100%;   /* L'image prend toute la largeur en mobile */
+
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        display:none
+      } 
+    }
+
+    @media screen and (min-width: 768px) {
+      .section-image-photo-desktop {
+        width: 50%;
+      }
     }
   }
-  @media screen and (min-width: 1025px) {
 
-    .logo_reseaux {
-      padding-left:150px
+  /* Mobile styles */
+  @media screen and (max-width: 768px) {
+    flex-direction: column; /* Colonne en mobile */
+    justify-content: flex-start; /* Aligne le contenu en haut */
+
+    .section-image {
+      order: -1; /* Place l'image avant le texte sur mobile */
+      margin-bottom: 20px; /* Espace entre l'image et le texte */
     }
+
+    .section-image-photo-desktop {
+      display: none; /* Cache l'image desktop sur mobile */
+    }
+
+    .section-image-photo-mobile {
+      display: block; /* Affiche l'image mobile uniquement */
+    }
+
+  }
+
+  /* Desktop and tablets */
+  @media screen and (min-width: 1025px) {
+    .logo_reseaux {
+      padding-left: 150px;
+    }
+
+    .title_mobile {
+      display: none; /* Masque le titre mobile en desktop */
+    }
+
+    .title-left, .title-right {
+      display: block; /* Affiche les titres sur desktop */
+    }
+
     .section-text {
       flex: 1;
-      font-size: 14px;
+      font-size: 16px;
       text-align: justify;
+      padding: 0;
     }
 
     .section-image {
-      width:100%;
-      padding-top:50px;
-      padding-bottom:50px;
-      padding-right:150px;
-      padding-left:150px;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
 
-      .section-image-photo {
-        width:60% 
+      .section-image-photo-mobile {
+        width: 100%;
+        display: none; /* Cache l'image mobile sur desktop */
       }
     }
+
     .text-right, .title-right {
-      padding-right:150px;
+      padding-right: 150px;
+      font-size: 24px;
     }
 
     .button-right {
-      margin-right:150px;
+      margin-right: 150px;
     }
 
-    .text-left, .title-left{
-      padding-left:150px;
-
+    .text-left, .title-left, .button_home {
+      padding-left: 150px;
     }
 
     .button-left {
-      margin-left:150px;
+      margin-left: 150px;
     }
-
-
   }
-  
-  
-  
 }
-
-

@@ -1,16 +1,17 @@
 footer {
     background-color: black;
     color: white;
-    padding: 10px;
     width:100%;
     display:flex;
     justify-content: space-around;
     align-items: center;
 
     .footer_logo {
-        width: 150px;
+        width: 100px;
     }
-
+iframe {
+    display:none;
+}
     .footer_img {
         margin-bottom: 10px; 
     }
@@ -35,7 +36,11 @@ footer {
         align-items: center;
         padding-top:70px;
         padding-bottom:70px;
-        width:99%;
+        width:100%;
+
+        iframe {
+            display:block;
+        }
 
         .footer_container_content {
             display:flex;
@@ -46,7 +51,7 @@ footer {
         .footer_contact,
         .footer_propos {
             margin-bottom: 0;
-            margin-left: 50px; 
+            margin-left: 20px; 
         }
 
         .footer_logo{

@@ -11,8 +11,9 @@ export default function Events({ navbarProps }) {
     return (
         <div>
             <NavBar {...navbarProps} />
-            <div className="countdown-container">
+            <div className="eventPage">
                 <h2>{t('event.title')}</h2>
+                <br/>
                 <p>{t('event.text')}</p>
             </div>
             {/*<CountDown/>*/}

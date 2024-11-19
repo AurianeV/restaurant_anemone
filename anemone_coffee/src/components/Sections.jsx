@@ -3,31 +3,38 @@ import { Link } from 'react-router-dom';
 import './Sections.scss'
 import { forwardRef } from 'react';
 
-const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal, alt}, ref) => {
+// eslint-disable-next-line react/display-name
+const Section = forwardRef(({title, text, imageDesktop, imageMobile, isTextOnLeft, linkPage, textButton, logoFacebook, logoInsta, logoTiktok, buttonAction, showButton, textButtonModal, alt}, ref) => {
 
   return (
+    <>
+    <h2 className="title_mobile">{title}</h2>
+
     <section ref={ref} className="section">
       {isTextOnLeft && (
         <div className="section-text">
             <h2 className="title-left">{title}</h2>
-            <p className="text-left" >{text}</p>
+            {/* Utilisation de dangerouslySetInnerHTML pour rendre le texte avec balises HTML */}
+            <p className="text-left" dangerouslySetInnerHTML={{ __html: text }}></p>
             
             {showButton && textButtonModal && (
             <button className="button-left" onClick={buttonAction}>{textButtonModal}</button>
           )}
-          <div className="logo_reseaux">
+            <div className="button_home">
             {textButton &&
               <Link to={linkPage}><button>{textButton}</button></Link>
             }
+            </div>
+            <div className="logo_reseaux">
             {logoFacebook &&
-              <Link to={linkPage}>                     
-              <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo facebook" />
-              </Link>
+              <a href="https://www.facebook.com/share/CmB5FkcAye85fA4Z/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">                     
+                <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo Facebook" />
+              </a>
             }
             {logoInsta &&
-              <Link to={linkPage}>                     
+              <a href="https://www.instagram.com/anemone.cafe?igsh=MWw0ejBmcGQzNDU4OA==" target="_blank" rel="noopener noreferrer">                     
               <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo instagram" />
-              </Link>
+              </a>
             }
             {logoTiktok &&
               <Link to={linkPage}>                     
@@ -38,7 +45,16 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
         </div>
       )}
       <div className="section-image">
-        <img className="section-image-photo" src={image} alt={alt}/>
+          <img
+            className="section-image-photo-desktop"
+            src={imageDesktop}
+            alt={alt}
+          />
+          <img
+            className="section-image-photo-mobile"
+            src={imageMobile}
+            alt={alt}
+          />
       </div>
       {!isTextOnLeft && (
         <div className="section-text">
@@ -53,6 +69,7 @@ const Section = forwardRef(({title, text, image, isTextOnLeft, linkPage, textBut
         </div>
       )}
     </section>
+    </>
   );
 })
 

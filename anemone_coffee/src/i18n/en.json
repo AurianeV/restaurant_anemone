@@ -7,6 +7,7 @@
     "menuLabel": "Menus",
     "eventsLabel": "Events",
     "contactLabel": "Contact",
+    "commandLabel":"Order",
     "homeTitle": "Welcome to Anémone Coffee",
     "homeText": "COFFEE - BRUNCH - FOOD",
     "conceptTitle": "Our Concept",
@@ -24,45 +25,45 @@
             "titleTapas":"Aperitifs and Tapas"
         },
         "sectionDiscover": {
-            "title":"What to expect at Anemone Café?",
-            "text": "Pick up your breakfast before work. Be able to come drink coffee or eat at any time of the day. Enjoy good specialty coffee and discover new drinks.\n\nEnjoy the time to taste with our homemade pastries. Attend regular events. Meet at the aperitif time and enjoy our tapas to share. ",
+            "title":"At Anémone Café, every moment of the day has its own special treat",
+            "text": "<ul><li>‣ Grab a delicious breakfast to go before heading off to work.</li><li>Take a break anytime to enjoy a specialty coffee or a light lunch.</li><li>‣ Discover new flavors with our trendy drinks and homemade pastries.</li><li>‣ At snack time, indulge in our artisanal sweet creations.</li><li>‣ Join our regular events in a warm and friendly atmosphere.</li><li>‣ In the evening, gather with friends for a cozy aperitif with our shareable tapas.</li><li>‣ And, of course, unwind with a drink among friends.</li></ul><strong>Anémone Café</strong> is much more than a simple coffee shop. It’s a warm and welcoming spot in the heart of Val d’Oise, designed to foster connection, share authentic moments, and make you feel at home. We’re waiting for you in downtown Saint-leu-la-forêt, whether you’re stopping by for a coffee or an aperitif—your choice! ",
             "buttonValues":"Our values"
         },
         "sectionCoffeeShop_Patisseries": {
-            "title":"Coffee Shop & pastries",
-            "text":"Our coffee shop is minimalist yet unique, a place where everyone can find their place. We offer carefully selected specialty coffees roasted in the Val d'Oise. You'll also find all kinds of hot drinks, cold beverages and seasonal juices. ",
+            "title":"Anémone Café: friendly, unique and just for you",
+            "text":"At Anémone Café, we’ve created a space where everyone can feel at home. Our warm yet character-filled ambiance invites you to relax while enjoying a unique experience.<br/><br/>We offer carefully selected specialty coffee that is locally roasted in Val d’Oise, ensuring freshness and quality in every cup. You’ll also find a wide range of hot drinks, refreshing cold beverages, and seasonal juices.<br/><br/>Every morning, our homemade pastries are prepared with care so you can enjoy them at any time of the day. And if you’re in a hurry, no worries – everything is available to-go, so you can take a bit of Anémone with you, wherever you go.",
             "buttonBoisson":"Our drinks"
         },
         "sectionBrunch": {
-            "title":"Brunch non-stop",
-            "text":"There's no time for brunch! We'll be brunching from Wednesday to Sunday from 11am to 5pm non-stop. On the menu, savory and sweet gourmet dishes, pastries, hot and cold drinks... In short, there's something for everyone.",
+            "title":"Brunch whenever you like!",
+            "text":"Join us for a delicious brunch from Wednesday to Sunday, from 11 AM to 5 PM, with no break.<br/>On the menu, a delightful selection of savory and sweet dishes, homemade pastries, as well as a variety of hot and cold drinks.<br/> <strong>Here, everyone will find something to enjoy!</strong>",
             "buttonBoisson":"Our brunch"
         },
         "sectionTapas" : {
-            "title":"Dishes to share in the form of tapas",
-            "text":"Sharing is at the heart of our work at Anémone Café, and it's also what we want to convey through our cuisine. That's why every evening we offer our dishes as tapas to share. Accompanied by a glass of good wine, all the ingredients are brought together for a great evening. ",
+            "title":"Sharing is our philosophy at Anémone Café.",
+            "text":"We believe that every dish tells a story, and that’s why we want our cuisine to be a collective experience.</br></br>Every evening, we offer our dishes in the form of shareable tapas, perfect for awakening your taste buds and creating convivial moments. Paired with a glass of good wine, all the ingredients are in place for a wonderful evening together.",
             "buttonTapas":"Our tapas"
         },
         "sectionReseaux": {
-            "title":"Our social networks",
-            "text":"Come and get to know us on social networks, we're super active and you'll be up to date with the latest news before anyone else. If you're still not convinced, we often organize contests with prizes. It happens here ->"
+            "title":"Join us on our social networks to get to know each other!",
+            "text":"We are very active, and you will be among the first to discover our latest updates. </br></br>And if you still have any doubts, know that we regularly organize contests with small prizes to be won. Don’t miss the chance to participate and have fun with us!"
         }
     },
 
     "values":{
         "sectionPartenariats": {
-            "title":"our partnerships",
-            "text":"Our partnerships with local producers: It would be a shame to have quality products at hand and not take advantage of them! That's why Anémone Café has decided to partner with local producers to guarantee you the best on your plate, and to promote short supply chains wherever possible. "
+            "title":"Our partnerships with local producers",
+            "text":"At Anémone Café, we firmly believe it would be a shame not to take advantage of the quality products available to us. That’s why we’ve chosen to collaborate with local producers, to offer you the best on your plate and prioritize short supply chains. </br></br>In the interest of transparency and to highlight their work, we are pleased to introduce our partners below. "
         },
         "sectionDechets": {
-            "title":"Waste recovery",
-            "text":"Every little action counts, and it seemed crazy to us as restaurateurs not to make the most of our food waste. So we teamed up with..., which takes advantage of all the café's food waste to turn it into compost "
+            "title":"Every little action counts!",
+            "text":"As restaurant owners, it seemed unthinkable to us not to make use of our food waste. That’s why we decided to partner with “...”, who transforms all our waste into compost. Together, we contribute to an eco-friendly approach and support a circular economy."
         }
     },
 
     "event": {
-        "title":"! Big opening night!",
-        "text":"Anémone café is a project that didn't come to town by chance. Our aim is to be at the heart of people's lives, to create a place where people can get together. That's why every month we'll be organising a creative, artistic or craft event. So that we can discover new things, meet new people and forge new links. The programme will soon be available here. One evening a week will also be dedicated to a particular musical theme, so you can get together with friends or family and listen to your favourite tunes (disco, jazz, bossa nova, etc.). Don't hesitate to drop by the café with your recommendations."
+        "title":"🎉 Big opening night not to be missed!",
+        "text":"We invite you to join us on January 25th to celebrate our grand opening in style! </br> <strong>On the agenda:</strong> delicious tapas, fine wine, lively music, and of course, plenty of good friends!</br> The great atmosphere is guaranteed, and we can't wait to see you there to share this memorable evening with you!"
     },
 
     "menu": {

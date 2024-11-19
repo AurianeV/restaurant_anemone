@@ -1,12 +1,13 @@
 {
     "homeLabel": "Accueil",
-    "knowUsLabel" : "Nous connaître",
+    "knowUsLabel" : "A propos",
     "conceptLabel": "Concept",
     "valuesLabel" : "Nos valeurs",
     "reservationLabel": "Réservation",
     "eventsLabel": "Évènements",
     "menuLabel": "Menus",
     "contactLabel": "Contact",
+    "commandLabel":"Commande",
     "homeTitle": "Bienvenue chez Anémone Coffee",
     "homeText": "CAFÉ - BRUNCH - CUISINE",
     "conceptTitle": "Notre Concept",
@@ -22,45 +23,45 @@
                 "titleTapas":"Apéro et Tapas"
             },
             "sectionDiscover": {
-                "title":"À quoi s'attendre chez Anémone Café ?",
-                "text":"Prenez votre petit-déjeuner avant le travail. Venez boire un café ou manger à tout moment de la journée. \n\n Profitez d’un bon café de spécialité et découvrez de nouvelles boissons. Profitez du temps pour déguster nos pâtisseries homenade. Assistez à des événements réguliers. Retrouvez-vous à l’heure de l’apéritif et dégustez nos tapas à partager. Prenez un verre avec les amis.",
+                "title":"Chez Anémone Café, chaque moment de la journée a son petit plaisir",
+                "text":"<ul><li>‣ Attrapez un délicieux petit-déjeuner à emporter avant de filer au travail.</li><li>‣ Faites une pause à tout moment pour savourer un café de spécialité ou un déjeuner léger.</li><li>‣ Explorez de nouvelles saveurs avec nos boissons tendance et nos pâtisseries maison.</li><li>‣ À l’heure du goûter, venez vous régaler avec nos créations sucrées artisanales.</li><li>‣ Participez à nos événements réguliers dans une ambiance chaleureuse.</li><li>‣ Le soir, retrouvez-vous entre amis pour un apéro convivial autour de nos tapas à partager.</li><li>‣ Et bien sûr, profitez d’un moment de détente avec un verre entre copains</li></ul><strong>Anémone Café</strong>, c’est bien plus qu’un simple coffee shop. C’est un lieu chaleureux et accueillant en plein cœur du Val d’Oise, conçu pour recréer du lien, partager des instants authentiques, et vous faire sentir chez vous. On vous attend au centre-ville de Saint-leu-la-forêt pour une visite, que ce soit pour un café ou un apéro – à vous de choisir !",
                 "buttonValues":"Nos valeurs"
             },
             "sectionCoffeeShop_Patisseries": {
-                "title":"Coffee Shop & pâtisseries",
-                "text":"Notre coffee shop se veut minimaliste mais singulier, un lieu où chacun trouve sa place. Nous vous proposons du café de spécialité sélectionné avec soin et torréfié dans le val d’Oise. Vous retrouverez également toutes sortes de boissons chaudes, boissons fraiches, et des jus de saison. ",
+                "title":"Anémone Café : convivial, singulier, et fait pour vous",
+                "text":"Chez Anémone Café, nous avons imaginé un espace où chacun peut se sentir chez soi. Notre ambiance conviviale, mais pleine de caractère, invite à la détente tout en vous offrant une expérience unique.<br/><br/>Nous vous proposons un café de spécialité soigneusement sélectionné et torréfié localement dans le Val d’Oise, garantissant fraîcheur et qualité à chaque tasse. Vous trouverez également une large gamme de boissons chaudes, des boissons fraîches rafraîchissantes et des jus de saison.<br/><br/>Chaque matin, nos pâtisseries maison sont préparées avec soin pour que vous puissiez les déguster à tout moment de la journée. Et si vous êtes pressé, pas de souci – tout est disponible à emporter, pour que vous puissiez emporter un peu d’Anémone avec vous, où que vous alliez.",
                 "buttonBoisson":"Nos boissons"
             },
             "sectionBrunch": {
-                "title":"Brunch en continu",
-                "text":"Y’a pas d’heure pour bruncher !\n\n On vous retrouve pour bruncher du mercredi au dimanche de 11h à 17h sans interruption.\n\n Au menu des plats salés et sucrés gourmands, des pâtisseries, des boissons chaudes et fraiches.\n\nBref, il y en a pour tous les goûts.",
+                "title":"Brunchez quand vous voulez !",
+                "text":"Retrouvez-nous pour un brunch savoureux du mercredi au dimanche, de 11h à 17h, sans interruption.<br/>Au menu, une délicieuse sélection de plats salés et sucrés gourmands, des pâtisseries maison, ainsi qu'une variété de boissons chaudes et fraîches. <br/> <strong>Ici, chacun trouvera de quoi se régaler !</strong>",
                 "buttonBoisson":"Notre brunch"
             },
             "sectionTapas" : {
-                "title":"Des plats à partager sous forme de tapas",
-                "text":"Le partage est au cœur de notre travail chez Anémone Café, c’est également ce que l’on veut transmettre à travers notre cuisine. C’est pour cette raison que l’on vous propose tous les soirs nos plats sous forme de tapas à partager. Accompagnées d’un verre de bon vin, tous les ingrédients sont réunis pour une bonne soirée. ",
+                "title":"Le partage, c’est notre philosophie chez Anémone Café.",
+                "text":"Nous croyons que chaque plat raconte une histoire, et c’est pourquoi nous voulons que notre cuisine soit une expérience collective.</br></br>Chaque soir, nous vous proposons nos plats sous forme de tapas à partager, parfaits pour éveiller vos papilles et créer des moments conviviaux. Accompagnés d’un verre de bon vin, tous les ingrédients sont réunis pour passer une excellente soirée ensemble.",
                 "buttonTapas":"Nos tapas"
             },
             "sectionReseaux": {
-                "title":"Nos réseaux sociaux",
-                "text":"Venez apprendre à nous connaitre sur les réseaux sociaux, on est super actifs et vous serez au courant des dernières nouveautés avant tout le monde. Si vous n’êtes toujours pas convaincus on organise souvent des jeu concours avec des p’tits cadeaux à la clé. Ça se passe ici ->"
+                "title":"Rejoignez-nous sur les réseaux sociaux pour faire connaissance !",
+                "text":"Nous sommes très actifs et vous serez parmi les premiers à découvrir nos dernières nouveautés. </br></br>Et si vous avez encore des doutes, sachez que nous organisons régulièrement des jeux concours avec de petits cadeaux à la clé. Ne manquez pas l’occasion de participer et de vous amuser avec nous !"
             }
         },
 
         "values":{
             "sectionPartenariats": {
-                "title":"Nos partenariats",
-                "text":"Nos partenariats avec des producteurs locaux : Il serait dommage d’avoir des produits de qualité à portée de main et de ne pas en profiter ! C’est pour cette raison qu’Anémone Café à décidé de s’associer avec des producteurs locaux afin de vous garantir le meilleur dans l’assiette et de favoriser les circuits courts dès que possible."
+                "title":"Nos partenariats avec des producteurs locaux",
+                "text":"Chez Anémone Café, nous croyons fermement qu'il serait dommage de ne pas profiter des produits de qualité à notre portée. C'est pourquoi nous avons choisi de collaborer avec des producteurs locaux, afin de vous offrir le meilleur dans votre assiette et de privilégier les circuits courts. </br></br>Dans un souci de transparence et pour valoriser leur travail, nous sommes heureux de vous présenter nos partenaires ci-dessous."
             },
             "sectionDechets": {
-                "title":"La valorisation des déchets",
-                "text":"Chaque petite action compte et il nous semblait fou en tant que restaurateur de ne pas tirer profit de nos déchets alimentaires. Nous nous sommes donc associés à « … » qui profite de tous les déchets alimentaires du café pour les transformer en composte. "
+                "title":"Chaque petite action compte !",
+                "text":"En tant que restaurateurs, il nous semblait impensable de ne pas tirer profit de nos déchets alimentaires. C'est pourquoi nous avons décidé de nous associer à « … », qui transforme tous nos déchets en compost. Ensemble, nous contribuons à une démarche écoresponsable et soutenons une économie circulaire."
             }
         },
 
         "event": {
-            "title":"! Grosse soirée d'ouverture !",
-            "text":"Anémone café est un projet qui ne s’est pas construit en ville par hasard. En effet, nous avons à cœur d’être au centre de la vie des gens, de pouvoir créer un lieu de convivialité. C’est pour cette raison que nous organiserons chaque mois un évènement autour de la création, de l’art ou de l’artisanat etc.. Pour pouvoir découvrir de nouvelles choses mais aussi de nouvelles personnes et créer du lien. Le programme sera bientôt disponible ici. Un soir par semaine sera également dédié à un thème musical en particulier, pour se retrouver entre amis ou famille sur l’air de vos sons préférés (disco, jazz, bossa nova..). N’hésitez pas à passer au café nous faire de vos recommandations.  "
+            "title":"🎉 Grosse soirée d’ouverture à ne pas manquer !",
+            "text":"Nous vous donnons rendez-vous le 25 janvier pour célébrer notre ouverture en beauté !</br> <strong>Au programme :</strong> tapas savoureux, vin délicieux, musique entraînante et, bien sûr, plein de bons amis !</br> La bonne ambiance est assurée, et nous avons hâte de vous retrouver pour partager cette soirée mémorable avec vous !"
         },
 
         "menu": {

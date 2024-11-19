@@ -79,6 +79,7 @@ const Reservation = ({ navbarProps }) => {
   return (
     <>
       <NavBar {...navbarProps} />
+      {/*  
         <section className="reservationForm">
           <h2 className="reservationForm_title">{t('reservation.title')}</h2>
           <form>
@@ -157,7 +158,10 @@ const Reservation = ({ navbarProps }) => {
               {t('reservation.reservation')}
             </button>
           </form>
-        </section>
+          </section>
+          */}
+          <h2> La réservation sera bientôt disponible !</h2>
+        
     </>
   );
 };

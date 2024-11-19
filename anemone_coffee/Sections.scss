@@ -16,8 +16,6 @@
     .logo_reseaux {
       display:flex;
       justify-content:center;
-      align-items: center;
-      width: 100%; 
       height: auto;
       margin-right: 10px;
     }
@@ -53,9 +51,6 @@
   }
   @media screen and (min-width: 1025px) {
 
-    .logo_reseaux {
-      padding-left:150px
-    }
     .section-text {
       flex: 1;
       font-size: 14px;
@@ -66,8 +61,6 @@
       width:100%;
       padding-top:50px;
       padding-bottom:50px;
-      padding-right:150px;
-      padding-left:150px;
 
       .section-image-photo {
         width:60% 

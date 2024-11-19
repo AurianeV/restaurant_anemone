@@ -31,6 +31,11 @@ body {
 }
 
 .points-container {
+  display:none;
+}
+
+@media only screen and (min-width: 768px) {
+.points-container {
   position: fixed;
   top: 50%;
   right: 0;
@@ -40,6 +45,7 @@ body {
   align-items: center;
   z-index: 999;
 }
+
 
 .point {
   width: 15px;
@@ -53,6 +59,8 @@ body {
 .point.active {
   background-color: black;
 }
+}
+
 
 /* Page admin profil */
 
@@ -100,4 +108,29 @@ body {
 
 .admin-profile-button:hover {
   border-color: #552900;
+}
+
+/* Page menu */
+
+.separateur {
+  width: 60%;
+
+  @media only screen and (min-width: 1024px) {
+    width: 40%
+  }
+}
+
+/* page event */
+.eventPage {
+  margin:10px;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.aPropos {
+  text-align: left;
+  padding:20px;
+  @media only screen and (min-width: 1024px) {
+    padding:100px;
+  }
 }

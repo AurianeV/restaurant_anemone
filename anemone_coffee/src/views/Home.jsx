@@ -1,4 +1,4 @@
-import NavBar from '../components/header/NavBar'
+import NavBar from '../components/header/Navbar'
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
 import TransitionImg from '../components/TransitionImage/TransitionImg'
@@ -6,12 +6,33 @@ import ImageCarre from '../components/ImageCarre'
 import 'intersection-observer'; 
 import { useEffect, useRef, useState } from 'react';
 import Logo from '../components/Logo'
+import PopUpShop from '../components/PopUpShop'
 
 
+// eslint-disable-next-line react/prop-types
 export default function Home({ navbarProps }) {
     const { t } = useTranslation();
     const [activeSection, setActiveSection] = useState(0);
     const [showContent, setShowContent] = useState(false)
+    const [showPopup, setShowPopup] = useState(false);
+
+    // Déclencher l'affichage du popup après 1 seconde
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 1000); 
+
+      // Nettoyage du timeout si le composant est démonté avant l'expiration
+      return () => clearTimeout(timer);
+    }, []);
+
+    const closePopup = () => {
+      setShowPopup(false);
+    };
+
+    const redirectToShop = () => {
+      window.location.href = 'https://www.anemonecafe.fr/shop/'; // Redirige vers la page de la boutique
+    };
 
     useEffect(() => {
       const timer = setTimeout(() => {
@@ -27,8 +48,9 @@ export default function Home({ navbarProps }) {
   const tapasRef=useRef();
   const reseauxRef= useRef();
 
-  const handleIntersection = (entries, observer) => {
+  const handleIntersection = (entries) => {
     entries.forEach((entry) => {
+      console.log("Section intersectée :", entry.target)
       if (entry.isIntersecting) {
         switch (entry.target) {
           
@@ -54,35 +76,30 @@ export default function Home({ navbarProps }) {
     });
   };
   useEffect(() => {
-    const options = {
-      root: null, 
-      rootMargin: '1px',
-      threshold: 0.5,
+    const observerCallback = () => {
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25,
+      };
+
+      const observer = new IntersectionObserver(handleIntersection, options);
+
+      if (discoverRef.current) observer.observe(discoverRef.current);
+      if (coffeeShopRef.current) observer.observe(coffeeShopRef.current);
+      if (brunchRef.current) observer.observe(brunchRef.current);
+      if (tapasRef.current) observer.observe(tapasRef.current);
+      if (reseauxRef.current) observer.observe(reseauxRef.current);
+  
+      return () => {
+        observer.disconnect();
+      };
     };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    
-    if (discoverRef.current) {
-      observer.observe(discoverRef.current);
+  
+    if (showContent) {
+      observerCallback(); 
     }
-    if (coffeeShopRef.current) {
-      observer.observe(coffeeShopRef.current);
-    }
-    if (brunchRef.current) {
-      observer.observe(brunchRef.current);
-    }
-    if (tapasRef.current) {
-      observer.observe(tapasRef.current);
-    }
-    if (reseauxRef.current) {
-      observer.observe(reseauxRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []); 
+  }, [showContent]);
     return (
         <>
           {!showContent && <Logo/>}
@@ -95,14 +112,17 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 4 ? 'active' : ''}`} />
             </div>
-
+            {/*{showPopup && (
+      <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
+      )} */}
       <NavBar {...navbarProps} 
         ref={headerRef}
       />
       <Sections
         title={t('home.sectionDiscover.title')}
         text={t('home.sectionDiscover.text')}
-        image="/image_home/presentationrestau.png"
+        imageDesktop="/image_home/presentationrestau_desktop.png"
+        imageMobile="/image_home/presentationrestau_mobile.png"
         isTextOnLeft={true}
         textButton={t('home.sectionDiscover.buttonValues')}
         linkPage="/valeurs"
@@ -175,7 +195,8 @@ export default function Home({ navbarProps }) {
       <Sections
         title={t('home.sectionReseaux.title')}
         text={t('home.sectionReseaux.text')}
-        image="/logos/RS.png"
+        imageDesktop="/image_home/gobelet_desktop.png"
+        imageMobile="/image_home/gobelet_mobile.png"
         isTextOnLeft={true}
         logoInsta={true}
         logoFacebook={true}

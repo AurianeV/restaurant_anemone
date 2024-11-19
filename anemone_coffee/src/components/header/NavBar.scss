@@ -2,185 +2,210 @@ nav {
     position: relative;
     width: 100%;
     min-height: 75px;
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     height: 700px;
     overflow: hidden;
 
-}
-
-
-.navbar {
-    
-    .navbar_logo {
-        width: 150px;
-        margin:auto;
-    }
-    .navbar_logoUser {
-        width:40px;
-        border-radius:100px;
-    }
-    
-    .navbar_link {
-        display: none;
-     }
-    
-     .navbar_link.active {
-        display: block;
-        flex-direction: column;
-        background-color: rgb(252, 252, 252);
-        width: 100%;
-        padding: 20px 0;
-        z-index: 1;
-    
-      
-        a {
-           color: black;
-           text-decoration: none;
-           padding: 10px;
-           transition: background-color 0.3s ease;
-    
-           &:hover {
-              background-color: #e0e0e0;
-           }
-        }
-     }
-
-    
-     
-}  
-.burger-icon {
-    display: block;
-    margin:auto;
-
-
-}
-
     .navbar_container {
-        padding-top: 200px;
-
-        h1 {
-            color: white;
-            font-family: 'League Spartan', sans-serif;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: white;
-        }
+        color:white;
+        padding-top:50px;
     }
-
-
-@media (min-width: 818px) {
-
-    nav {
-   
+  
     .navbar {
+      display: flex;
+      justify-content: space-between; /* Permet de placer le logo à gauche et le menu à droite */
+      align-items: center;
+      padding: 10px 20px;
+  
+      .navbar_logo {
+        width: 80px; /* Taille du logo */
+      }
+  
+      .burger-icon {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: black; /* Couleur du menu burger */
+        cursor: pointer;
+        z-index: 1100; /* Toujours au-dessus du menu */
+
+  
+        &:hover {
+          color: #656565; /* Couleur au survol */
+        }
+
+        .burger {
+            width: 35px;
+            height: 5px;
+            background-color: rgb(255, 255, 255);
+            margin: 6px 0;
+            transition: all 0.3s ease; /* Transition fluide */
+
+        }
+        /* Transformation pour croix */
+        &.active .burger:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 5px);
+        }
+        &.active .burger:nth-child(2) {
+            transform: rotate(-45deg) translate(2px, -10px);
+        }
+        &.active .burger:nth-child(3) {
+            opacity: 0; /* Masque la barre centrale */
+
+        }
+      }
+  
+      .navbar_link {
+        display: none; /* Menu caché par défaut */
+        position:fixed;
+        top:0;
+        left:0;
+        height: 100%; /* Prend toute la hauteur de l'écran */
+        width: 100%;
+        flex-direction: column; /* Liens affichés en colonne */
+        justify-content: center; /* Centrer verticalement */
+        align-items: center;
+        opacity: 0; /* Invisible par défaut */
+        z-index: 1000; /* Toujours au-dessus du contenu */
+
+  
+  
+        &.active {
+          display: flex;
+          flex-direction: column;
+          background-color: rgb(0, 0, 0); /* Fond sombre */
+          z-index: 1000; /* Au-dessus du reste */
+          transition: transform 0.5s ; /* Animation d'ouverture/fermeture */
+          transform: translateX(0); /* Afficher le menu */
+          opacity: 1; /* Apparait progressivement */
+          transition: transform 0.5s ease, opacity 0.5s ease; /* Transition douce pour ouverture/fermeture */
+
+          
+            
+          .navbar_item {
+            margin: 20px 0; /* Espacement entre les liens */
+            font-size: 1.5rem; /* Taille des liens */
+            text-align: center;
+            opacity: 0; /* Invisible avant l'animation */
+            transform: translateY(20px); /* Légèrement en bas */
+            animation: fadeInSlide 0.5s ease forwards; /* Animation personnalisée */
+            
+    /* Délais progressifs pour chaque élément */
+    &:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.8s;
+    }  }
+  
+          a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+                color: #cd976c; /* Couleur au survol */
+              
+            }
+          }
+  
+          .commandLabel {
+            border: 1px solid rgb(255, 255, 255);
+  
+            &:hover {
+              background-color: #cd976c;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* RESPONSIVE : DESKTOP STYLES */
+  @media (min-width: 1044px) {
+    nav {
+      .navbar {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Menu et logo aux extrémités */
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
         min-height: 75px;
-        margin-top:20px;
-
-        a {
-            color: white;
-            text-decoration: none;
+        margin-top: 20px;
+  
+        .burger-icon {
+          display: none; /* Masquer le menu burger sur desktop */
         }
-
+  
         .navbar_link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin-right: 50px;
-            
-
-            .navbar_item {
-                list-style-type: none;
-                padding: 1rem;
-                text-transform: uppercase;
-                font-weight: 600;
+          display: flex; /* Afficher les liens horizontalement */
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          list-style: none;
+          padding: 0;
+          margin-right: 50px;
+          position:relative;
+          opacity:1;
+          width:auto;
+  
+          .navbar_item {
+            list-style-type: none;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+  
+          a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+              background-color: #ffffff2c;
             }
-
-            .navbar_logoInsta {
-                width: 30px;
-                height: 30px;
+          }
+  
+          .commandLabel {
+            border: 2px solid rgb(255, 255, 255);
+  
+            &:hover {
+              background-color: #cd976c;
             }
-            
-            .navbar_logoFacebook {
-                width: 40px;
-                height: 40px;
-            }
-
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                z-index: 1;
-            }
-            
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-            
-            .dropdown-content a:hover {
-                background-color: #e0e0e0;
-            }
-            
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
+          }
         }
-
+  
         .navbar_logo {
-            width: 150px;
-            height: 150px;
-            margin-left: 50px;
+          width: 150px;
+          margin-left: 50px;
         }
-
-        
+      }
     }
-    
-
-    
-    .buttonLangue {
-        padding: 2px;
-        background-color: rgba(226, 226, 226, 0.212);
-        margin-left: 2px;
+  }
+  @keyframes fadeInSlide {
+    0% {
+      opacity: 0; /* Invisible */
+      transform: translateY(20px); /* Déplacé vers le bas */
     }
-    } 
+    100% {
+      opacity: 1; /* Complètement visible */
+      transform: translateY(0); /* Position normale */
+    }}
 
-    .burger-icon {
-    display: none;
-    }
-
-
-
-    .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-    display: block;
-    }
-
-}
+    .no-scroll {
+        overflow: hidden; /* Empêche le scroll vertical */
+        position: fixed; /* Bloque la position */
+        width: 100%; /* Évite tout décalage horizontal */
+        height: 100%; /* Évite tout décalage vertical */
+     }
+     

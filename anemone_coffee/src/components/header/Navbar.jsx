@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { useState } from 'react'
+import  { forwardRef } from 'react';
 import './Navbar.scss'
 import SwitchLanguage from '../SwitchLanguage'
 import { useTranslation } from 'react-i18next';
 
-function Navbar(props) {
+// eslint-disable-next-line react/display-name
+const Navbar = forwardRef((props, ref) => {
    const { t } = useTranslation();
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -15,24 +17,34 @@ function Navbar(props) {
 
    const closeDropdown = () => {
       setIsDropdownOpen(false);
+      document.body.classList.remove('no-scroll'); // Assurez-vous de retirer la classe
    };
+   
 
    const toggleMobileMenu = () => {
-      setIsMobileMenuOpen((prev) => !prev);
-      setIsDropdownOpen(false); 
-   };
+   setIsMobileMenuOpen((prev) => {
+      const newState = !prev;
+      if (newState) {
+         document.body.classList.add('no-scroll'); // Empêche le scroll
+      } else {
+         document.body.classList.remove('no-scroll'); // Réactive le scroll
+      }
+      return newState;
+   });
+};
 
 
+   // eslint-disable-next-line no-sparse-arrays
    const navLinks = [
-      { path: '/connaitre', label: t('knowUsLabel'),
-      children : [
-         {path:'/', label:t('conceptLabel') },
-         {path:'/valeurs', label:t('valuesLabel') }
-      ]
+      { path: '/a-propos', label: t('knowUsLabel'),
+      /*children : [
+      ]*/
     },
       { path: '/reservation', label: t('reservationLabel') },
       { path: '/menu', label: t('menuLabel'),},
       { path: '/events', label: t('eventsLabel') },
+      {path: 'https://www.anemonecafe.fr/shop/', label:t('commandLabel'),  isExternal: true }
+      
 
       /*{ path: '/contact', label: t('contactLabel') }*/,
    ];
@@ -40,12 +52,16 @@ function Navbar(props) {
    return (
       <header>
          <nav style={{ backgroundImage: `url(${props.backgroundImage})` }} onMouseEnter={toggleDropdown}
-         onMouseLeave={closeDropdown} >
+         onMouseLeave={closeDropdown} ref={ref}>
             <div className="navbar">
                <NavLink to="/">
-                  <img className="navbar_logo" src="/logos/LogoAnemone_blanc.png" alt="Logo Anemone Coffee" />
+                  <img className="navbar_logo" src="/logos/logotasse_sanstextev1.png" alt="Logo Anemone Café" />
                </NavLink>
-               <button className="burger-icon" onClick={toggleMobileMenu}>Menu</button>
+               <button className={`burger-icon ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+                  <div className="burger"></div>
+                  <div className="burger"></div>
+                  <div className="burger"></div>
+               </button>               
                <ul className={`navbar_link ${isMobileMenuOpen ? 'active' : ''}`}>
                {navLinks.map((link, index) => (
                      <li className="navbar_item" key={index}>
@@ -63,12 +79,26 @@ function Navbar(props) {
                                     {t(childLink.label)}
                                     </NavLink>
                                  ))}
+                                 
                               </div>
                            )}
                         </div>
-                     ) : (
-                        <NavLink to={link.path}>{t(link.label)}</NavLink>
-                     )}
+                        ) : link.isExternal ? (
+                        // Liens externes (avec <a>)
+                        <a className="commandLabel"
+                           href={link.path} 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onClick={closeDropdown} // Optionnel : pour fermer un menu mobile après clic
+                        >
+                           {t(link.label)}
+                        </a>
+                        ) : (
+                        // Liens internes (avec <NavLink>)
+                        <NavLink to={link.path} onClick={closeDropdown}>
+                           {t(link.label)}
+                        </NavLink>
+                        )}
                      </li>
                   ))}
                   {/*
@@ -102,7 +132,7 @@ function Navbar(props) {
          </nav>
       </header>
    );
-}
+})
 
 
 export default Navbar;

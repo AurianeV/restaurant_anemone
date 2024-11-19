@@ -4,7 +4,6 @@ import NavBar from '../components/header/NavBar'
 import ModalComponent from '../components/PopUp/PopUp';
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
-import TransitionLine from '../components/TransitionLine';
 
 
 export default function Menu({navbarProps}){
@@ -27,29 +26,31 @@ export default function Menu({navbarProps}){
         <Sections
         title={t('menu.titleBrunch')}
         text={t('menu.textBrunch')}
-        image="/image_menus/brunch"
+        imageDesktop="/image_menus/brunch_desktop.png"
+        imageMobile="/image_menus/brunch_mobile.png"
         isTextOnLeft={true}
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}
         showButton={true}
         alt="photo d'une assiette de brunch"
       />
-      <TransitionLine/>
+      <hr className="separateur"/>
       <Sections
         title={t('menu.titleBoissons')}
         text={t('menu.textBoissons')}
-        image="/image_menus/boissons4"
+        imageDesktop="/image_menus/boisson_desktop.png"
+        imageMobile="/image_menus/boisson_mobile.png"
         isTextOnLeft={false}
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}
         showButton={true}
         alt="photo d'un café et chai latte"
       />
-      <TransitionLine/>
       <Sections
         title={t('menu.titleDinner')}
         text={t('menu.textDinner')}
-        image="/image_menus/dinner1"
+        imageDesktop="/image_menus/diner_desktop.png"
+        imageMobile="/image_menus/diner_mobile.png"
         isTextOnLeft={true}
         textButtonModal={t('menu.textButton')}
         buttonAction={openModal}

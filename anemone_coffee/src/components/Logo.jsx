@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import './Logo.css';
-import logoColor from '../../public/logos/LogoAnemone_noir.png';
-import logoWhite from '../../public/logos/LogoAnemone_blanc.png';
+import logoColor from '../../public/logos/Logo_Anémone_cafe_noir.png';
+import logoWhite from '../../public/logos/Logo_Anémone_cafe_blanc.png';
 
 const Logo = () => {
     const [isvisible, setIsVisible] = useState(true)
