@@ -30,6 +30,11 @@
     width: 100%;
     padding-top: 20px;
 
+    
+    button{
+      color:rgb(0, 0, 0);
+    }
+
     @media screen and (max-width: 768px) {
       .title_left, .title_right {
         display: none;
@@ -43,10 +48,6 @@
       flex-direction: column; 
       
     }
-    
-    button{
-        color:rgb(0, 0, 0);
-      }
       
     .image-row {
       display: flex;

@@ -52,6 +52,8 @@ button:focus-visible {
   }
 }
 
+
+
 body, p, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
 
@@ -73,4 +75,32 @@ h2 {
 
 h3 {
   font-size:25px
+}
+
+/* Mode clair (par défaut) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #444444;
+    --color-background: #ffffff;
+    --color-button: #f9f9f9;
+  }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #ffffff;
+    --color-button: #ffffff;
+
+  }
+}
+
+/* Utilisation des variables CSS */
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+button {
+  background-color: var(--color-button);
 }

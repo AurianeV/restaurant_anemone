@@ -112,9 +112,9 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 4 ? 'active' : ''}`} />
             </div>
-            {/*{showPopup && (
+           {showPopup && (
       <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
-      )} */}
+      )} 
       <NavBar {...navbarProps} 
         ref={headerRef}
       />
