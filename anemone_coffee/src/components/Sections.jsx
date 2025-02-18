@@ -36,11 +36,11 @@ const Section = forwardRef(({title, text, imageDesktop, imageMobile, isTextOnLef
               <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo instagram" />
               </a>
             }
-            {logoTiktok &&
+            {/*{logoTiktok &&
               <Link to={linkPage}>                     
               <img className="navbar_logoTiktok" src="/logos/RS_tiktok.png" alt="Logo Tiktok" />
               </Link>
-            }
+            }*/}
             </div>
         </div>
       )}
