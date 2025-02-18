@@ -60,8 +60,8 @@
         },
 
         "event": {
-            "title":"🎉 Grosse soirée d’ouverture à ne pas manquer !",
-            "text":"Nous vous donnons rendez-vous le 25 janvier pour célébrer notre ouverture en beauté !</br> <strong>Au programme :</strong> tapas savoureux, vin délicieux, musique entraînante et, bien sûr, plein de bons amis !</br> La bonne ambiance est assurée, et nous avons hâte de vous retrouver pour partager cette soirée mémorable avec vous !"
+            "title":"🎉 Bientôt, des soirées seront organisées !",
+            "text":"Nous avons hâte de vous accueillir pour des événements uniques dans notre restaurant ! Très bientôt, nous organiserons des soirées, des brunchs spéciaux et bien plus encore. <br></br>Restez à l'affût pour ne rien manquer de notre programmation. <br></br>Suivez-nous sur nos réseaux sociaux ou revenez ici pour découvrir les prochaines dates !"
         },
 
         "menu": {
@@ -89,11 +89,12 @@
 
         "footer" :{
             "titleAdress":"Adresse", 
-            "adress":"Saint-Leu-la-Forêt 95320",
+            "adress":"68 rue du Général Leclerc, Saint-Leu-la-Forêt 95320",
             "contact":"Contact",
             "propos": "À propos",
             "reservation": "Page réservation",
             "event":"Découvrir les prochains évènements",
+            "tel": "01 34 18 43 99",
             "mail":"anemonecafe95@gmail.com"
 
 

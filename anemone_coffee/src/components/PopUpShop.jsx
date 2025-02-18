@@ -6,15 +6,11 @@ const PopUpShop = ({ closePopup, redirectToShop }) => {
     <div className="overlay">
       <div className="popup">
         <div className="popUp_header">
-          <h2 className="title_popshop">📢 Annonce importante!</h2>
+          <h2 className="title_popshop">📢 Site en construction !</h2>
         </div>
         <div className="popUp_container">
           <p className="text_popshop">
-            En attendant de vous recevoir dans notre restaurant, laissez-vous tenter dès maintenant par nos délicieux gâteaux faits maison, disponibles à la commande en ligne. Un plaisir gourmand vous attend ! 😉
-          </p>
-          <button onClick={redirectToShop} className="button">
-            Découvrir le shop
-          </button>
+Notre site sera bientôt disponible. Restez connectés !           </p>
           {/*<button onClick={closePopup} className="closeButton">
             Fermer
           </button>

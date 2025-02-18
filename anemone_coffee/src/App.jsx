@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
 import Concept from './views/Concept';
-import Reservation from './views/Reservation';
 import Menu from './views/Menu';
 import Contact from './views/Contact';
 import Footer from './components/footer/Footer'
@@ -20,6 +19,7 @@ import UserAccountPage from './views/UserAccountPage'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Ajout pour le ScrollToTop
 import Apropos from './views/Apropos'
+import ZenchefWidget from './components/zenchef/ZenchefWidget';
 
 
 // Composant ScrollToTop
@@ -59,11 +59,6 @@ function App() {
             buttonLabel: 'Découvrir'
 
         },
-        reservation: {
-            backgroundImage: '/background_header/reservation.png',
-            title: 'Réservation'
-
-        },
         admin: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Connexion - Administrateur'
@@ -82,6 +77,7 @@ function App() {
     return (
         <>
             <ScrollToTop/>
+            <ZenchefWidget/>
             <Routes>
                 
                 <Route
@@ -91,10 +87,6 @@ function App() {
                 <Route
                     path="/concept"
                     element={<Concept navbarProps={navbarProps.concept} />}
-                />
-                <Route
-                    path="/reservation"
-                    element={<Reservation navbarProps={navbarProps.reservation} />}
                 />
                 <Route
                     path="/menu"

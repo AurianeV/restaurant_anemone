@@ -67,11 +67,10 @@ export default function Menu({navbarProps}){
       <PopUpMenu
             title="Nos Menus"
             items={[
-              { title: 'Nos cartes seront bientôt disponibles !', image: '/loading.png' }]/*[
-                { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/entrees' },
-                { title: 'Tapas', image: '/lunch.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/plats' },
-                { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/desserts' },
-            ]*/}
+                { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menu-Brunch.pdf', link: '/menu/brunch' },
+                { title: 'Tapas', image: '/lunch.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Tapas.pdf', link: '/menu/tapas' },
+                { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/boissons' },
+            ]}
         />
     </ModalComponent>
 

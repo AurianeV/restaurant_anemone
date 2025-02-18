@@ -20,6 +20,7 @@ function Footer () {
                     </div>
                     <div className="footer_contact">
                         <h3>{t('footer.contact')}</h3>
+                        <p>{t('footer.tel')}</p>
                         <p>{t('footer.mail')}</p>
                     </div>
                     <div className="footer_propos">

@@ -14,8 +14,8 @@ export default function Events({ navbarProps }) {
             <div className="eventPage">
                 <h2>{t('event.title')}</h2>
                 <br/>
-                <p>{t('event.text')}</p>
-            </div>
+                <p dangerouslySetInnerHTML={{ __html: t('event.text') }}></p>            
+                </div>
             {/*<CountDown/>*/}
         </div>
     );

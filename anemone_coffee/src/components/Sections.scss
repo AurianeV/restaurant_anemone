@@ -6,7 +6,7 @@
   padding-right:20px;
   padding-left:20px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     display: none; /* Masque le titre mobile sur les écrans à partir de 768px */
   }
 }
@@ -15,8 +15,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top:20px;
   padding-right:20px;
   padding-left:20px;
+  @media screen and (min-width: 768px) {
+    padding-right:70px;
+    padding-left:70px;
+  }
 
   .title-left, .title-right {
     display: none;
@@ -50,8 +55,7 @@
       @include logo-styles;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      padding: 14px;
+    @media screen and (min-width: 1024px)  {
       font-size: 18px;
 
       .title-left, .title-right {
@@ -76,20 +80,22 @@
       display: block; /* Affiche l'image mobile par défaut */
       width: 100%;   /* L'image prend toute la largeur en mobile */
 
-      @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @media screen and (min-width: 1024px)  {
         display:none
       } 
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       .section-image-photo-desktop {
-        width: 50%;
+        width: 70%;  // Réduit la taille de l’image
+        max-width: 600px; // Limite la largeur
+        height: auto;        
       }
     }
   }
 
   /* Mobile styles */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column; /* Colonne en mobile */
     justify-content: flex-start; /* Aligne le contenu en haut */
 
@@ -109,9 +115,11 @@
   }
 
   /* Desktop and tablets */
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1024px) {
+    padding:60px;
+
     .logo_reseaux {
-      padding-left: 150px;
+      margin:auto;
     }
 
     .title_mobile {
@@ -126,13 +134,12 @@
       flex: 1;
       font-size: 16px;
       text-align: justify;
-      padding: 0;
+      padding: 20px;
     }
 
     .section-image {
       width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding:20px;
 
       .section-image-photo-mobile {
         width: 100%;
@@ -141,20 +148,9 @@
     }
 
     .text-right, .title-right {
-      padding-right: 150px;
       font-size: 24px;
     }
 
-    .button-right {
-      margin-right: 150px;
-    }
-
-    .text-left, .title-left, .button_home {
-      padding-left: 150px;
-    }
-
-    .button-left {
-      margin-left: 150px;
-    }
+    
   }
 }

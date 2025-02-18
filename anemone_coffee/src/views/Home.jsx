@@ -112,9 +112,9 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 4 ? 'active' : ''}`} />
             </div>
-           {showPopup && (
+           {/* {showPopup && (
       <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
-      )} 
+      )} */}
       <NavBar {...navbarProps} 
         ref={headerRef}
       />
@@ -135,17 +135,17 @@ export default function Home({ navbarProps }) {
       />
       <ImageCarre
         isTextOnRight={true}
-        image1="/image_home/carre_patisseriesCoffee/sectioncarre1.png"
+        image1="/image_home/carre_patisseriesCoffee/sectioncarre2.png"
         image2="/image_home/carre_patisseriesCoffee/sectioncarre3.png"
-        image3="/image_home/carre_patisseriesCoffee/sectioncarre2.png"
+        image3="/image_home/carre_patisseriesCoffee/sectioncarre1.png"
         image4="/image_home/carre_patisseriesCoffee/sectioncarre4.png"
         title={t('home.sectionCoffeeShop_Patisseries.title')}
         text={t('home.sectionCoffeeShop_Patisseries.text')}
         textButton={t('home.sectionCoffeeShop_Patisseries.buttonBoisson')}
-        alt1="photo brownie"
-        alt2="photo café"
-        alt3="photo café"
-        alt4="photo smoothie"
+        alt1="photo café"
+        alt2="photo cookie et expresso"
+        alt3="photo banana bread"
+        alt4="photo preparation café"
         linkPage="/menu"
         ref={coffeeShopRef} 
         />
@@ -177,9 +177,9 @@ export default function Home({ navbarProps }) {
       <ImageCarre
         isTextOnRight={true}
         image1="/image_home/carre_tapas/9.png"
-        image2="/image_home/carre_tapas/10.png"
-        image3="/image_home/carre_tapas/11.png"
-        image4="/image_home/carre_tapas/12.png"
+        image2="/image_home/carre_tapas/11.png"
+        image3="/image_home/carre_tapas/12.png"
+        image4="/image_home/carre_tapas/10.png"
         alt1="photo personne à table"
         alt2="photo assiette nourriture"
         alt3="photo assiette nourriture"

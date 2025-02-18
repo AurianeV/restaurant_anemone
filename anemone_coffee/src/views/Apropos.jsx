@@ -1,5 +1,4 @@
 import NavBar from '../components/header/NavBar'
-import ImageCarre from '../components/ImageCarre'
 import { useTranslation } from 'react-i18next';
 
 
