@@ -125,7 +125,7 @@ export default function Home({ navbarProps }) {
         imageMobile="/image_home/presentationrestau_mobile.png"
         isTextOnLeft={true}
         textButton={t('home.sectionDiscover.buttonValues')}
-        linkPage="/valeurs"
+        linkPage="/a-propos"
         ref={discoverRef}
         alt="photo d'un restaurateur"
       />

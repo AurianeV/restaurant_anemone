@@ -5,7 +5,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height:500px;
+    height:600px;
     overflow: hidden;
     @media only screen and (min-width: 1024px) {
       height: 700px;
@@ -37,6 +37,9 @@ nav {
       align-items: center;
       padding: 10px 20px;
   
+      .reservation-btn {
+        color:black;
+      }
       .navbar_logo {
         width: 80px; /* Taille du logo */
       }
