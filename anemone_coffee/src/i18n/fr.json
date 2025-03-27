@@ -89,10 +89,11 @@
 
         "footer" :{
             "titleAdress":"Adresse", 
-            "adress":"68 rue du Général Leclerc, Saint-Leu-la-Forêt 95320",
+            "adress":"68 rue du Général Leclerc",
+            "city":"95320 Saint-Leu-la-Forêt",
             "contact":"Contact",
             "propos": "À propos",
-            "reservation": "Page réservation",
+            "reservation": "Réservation",
             "event":"Découvrir les prochains évènements",
             "tel": "01 34 18 43 99",
             "mail":"anemonecafe95@gmail.com"

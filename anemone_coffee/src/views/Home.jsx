@@ -63,11 +63,8 @@ export default function Home({ navbarProps }) {
           case brunchRef.current:
             setActiveSection(2);
             break;
-            case tapasRef.current:
-              setActiveSection(3);
-              break;
             case reseauxRef.current:
-              setActiveSection(4);
+              setActiveSection(3);
               break;          
               default:
             break;
@@ -88,7 +85,6 @@ export default function Home({ navbarProps }) {
       if (discoverRef.current) observer.observe(discoverRef.current);
       if (coffeeShopRef.current) observer.observe(coffeeShopRef.current);
       if (brunchRef.current) observer.observe(brunchRef.current);
-      if (tapasRef.current) observer.observe(tapasRef.current);
       if (reseauxRef.current) observer.observe(reseauxRef.current);
   
       return () => {
@@ -110,7 +106,6 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 1 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 2 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
-              <div className={`point ${activeSection === 4 ? 'active' : ''}`} />
             </div>
            {/* {showPopup && (
       <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
@@ -170,34 +165,12 @@ export default function Home({ navbarProps }) {
         ref={brunchRef}
         linkPage="/menu"
       />
-      <TransitionImg
-        imageTransition="/image_home/transition_tapas.png"
-        titleTransition={t('home.transition.titleTapas')}
-      />
-      <ImageCarre
-        isTextOnRight={true}
-        image1="/image_home/carre_tapas/9.png"
-        image2="/image_home/carre_tapas/11.png"
-        image3="/image_home/carre_tapas/12.png"
-        image4="/image_home/carre_tapas/10.png"
-        alt1="photo personne à table"
-        alt2="photo assiette nourriture"
-        alt3="photo assiette nourriture"
-        alt4="photo vin"
-        title={t('home.sectionTapas.title')}
-        text={t('home.sectionTapas.text')}
-        textButton={t('home.sectionTapas.buttonTapas')}
-        alt="image1"
-        ref= {tapasRef}
-        linkPage="/menu"
-
-      />
       <Sections
         title={t('home.sectionReseaux.title')}
         text={t('home.sectionReseaux.text')}
         imageDesktop="/image_home/gobelet_desktop.png"
         imageMobile="/image_home/gobelet_mobile.png"
-        isTextOnLeft={true}
+        isTextOnLeft={false}
         logoInsta={true}
         logoFacebook={true}
         logoTiktok={true}

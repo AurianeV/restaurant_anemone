@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
+import Boissons from './views/Menu/Boissons';
 import Concept from './views/Concept';
 import Menu from './views/Menu';
 import Contact from './views/Contact';
@@ -59,6 +60,12 @@ function App() {
             buttonLabel: 'Découvrir'
 
         },
+        menu_boissons: {
+            backgroundImage: '/background_header/back_transparent.png',
+            title: 'Nos boissons',
+            buttonLabel: 'Découvrir'
+
+        },
         admin: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Connexion - Administrateur'
@@ -92,6 +99,9 @@ function App() {
                     path="/menu"
                     element={<Menu navbarProps={navbarProps.menu} />}
                 />
+
+                <Route path="/menu/boissons" element={<Boissons navbarProps={navbarProps.menu_boissons}/>} />
+                
                 <Route path="/events" 
                 element={<Events navbarProps={navbarProps.events} />} />
 

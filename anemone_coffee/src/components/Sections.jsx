@@ -59,7 +59,7 @@ const Section = forwardRef(({title, text, imageDesktop, imageMobile, isTextOnLef
       {!isTextOnLeft && (
         <div className="section-text">
             <h2 className="title-right" >{title}</h2>
-            <p className="text-right" >{text}</p>
+            <p className="text-right" dangerouslySetInnerHTML={{ __html: text }}></p>
             {showButton && textButtonModal && (
             <button className="button-right" onClick={buttonAction}>{textButtonModal}</button>
           )}

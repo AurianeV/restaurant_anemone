@@ -4,6 +4,7 @@ import NavBar from '../components/header/NavBar'
 import ModalComponent from '../components/PopUp/PopUp';
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
+import CarteBoisson from '../components/CarteBoisson';
 
 
 export default function Menu({navbarProps}){
@@ -67,9 +68,9 @@ export default function Menu({navbarProps}){
       <PopUpMenu
             title="Nos Menus"
             items={[
-                { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menu-Brunch.pdf', link: '/menu/brunch' },
-                { title: 'Tapas', image: '/lunch.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Tapas.pdf', link: '/menu/tapas' },
-                { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', menuPdfLink: '/Menus-Boissons.pdf', link: '/menu/boissons' },
+                { title: 'Brunch', image: '/coffee-mug.png', buttonLabel: 'La nouvelle carte bientôt dispo', linkPage: '/menu/boissons' },
+                { title: 'Tapas', image: '/lunch.png', buttonLabel: 'La nouvelle carte bientôt dispo', linkPage: '/menu/boissons' },
+                { title: 'Boissons', image: '/drink.png', buttonLabel: 'Découvrir la carte', linkPage: '/menu/boissons' },
             ]}
         />
     </ModalComponent>

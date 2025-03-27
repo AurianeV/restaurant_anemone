@@ -1,7 +1,8 @@
 import './PopUpMenu.css'
+import { Link } from 'react-router-dom';
 
 export default function PopUpMenu(props) {
-    const { title, items, menupdf } = props;
+    const { title, items,  linkPage} = props;
     
   
     return (
@@ -17,9 +18,8 @@ export default function PopUpMenu(props) {
                       <div key={index}>
                       <img className="popUp_breakfast_img" src={item.image} alt={item.title} />
                       <h2 className="popUp_items">{item.title}</h2>
-                      <button onClick={() => window.open(item.menuPdfLink, '_blank')}>
-                        {item.buttonLabel}
-                      </button>
+                      <Link to={item.linkPage}><button>{item.buttonLabel}</button></Link>
+                     
                       </div>
                   ))}
                   </div>

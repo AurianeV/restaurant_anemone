@@ -1,0 +1,75 @@
+.carte_boissons {
+
+.boisson_chaude, .coffee, .boissons_fraiches, .alcool {
+    max-width: 600px;
+    margin:20px;  
+    margin-top:50px;
+
+    .title_container {
+        display:flex;
+        justify-content: space-between;
+
+        img {
+            width:30%;
+        }
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; // Alignement en haut pour éviter les décalages
+      border-bottom: 1px solid #ccc;
+      padding: 8px 0;
+      position: relative;
+  
+      h4 {
+        margin: 0;
+        text-align: left;
+        font-size: 1.2em;
+        flex: 1; // Permet d'occuper l'espace et pousser le prix à droite
+      }
+  
+      .description {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 3px;
+        flex: 1; // S'assure que la description prend toute la largeur dispo
+      }
+  
+      .price {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #000;
+        white-space: nowrap; // Empêche le prix de passer à la ligne
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // DESKTOP
+
+  @media screen and (min-width: 768px) {
+    .boissons_coffee, .boissons_alcool{
+        display:flex;
+        align-items:flex-start;
+        justify-content: space-around;
+
+        .boisson_chaude, .coffee, .boissons_fraiches, .alcool {
+            width:100%;
+            margin:20px;
+
+            h3 {
+                text-align: left;
+            }
+        }
+
+        .title_container {
+            display:flex;
+            justify-content: space-between;
+
+            img {
+                width:30%;
+            }
+        }
+    }
+  }
+}
