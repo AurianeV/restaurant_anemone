@@ -1,4 +1,4 @@
-import NavBar from '../components/header/Navbar'
+import Navbar from '../components/header/Navbar'
 import Sections from '../components/Sections'
 import { useTranslation } from 'react-i18next';
 import TransitionImg from '../components/TransitionImage/TransitionImg'
@@ -110,7 +110,7 @@ export default function Home({ navbarProps }) {
            {/* {showPopup && (
       <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
       )} */}
-      <NavBar {...navbarProps} 
+      <Navbar {...navbarProps} 
         ref={headerRef}
       />
       <Sections

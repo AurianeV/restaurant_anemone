@@ -10,38 +10,9 @@
         justify-content: space-between;
 
         img {
-            width:30%;
+            width:80px;
+            height:60px;
         }
-    }
-    .item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start; // Alignement en haut pour éviter les décalages
-      border-bottom: 1px solid #ccc;
-      padding: 8px 0;
-      position: relative;
-  
-      h4 {
-        margin: 0;
-        text-align: left;
-        font-size: 1.2em;
-        flex: 1; // Permet d'occuper l'espace et pousser le prix à droite
-      }
-  
-      .description {
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 3px;
-        flex: 1; // S'assure que la description prend toute la largeur dispo
-      }
-  
-      .price {
-        font-weight: bold;
-        font-size: 1.2em;
-        color: #000;
-        white-space: nowrap; // Empêche le prix de passer à la ligne
-        margin-left: 20px;
-      }
     }
   }
 
@@ -67,7 +38,8 @@
             justify-content: space-between;
 
             img {
-                width:30%;
+                width:100px;
+                height:80px;
             }
         }
     }

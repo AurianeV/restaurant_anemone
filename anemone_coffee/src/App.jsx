@@ -21,6 +21,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Ajout pour le ScrollToTop
 import Apropos from './views/Apropos'
 import ZenchefWidget from './components/zenchef/ZenchefWidget';
+import Brunch from './views/Menu/Brunch';
 
 
 // Composant ScrollToTop
@@ -66,6 +67,12 @@ function App() {
             buttonLabel: 'Découvrir'
 
         },
+        menu_brunch: {
+            backgroundImage: '/background_header/back_transparent.png',
+            title: 'Notre brunch',
+            buttonLabel: 'Découvrir'
+
+        },
         admin: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Connexion - Administrateur'
@@ -101,6 +108,8 @@ function App() {
                 />
 
                 <Route path="/menu/boissons" element={<Boissons navbarProps={navbarProps.menu_boissons}/>} />
+
+                <Route path="/menu/brunch" element={<Brunch navbarProps={navbarProps.menu_brunch}/>} />
                 
                 <Route path="/events" 
                 element={<Events navbarProps={navbarProps.events} />} />

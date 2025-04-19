@@ -1,0 +1,186 @@
+.carte_brunch {
+    margin-top:30px;
+    padding:40px;
+
+    .section_petitdej{
+
+        .illu_toast{
+            width:200px;
+        }
+        .text_petitdej{
+            p{text-align: left;}
+        }
+
+    }
+
+   
+
+    .formule_brunch {
+        .formule_adulte_brunch, .formule_kids_brunch{
+            border: 2px solid black;
+            width:100%;
+            padding:0;
+            margin-top:16px;
+        }
+    }
+    .formule_lunch {
+        border: 2px solid black;
+        width:100%;
+        padding:0;
+        margin:auto;
+        margin-top:16px;
+    }
+
+    .text_horaire {
+        border: 2px solid black;
+        font-weight: bold;
+        margin:auto;
+        padding:5px;
+        width:100%;
+    }
+
+    .logo_veggie{
+        width:30px;
+    }
+
+    .horaire {
+        font-weight: bold;
+        border:2px solid black;
+        width:100%;
+        margin:auto;
+    }
+
+    .sale_sucre {
+        display:block;
+
+        .plats_sales, .plats_sucre {
+            padding:0px;
+
+            p {
+                text-align:left;
+            }
+
+            .title_container {
+                display:flex;
+                justify-content:space-between;
+                align-items: center;
+
+                .pancakes_carte, .avocado_carte {
+                    width:100px;
+                }
+        }
+        }
+    }
+
+    .infos_food {
+        text-align: left;
+        width:100%;
+        margin:auto;
+
+        .vegan_veggie{
+            display:flex;
+
+            p {
+                margin-right:20px;
+            }
+        }
+    }
+
+    @media  (min-width:768px) {
+
+        hr {
+            width:90%;
+        }
+
+        
+
+            .section_petitdej{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .illu_toast{
+                    margin:auto;
+                    width:350px;
+                    height:350px;
+                }
+
+                .petit_dej {
+                    width:60%;
+                    padding:30px;
+        
+                    .text_horaire {
+                        border: 2px solid black;
+                        font-weight: bold;
+                        margin:auto;
+                        padding:5px;
+                        width:50%;
+                    }
+
+                   
+                    .text_petitdej{
+                        p{text-align: left;}
+                    }
+
+                
+        
+            }
+        }
+
+
+        .infos_food {
+            width:50%;
+            margin:auto;
+    
+            .vegan_veggie{
+                display:flex;
+    
+                p {
+                    margin-right:20px;
+                }
+            }
+        }
+
+        .horaire {
+            font-weight: bold;
+            border:2px solid black;
+            width:50%;
+            margin:auto;
+        }
+
+        .sale_sucre {
+            display:flex;
+            justify-content:space-around;
+            align-items: flex-start;
+
+            .plats_sales, .plats_sucre {
+                padding:30px;
+            }
+
+            
+
+        }
+        .formule_brunch {
+            display:flex;
+            justify-content: space-around;
+            align-items: normal;
+    
+            .formule_adulte_brunch, .formule_kids_brunch{
+                border: 2px solid black;
+                width:40%;
+                padding:0;
+            }
+        }
+        .formule_lunch {
+            border: 2px solid black;
+            width:40%;
+            padding:0;
+            margin:auto;
+            margin-top:20px;
+        }
+
+        
+    }
+
+
+}

@@ -1,0 +1,30 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    position: relative;
+
+    h4 {
+        margin: 0;
+        text-align: left;
+        font-size: 1.2em;
+        flex: 1;
+    }
+
+    .description {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 3px;
+        flex: 1;
+    }
+
+    .price {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #000;
+        white-space: nowrap;
+        margin-left: 20px;
+    }
+}
