@@ -13,6 +13,7 @@ import AdminDashboard from './views/AdminDashboard'
 import LoginForm from './components/admin/LoginForm'
 import RegisterForm from './components/admin/RegisterForm'
 import MainAdminPage from './views/MainAdminPage'
+import MentionLegale from './views/MentionLegale'
 import {useState} from 'react'
 import { Navigate } from 'react-router-dom';
 import UserPage from './views/UserPage'
@@ -84,6 +85,10 @@ function App() {
         useraccount: {
             backgroundImage: '/background_header/photo_connexion.png',
             title: 'Connexion - Utilisateur'
+        },
+        mentionsLegales: {
+            backgroundImage: '/background_header/back_transparent.png',
+            title: 'Mentions légales'
         }
 
     };
@@ -124,6 +129,8 @@ function App() {
                 <Route path="/user" element={<UserPage navbarProps={navbarProps.useraccount}/>} />
 
                 <Route path="/user-account" element={<UserAccountPage navbarProps={navbarProps.useraccount}/>} />
+
+                <Route path="/mentions-legales" element={<MentionLegale navbarProps={navbarProps.mentionsLegales} />} />
 
                 </Routes>
             <Footer

@@ -33,6 +33,9 @@ function Footer () {
                             <li>
                                 <NavLink to="/events">{t('footer.event')}</NavLink>
                             </li>
+                            <li>
+                               <a href="/mentions-legales"> {t('footer.mentionsLegales')}</a>
+                            </li>
                         </ul>
                     </div>
             </div>
