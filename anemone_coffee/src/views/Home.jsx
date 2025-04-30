@@ -173,7 +173,7 @@ export default function Home({ navbarProps }) {
         isTextOnLeft={false}
         logoInsta={true}
         logoFacebook={true}
-        logoTiktok={true}
+        logoTiktok={false}
         ref={reseauxRef}
         alt="Gobelet"
       />

@@ -66,6 +66,23 @@ const Section = forwardRef(({title, text, imageDesktop, imageMobile, isTextOnLef
             {textButton &&
               <Link to={linkPage}><button>{textButton}</button></Link>
             }
+            <div className="logo_reseaux">
+            {logoFacebook &&
+              <a href="https://www.facebook.com/share/CmB5FkcAye85fA4Z/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">                     
+                <img className="navbar_logoFacebook" src="/logos/RS_fb.png" alt="Logo Facebook" />
+              </a>
+            }
+            {logoInsta &&
+              <a href="https://www.instagram.com/anemone.cafe?igsh=MWw0ejBmcGQzNDU4OA==" target="_blank" rel="noopener noreferrer">                     
+              <img className="navbar_logoInsta" src="/logos/RS_insta.png" alt="Logo instagram" />
+              </a>
+            }
+            {/*{logoTiktok &&
+              <Link to={linkPage}>                     
+              <img className="navbar_logoTiktok" src="/logos/RS_tiktok.png" alt="Logo Tiktok" />
+              </Link>
+            }*/}
+            </div>
         </div>
       )}
     </section>
