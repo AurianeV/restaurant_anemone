@@ -28,7 +28,7 @@ function MentionLegales () {
                     <p>Auriane Viggiano - auriane.vigg@gmail.com</p>
 
                     <h3>Hébergeur</h3>
-                    <p>Le site est hébergé par OVH SAS, dont le siège social est situé :
+                    <p>Le site est hébergé par OVH SAS, dont le siège social est situé :<br></br>
                     <strong>Adresse:</strong>  2 rue Kellermann, 59100 Roubaix, France<br></br>
                     <strong>Téléphone :</strong> 1007 (appel non surtaxé) / Depuis l’étranger : +33 9 72 10 10 07 <br></br>
                     <strong>Email :</strong>via le formulaire de contact sur www.ovhcloud.com<br></br>

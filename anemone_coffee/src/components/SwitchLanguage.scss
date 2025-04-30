@@ -9,6 +9,7 @@
       font-size: 1.5rem;
       display: inline-flex;
       align-items: center;
+      padding:0px;
     }
   
     .arrow {
@@ -24,13 +25,15 @@
       z-index: 1000;
       display: flex;
       flex-direction: column;
+      border:none;
+      padding:0px;
   
       .buttonLangue {
-        margin-top:-10px;
         width: 100%;
         text-align: left;
         background: none;
         border: none;
+        padding:0px;
   
         &:hover {
           background-color: #f0f0f01f;
