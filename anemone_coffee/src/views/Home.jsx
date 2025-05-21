@@ -151,7 +151,7 @@ export default function Home({ navbarProps }) {
       <ImageCarre
         isTextOnRight={false}
         image1="/image_home/carre_brunch/5.png"
-        image2="/image_home/carre_brunch/6.png"
+        image2="/image_home/carre_brunch/9.png"
         image3="/image_home/carre_brunch/7.png"
         image4="/image_home/carre_brunch/8.png"
         alt1="photo brunch"

@@ -29,12 +29,12 @@
             },
             "sectionCoffeeShop_Patisseries": {
                 "title":"Anémone Café : convivial, singulier, et fait pour vous",
-                "text":"Chez Anémone Café, nous avons imaginé un espace où chacun peut se sentir chez soi. Notre ambiance conviviale, mais pleine de caractère, invite à la détente tout en vous offrant une expérience unique.<br/><br/>Nous vous proposons un café de spécialité soigneusement sélectionné et torréfié localement dans le Val d’Oise, garantissant fraîcheur et qualité à chaque tasse. Vous trouverez également une large gamme de boissons chaudes, des boissons fraîches rafraîchissantes et des jus de saison.<br/><br/>Chaque matin, nos pâtisseries maison sont préparées avec soin pour que vous puissiez les déguster à tout moment de la journée. Et si vous êtes pressé, pas de souci – tout est disponible à emporter, pour que vous puissiez emporter un peu d’Anémone avec vous, où que vous alliez.",
+                "text":"Chez Anémone Café, nous avons imaginé un espace où chacun peut se sentir chez soi. Notre ambiance conviviale, mais pleine de caractère, invite à la détente tout en vous offrant une expérience unique.<br/><br/>Nous vous proposons un <strong>café de spécialité</strong> soigneusement sélectionné et torréfié localement dans le Val d’Oise, garantissant fraîcheur et qualité à chaque tasse. Vous trouverez également une large gamme de boissons chaudes, des boissons fraîches rafraîchissantes et des jus de saison.<br/><br/>Chaque matin, nos pâtisseries maison sont préparées avec soin pour que vous puissiez les déguster à tout moment de la journée. Et si vous êtes pressé, pas de souci – tout est disponible à emporter, pour que vous puissiez emporter un peu d’Anémone avec vous, où que vous alliez.<br></br>Nous vous accueillons au coffee shop du <strong>mercredi au vendredi de 8h30 à 18h00 et le week-end de 9h30 à 18h30.</strong><br></br> Et pour les plus gourmands, notre brunch salé et sucré est servi du mercredi au vendredi, de 11h à 17h30, et le week-end, de 10h à 17h30, en continu. Ici, chacun trouve de quoi se régaler !",
                 "buttonBoisson":"Nos boissons"
             },
             "sectionBrunch": {
                 "title":"Brunchez quand vous voulez !",
-                "text":"Retrouvez-nous pour un brunch savoureux du mercredi au dimanche, de 11h à 17h, sans interruption.<br/>Au menu, une délicieuse sélection de plats salés et sucrés gourmands, des pâtisseries maison, ainsi qu'une variété de boissons chaudes et fraîches. <br/> <strong>Ici, chacun trouvera de quoi se régaler !</strong>",
+                "text":"Envie d’un brunch gourmand ? Nous vous accueillons du mercredi au vendredi de <strong>11h à 17h30</strong>, et le week-end de <strong>10h à 17h30</strong>, en continu, pour un moment savoureux et convivial.<br/>Au menu, une délicieuse sélection de plats salés et sucrés gourmands, des pâtisseries maison, ainsi qu'une variété de boissons chaudes et fraîches. <br/> <strong>Ici, chacun trouvera de quoi se régaler !</strong>",
                 "buttonBoisson":"Notre brunch"
             },
             "sectionTapas" : {
@@ -97,7 +97,13 @@
             "event":"Découvrir les prochains évènements",
             "mentionsLegales":"Mentions légales",
             "tel": "01 34 18 43 99",
-            "mail":"anemonecafe95@gmail.com"
+            "mail":"anemonecafe95@gmail.com",
+            "horaire":"Horaires",
+            "horaire_coffee_semaine":"Du mercredi au vendredi : 8h30 - 18h00",
+            "horaire_coffee_weekend":"le week-end : 10h - 17h30",
+            "horaire_cuisine":"Cuisine :",
+            "horaire_cuisine_semaine":"Du mercredi au vendredi : 11h - 17h30,",
+            "horaire_cuisine_weekend":"le week-end : 10h - 17h30"
 
 
 
