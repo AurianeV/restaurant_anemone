@@ -1,0 +1,58 @@
+.section_event {
+
+    .event_items {
+      img {
+        width:100%;
+        overflow: hidden;
+        border-radius: 10px; /* optionnel */
+        height: auto;
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+      
+      img:hover {
+        transform: scale(1.05);
+        filter: brightness(90%);
+        cursor:pointer;
+      }
+    }
+      
+}
+
+.eventCard {
+    padding:20px;
+
+    p {
+        text-align:left;
+    }
+}
+
+.eventDescription {
+    width:100%;
+}
+
+@media screen and (min-width: 768px) {
+    .event_items {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+
+
+        .eventCard {
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .event_items {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        .eventCard {
+            width: 25%;
+        }
+    }
+}
