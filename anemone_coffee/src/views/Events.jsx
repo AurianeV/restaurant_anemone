@@ -9,7 +9,7 @@ export default function Events({ navbarProps }) {
 
     const events = [
         {
-            imgSrc: '/public/image_events/post_30MAI.jpeg',
+            imgSrc: '/image_events/post_30MAI.jpeg',
             titleH3: 'AFTERWORK - Jeux de société',
             titleH4: 'Vendredi 30 mai, on lance notre tout premier Afterwork chez Anémone Café 🌙',
             description: `Le concept ? Une soirée chill entre ami·e·s (ou parfaits inconnus 😌) autour de bons jeux… et de bonnes choses à grignoter.<br></br>
@@ -27,7 +27,7 @@ export default function Events({ navbarProps }) {
             `
         },
         {
-            imgSrc: '/public/image_events/post_20juin.jpeg',
+            imgSrc: '/image_events/post_20juin.jpeg',
             titleH3: '🎶 Afterwork en musique chez Anémone Café 🎶',
             titleH4: '📅 Vendredi 20 juin – de 19h30 à 21h',
             description: `Un moment suspendu dans la semaine avec <a href="https://www.instagram.com/acno_officiel?igsh=MWEwMHNzd2s4ZnZ3cQ==" >@acno</a> & <a href="https://www.instagram.com/_margo.music?igsh=amF5bzd6d3p0bTkw">@margo</a> : guitare, voix, et émotions partagées dans une ambiance chaleureuse. ✨<br></br>
@@ -46,7 +46,7 @@ export default function Events({ navbarProps }) {
             <i>*Pour rappel nous ne servons de l’alcool qu’en accompagnement du repas, merci de votre compréhension*</i>`
         },
         {
-            imgSrc: '/public/image_events/post_25juin.jpeg',
+            imgSrc: '/image_events/post_25juin.jpeg',
             titleH3: '🧵 Atelier couture & goûter',
             titleH4: `📅 Mercredi 25 juin avec <a href="https://www.instagram.com/isecouture?igsh=anhpemJzM2tpY2Fm" > @isecouture </a>`,
             description: `Envie de te lancer dans la couture ou juste de passer un bon moment ?<br></br>
