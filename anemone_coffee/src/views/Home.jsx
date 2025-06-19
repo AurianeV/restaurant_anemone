@@ -6,7 +6,7 @@ import ImageCarre from '../components/ImageCarre'
 import 'intersection-observer'; 
 import { useEffect, useRef, useState } from 'react';
 import Logo from '../components/Logo'
-import PopUpShop from '../components/PopUpShop'
+import PopUpNewMenu from '../components/PopUpNewMenu'
 
 
 // eslint-disable-next-line react/prop-types
@@ -14,12 +14,12 @@ export default function Home({ navbarProps }) {
     const { t } = useTranslation();
     const [activeSection, setActiveSection] = useState(0);
     const [showContent, setShowContent] = useState(false)
-    const [showPopup, setShowPopup] = useState(false);
+    const [showPopNewMenu, setShowPopNewMenu] = useState(false);
 
     // Déclencher l'affichage du popup après 1 seconde
     useEffect(() => {
       const timer = setTimeout(() => {
-        setShowPopup(true);
+        setShowPopNewMenu(true);
       }, 1000); 
 
       // Nettoyage du timeout si le composant est démonté avant l'expiration
@@ -27,11 +27,11 @@ export default function Home({ navbarProps }) {
     }, []);
 
     const closePopup = () => {
-      setShowPopup(false);
+      setShowPopNewMenu(false);
     };
 
     const redirectToShop = () => {
-      window.location.href = 'https://www.anemonecafe.fr/shop/'; // Redirige vers la page de la boutique
+      window.location.href = 'https://www.anemonecafe.fr/menu/brunch'; // Redirige vers la page de la boutique
     };
 
     useEffect(() => {
@@ -107,9 +107,9 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 2 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
             </div>
-           {/* {showPopup && (
-      <PopUpShop closePopup={closePopup} redirectToShop={redirectToShop} />
-      )} */}
+            {showPopNewMenu && (
+      <PopUpNewMenu closePopup={closePopup}  />
+      )} 
       <Navbar {...navbarProps} 
         ref={headerRef}
       />

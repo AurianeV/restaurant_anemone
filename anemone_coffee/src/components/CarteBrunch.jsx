@@ -5,16 +5,16 @@ import "./CarteBrunch.scss"
 function CarteBrunch() {
     const platsSales = [
         { name: "Avocado toast", description: "Pain rustique, houmous, avocat, pickles d'oignons", image:"/logos/vegan.png", alt:"logo végan", price: 15 },
-        { name: "Oeufs sauce hollandaise", description: "Pain rustique, saumon fumé, oeuf poché, sauce hollandaise, ciboulette", price: 16 },
-        { name: "Oeufs çılbır", description: "Préparation à base de yaourt grec, ail, menthe, paprika, oeufs pochés", image:"/logos/vegetarien.png", alt:"logo végétarien", price: 14 },
-        { name: "Bruschetta", description: "Pain rustique, formage frais aux herbes, tomates au four, ail, mélange d'herbes fraîches", image:"/logos/vegetarien.png", alt:"logo végétarien", price: 14 }
+        { name: "Oeufs sauce hollandaise", description: "Pain rustique, bacon grillé (ou végétal), oeuf poché, sauce hollandaise maison, ciboulette", price: 16 },
+        { name: "Chakchouka", description: "Oeufs au plat sur un mélange de poivrons, tomates et oignons cuisinés, parsemé de fêta et persil", image:"/logos/vegetarien.png", alt:"logo végétarien", price: 14 },
+        { name: "Bruschetta burrata", description: "Pain rustique, aubergines grillées, tomates, burrata, basilic, crème de balsamique", image:"/logos/vegetarien.png", alt:"logo végétarien", price: 14 }
     ];
 
     const platsSucres = [
-        { name: "Pancakes Nocciolata Banane", description: "Trois beaux pancakes accompagnés de nocciolata (pâte à tartiner chocolat-noisette bio) et de banane", price: 8 },
-        { name: "Pancakes fruits mascarpone", description: "Trois beaux pancakes accompagnés de sirop d'érable, fruits de saison et d'une crème légère à base de mascarpone", price: 8 },
+        { name: "Pancakes Nocciolata Pistache", description: "Trois beaux pancakes accompagnés de nocciolata (pâte à tartiner chocolat-noisette bio), de purée de pistache et pistache concassées", price: 8 },
+        { name: "Pancakes fruits mascarpone", description: "Trois beaux pancakes accompagnés de sirop d'érable, fruits de saison, d'une crème légère à base de mascarpone et d'amandes effilées grillées", price: 8 },
         { name: "Granola bowl", description: "Yaourt végétal, granola maison du moment et fruits frais", price: 8 },
-        { name: "Pain perdu fleur d'oranger", description: "Pain perdu à la fleur d'oranger, crème légère à base de mascarpone, pistaches concassées", price: 8 },
+        { name: "Pain perdu pêche romarin", description: "Pain perdu, crème légère à base de mascarpone, pêches rôties, romarin et miel", price: 8 },
         
     ];
 
@@ -28,7 +28,7 @@ function CarteBrunch() {
 
     const petitDej = [
         { name: "Viennoiseries", description: "Une viennoiserie au choix + 1 jus du jour", price: 5 },
-        { name: "Tartines", description: "Deux tranches de pain grillées, confiture + beurre", price: 5 },
+        { name: "Tartines", description: "Deux tranches de pain grillées, confiture + beurre + 1 jus du jour", price: 5 },
         { name: "Granola bowl", description: "Yaourt végétal, granola maison du moment et fruits frais", price: 8 },
     ];
 
@@ -132,20 +132,25 @@ function CarteBrunch() {
                 <div className="formule_lunch">
                     <div>
                         <h4>FORMULE LUNCH</h4>
+                            <h5>Semaine uniquement</h5>
                             <li>
-                                Une boisson fraîche ou un expresso
+                                Une boisson fraîche OU un expresso
+                            </li>
+                            <li>+</li>
+                            <li>
+                                - Salade de pastèque, concombre, menthe, fêta, oignons rouge, mélange de graines
                             </li>
                             <li>
-                                + Un sandwich toasté :
+                                OU
                             </li>
                             <li>
-                                - Oeufs mayo, ciboulette, oignon fris, pousse d'épinard
+                                - Bagel garni de blanc de poulet OU oeuf au plat, cream cheese, avocat, pickles de chou rouge et sauce moutarde au miel 
                             </li>
                             <li>
-                                - thon, cream cheese, sésame, concombre, pickles d'oignon, pousses d'épinard
+                                + 
                             </li>
                             <li>
-                                + Une douceur
+                            Une douceur
                             </li>
                             <p><strong>16€</strong></p>
                         </div>
