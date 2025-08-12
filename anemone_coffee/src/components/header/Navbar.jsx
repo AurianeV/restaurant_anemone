@@ -69,13 +69,25 @@ const Navbar = forwardRef((props, ref) => {
             <div className="burger"></div>
           </button>
           <ul className={`navbar_link ${isMobileMenuOpen ? "active" : ""}`}>
-            {navLinks.map((link, index) => (
-              <li className="navbar_item" key={index}>
+          {navLinks.map((link, index) => (
+            <li className="navbar_item" key={index}>
+              {link.path.startsWith("http") ? (
+                <a
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeDropdown}
+                >
+                  {link.label}
+                </a>
+              ) : (
                 <NavLink to={link.path} onClick={closeDropdown}>
                   {t(link.label)}
                 </NavLink>
-              </li>
-            ))}
+              )}
+            </li>
+          ))}
+
 
             {/* Menu déroulant pour "Réservation" */}
             <li className="navbar_item reservation-dropdown">
