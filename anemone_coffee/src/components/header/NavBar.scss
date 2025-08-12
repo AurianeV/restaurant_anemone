@@ -116,6 +116,8 @@ nav {
           
             
           .navbar_item {
+
+            
             margin: 20px 0; /* Espacement entre les liens */
             font-size: 1.5rem; /* Taille des liens */
             text-align: center;
@@ -145,18 +147,30 @@ nav {
             text-decoration: none;
             padding: 10px;
             transition: background-color 0.3s ease;
+            position:relative;
   
-            &:hover {
-                color: #cd976c; /* Couleur au survol */
-              
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              width: 0;
+              height: 3px;
+              background-color: #b3b3b2; 
+              transition: width 0.3s ease;
             }
+      
+            &:hover::after {
+              width: 100%;
+            }
+            
           }
   
           .commandLabel {
             border: 1px solid rgb(255, 255, 255);
   
             &:hover {
-              background-color: #cd976c;
+              background-color: #b39f8e;
             }
           }
         }
@@ -222,11 +236,23 @@ nav {
             color: rgb(255, 255, 255);
             text-decoration: none;
             padding: 10px;
-            transition: background-color 0.3s ease;
-  
-            &:hover {
-              background-color: #ffffff2c;
+            position:relative;
+            
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              width: 0;
+              height: 3px;
+              background-color: #b3b3b2; 
+              transition: width 0.3s ease;
             }
+      
+            &:hover::after {
+              width: 100%;
+            }
+            
           }
   
           .commandLabel {

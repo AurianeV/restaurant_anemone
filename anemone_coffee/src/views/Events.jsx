@@ -67,8 +67,6 @@ export default function Events({ navbarProps }) {
                 <br />
                 <p dangerouslySetInnerHTML={{ __html: t('event.text') }}></p>
             </div>
-
-            <Event events={events} />
         </div>
     );
 }

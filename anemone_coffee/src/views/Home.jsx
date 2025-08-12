@@ -107,9 +107,7 @@ export default function Home({ navbarProps }) {
               <div className={`point ${activeSection === 2 ? 'active' : ''}`} />
               <div className={`point ${activeSection === 3 ? 'active' : ''}`} />
             </div>
-            {showPopNewMenu && (
-      <PopUpNewMenu closePopup={closePopup}  />
-      )} 
+          
       <Navbar {...navbarProps} 
         ref={headerRef}
       />

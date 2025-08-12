@@ -41,6 +41,7 @@ const Navbar = forwardRef((props, ref) => {
     { path: "/a-propos", label: t("knowUsLabel") },
     { path: "/menu", label: t("menuLabel") },
     { path: "/events", label: t("eventsLabel") },
+    { path: "https://www.anemonecafe.fr/prestashop/", label: t("boutiqueLabel") },
   ];
 
   return (
