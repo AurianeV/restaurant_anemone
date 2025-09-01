@@ -24,7 +24,7 @@
     }
 
     /* Cache les images supplémentaires sur mobile */
-    .image-row3, .image-row4 {
+    .image-row1, .image-row2 {
       display: none;
     }
   }
@@ -95,7 +95,7 @@
       width: 100%;
       margin-bottom: 2px; 
       
-      .image-row3, .image-row4 {
+      .image-row1, .image-row2 {
         display: block; 
       }/* Espacement entre les deux lignes d'images */
     }

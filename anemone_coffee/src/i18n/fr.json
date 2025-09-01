@@ -25,7 +25,7 @@
             },
             "sectionDiscover": {
                 "title":"Chez Anémone Café, chaque moment de la journée a son petit plaisir",
-                "text":"<ul><li>‣ Attrapez un délicieux petit-déjeuner à emporter avant de filer au travail.</li><li>‣ Faites une pause à tout moment pour savourer un café de spécialité ou un déjeuner léger.</li><li>‣ Explorez de nouvelles saveurs avec nos boissons tendance et nos pâtisseries maison.</li><li>‣ À l’heure du goûter, venez vous régaler avec nos créations sucrées artisanales.</li><li>‣ Participez à nos événements réguliers dans une ambiance chaleureuse.</li><li>‣ Et bien sûr, profitez d’un moment de détente avec un verre entre copains</li></ul><strong>Anémone Café</strong>, c’est bien plus qu’un simple coffee shop. C’est un lieu chaleureux et accueillant en plein cœur du Val d’Oise, conçu pour recréer du lien, partager des instants authentiques, et vous faire sentir chez vous. On vous attend au centre-ville de Saint-leu-la-forêt pour une visite, que ce soit pour un café ou un apéro – à vous de choisir !",
+                "text":"<ul><li>‣ Attrapez un délicieux petit-déjeuner à emporter avant de filer au travail avec nos formules à prix doux.</li><li>‣ Faites une pause à tout moment pour savourer un café de spécialité ou un déjeuner léger.</li><li>‣ Explorez de nouvelles saveurs avec nos boissons tendance et nos gâteaux maison.</li><li>‣ À l’heure du goûter, venez vous régaler avec nos créations sucrées : pancakes, pain perdu, cookies….</li><li></ul><strong>Anémone Café</strong>, c’est bien plus qu’un simple coffee shop. C’est un lieu chaleureux et accueillant en plein cœur du Val d’Oise, conçu pour recréer du lien, partager des instants authentiques, et vous faire sentir chez vous. On vous attend au centre-ville de Saint-leu-la-forêt pour une visite, que ce soit pour un café ou pour bruncher – à vous de choisir !",
                 "buttonValues":"Nos valeurs"
             },
             "sectionCoffeeShop_Patisseries": {
@@ -101,7 +101,7 @@
             "mail":"anemonecafe95@gmail.com",
             "horaire":"Horaires",
             "horaire_coffee_semaine":"Du mercredi au vendredi : 8h30 - 18h00",
-            "horaire_coffee_weekend":"le week-end : 10h - 17h30",
+            "horaire_coffee_weekend":"le week-end : 9h30 - 18h30",
             "horaire_cuisine":"Cuisine :",
             "horaire_cuisine_semaine":"Du mercredi au vendredi : 11h - 17h30,",
             "horaire_cuisine_weekend":"le week-end : 10h - 17h30"
