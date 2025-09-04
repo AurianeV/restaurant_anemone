@@ -63,13 +63,13 @@ function App() {
 
         },
         menu_boissons: {
-            backgroundImage: '/background_header/back_transparent.png',
+            backgroundImage: '/background_header/background_Boissons.png',
             title: 'Nos boissons',
             buttonLabel: 'Découvrir'
 
         },
         menu_brunch: {
-            backgroundImage: '/background_header/back_transparent.png',
+            backgroundImage: '/background_header/background_Brunch.png',
             title: 'Notre brunch',
             buttonLabel: 'Découvrir'
 
